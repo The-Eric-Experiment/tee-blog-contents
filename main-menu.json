@@ -1,36 +1,36 @@
 [
   {
-    "icon": "/contents/public/home.png",
+    "icon": "/contents/public/home.gif",
     "path": "/",
     "label": "Home"
   },
   {
-    "icon": "/contents/public/windows.png",
+    "icon": "/contents/public/windows.gif",
     "path": "/windows3x",
     "label": "Windows 3.x"
   },
   {
-    "icon": "/contents/public/dreamcast.png",
+    "icon": "/contents/public/dreamcast.gif",
     "path": "/dreamcast",
     "label": "Dreamcast"
   },
   {
-    "icon": "/contents/public/programs.png",
+    "icon": "/contents/public/programs.gif",
     "path": "/software",
     "label": "Software"
   },
   {
-    "icon": "/contents/public/devices.png",
+    "icon": "/contents/public/devices.gif",
     "path": "/drivers",
     "label": "Drivers"
   },
   {
-    "icon": "/contents/public/destinations.png",
+    "icon": "/contents/public/destinations.gif",
     "path": "/destinations",
     "label": "Destinations"
   },
   {
-    "icon": "/contents/public/msn.png",
+    "icon": "/contents/public/msn.gif",
     "path": "/about-me",
     "label": "About me"
   }
