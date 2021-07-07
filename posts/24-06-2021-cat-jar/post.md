@@ -1,7 +1,7 @@
 ---
 title: I made my cat into a candy jar
 date: 24-06-2021
-tags: 3d printing, craft, paiting
+tags: 3d printing, craft, painting
 category: 3d printing
 image: final-result-2.jpeg
 description: For my girlfriend's birthday gift for 2021 I made our cat into a candy jar
