@@ -21,6 +21,10 @@ This page contains drivers that I gathered over time for the pieces of hardware 
 
 Even though some downloads might drivers for Windows 3.x if they have drivers for multiple operating systems, this page does not contain Windows 3.x specific drivers, if you want drivers that are for Windows 3.x specifically, please visit the [Windows 3.x resource page](/windows3x)
 
+<center>
+<img src="/contents/public/cdrom.gif"><img src="/contents/public/cdrom.gif"><img src="/contents/public/cdrom.gif">
+</center>
+
 ### Graphics {#graphics}
 
 [file-download]

@@ -8,7 +8,15 @@ $$ content $$
 
 Some pieces of software you have to get the most out of your Windows 3.x install.
 
+<center>
+
 [Internet](#internet) | [Graphics](#graphics) | [Networking](#networking) | [Office](#office) | [Multimedia](#multimedia) | [Customization](#customization) | [Archiving](#archiving) | [System](#system)
+
+</center>
+
+<center>
+<img src="/contents/public/cdrom.gif"><img src="/contents/public/cdrom.gif"><img src="/contents/public/cdrom.gif">
+</center>
 
 ### Internet {#internet}
 

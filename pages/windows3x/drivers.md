@@ -8,7 +8,15 @@ $$ content $$
 
 Some useful drivers for Windows 3.x for download
 
+<center>
+
 [Graphics](#graphics) | [Sound](#sound) | [Networking](#networking) | [Modem](#modem) | [CD-ROM](#cdrom) | [Mouse](#mouse) | [USB](#usb)
+
+</center>
+
+<center>
+<img src="/contents/public/cdrom.gif"><img src="/contents/public/cdrom.gif"><img src="/contents/public/cdrom.gif">
+</center>
 
 ### Graphics {#graphics}
 

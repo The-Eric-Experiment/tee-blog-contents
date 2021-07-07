@@ -19,7 +19,12 @@ $$ content $$
 
 Welcome to the Sega Dreamcast resource page
 
-![Logo](/contents/pages/dreamcast/logo.jpg)
+![Logo](/contents/pages/dreamcast/dreamcast.jpg)
+
+<center>
+  <img src="/contents/pages/dreamcast/system_segalogo.gif">
+  <img src="/contents/pages/dreamcast/tectoy.png">
+</center>
 
 The Sega Dreamcast is one of my favorite consoles of all time, and a console I have a bit of a sad history with.
 
@@ -233,3 +238,7 @@ title: Soulcalibur
 - [](/contents/pages/dreamcast/scal-3.jpg)
 
 [/gallery]
+
+<center>
+  <img src="/contents/pages/dreamcast/segaonline.gif">
+</center>
