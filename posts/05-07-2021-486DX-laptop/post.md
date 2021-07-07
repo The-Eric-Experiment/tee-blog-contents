@@ -1,6 +1,6 @@
 ---
 title: Repairing a 486DX laptop
-date: 12-11-2020
+date: 05-07-2021
 tags: retro computing, intel 486, 486DX, 486DX laptop, vintage laptop, old laptop, retro laptop, windows 3.1, windows 3.x, windows 95, MS-DOS, DOS gaming
 category: Retro Computing, Videos
 image: img.jpg
