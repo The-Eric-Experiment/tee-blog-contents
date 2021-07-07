@@ -1,0 +1,32 @@
+[
+  {
+    "icon": "/contents/public/home.png",
+    "path": "/",
+    "label": "Home"
+  },
+  {
+    "icon": "/contents/public/windows.png",
+    "path": "/windows3x",
+    "label": "Windows 3.x"
+  },
+  {
+    "icon": "/contents/public/dreamcast.png",
+    "path": "/dreamcast",
+    "label": "Dreamcast"
+  },
+  {
+    "icon": "/contents/public/programs.png",
+    "path": "/software",
+    "label": "Software"
+  },
+  {
+    "icon": "/contents/public/devices.png",
+    "path": "/drivers",
+    "label": "Drivers"
+  },
+  {
+    "icon": "/contents/public/msn.png",
+    "path": "/about-me",
+    "label": "About me"
+  }
+]
