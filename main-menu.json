@@ -25,6 +25,11 @@
     "label": "Drivers"
   },
   {
+    "icon": "/contents/public/destinations.png",
+    "path": "/destinations",
+    "label": "Destinations"
+  },
+  {
     "icon": "/contents/public/msn.png",
     "path": "/about-me",
     "label": "About me"
