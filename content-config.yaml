@@ -1,0 +1,26 @@
+contentsFolder: contents
+pagesFolder: pages
+postsFolder: posts
+publicFolder: public
+themeImageResolutions:
+  retro:
+    postThumbnail:
+      width: 143
+      aspectRatio: 16:9
+      quality: 50
+    contentImage:
+      width: 350
+      quality: 70
+    galleryThumbnail:
+      width: 120
+      quality: 70
+    galleryImage:
+      width: 600
+  modern:
+    postThumbnail:
+      width: 600
+      aspectRatio: 16:9
+    contentImage:
+      width: 650
+    galleryThumbnail:
+      width: 150

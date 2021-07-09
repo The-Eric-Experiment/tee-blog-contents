@@ -16,11 +16,11 @@ The websites in this list are not necessarily compatible with old browsers.
 
   It's incredible how much they have been able to archive over the years, my favorite part is definitely the Wayback Machine, in which you can visit old websites.
 
-  <img src="/contents/pages/destinations/waybackmachine-logo.png">
+  ![Wayback Machine](/contents/pages/destinations/waybackmachine-logo.png)
 
 - [The Old Net](http://theoldnet.com) - This is a project that aims to bring the internet of yesterday back. It uses the wayback machine apis to deliver the old websites while removing any code that would be incompatible with old browsers. With it you can browse the old internet on your retro computer. They also have a proxy server available that makes the experience way more immersive.
 
-  <img src="/contents/pages/destinations/theoldnetanimblur2.gif">
+  ![The Old Net](/contents/pages/destinations/theoldnetanimblur2.gif)
 
 - [The Useless Web](https://theuselessweb.com/) - If you want to spend hours on websites that serve no purpose whatsoever, this is the place for you. I like this website because it links to websites that are not trying to be anything, it has the spirit of the old internet where people would create a website because they could, not becuase they should. I don't know, it's hard to explain this one.
 
@@ -28,7 +28,17 @@ The websites in this list are not necessarily compatible with old browsers.
 
 - [Winworld](https://winworldpc.com/home) - This is a website that has been around since 2002 or 2003. This is THE website to find old versions of software in general, especially Microsoft operating sytems. It kinda sucks that they updated the website to use bootstrap or whatever, the old design used to be great.
 
-  <img src="/img.php?p=/contents/pages/destinations/wwv4.jpg&w=150">
+<center>
+
+[gallery]
+
+- title: WinWorld
+
+- [Winworld](/contents/pages/destinations/wwv4.jpg)
+
+[/gallery]
+
+</center>
 
 - [Make Frontend Shit again](https://makefrontendshitagain.party/) - In the spirit of bringing personality back to the internet, Make frontend shit again!
 
