@@ -22,13 +22,13 @@ So, in this part of The Eric Experiment we are going to travel back in time to r
 ### Here are some links related to this video:
 
 The Livingroom Video I mentioned in the video:
-!yt[](https://www.youtube.com/watch?v=T6I3qv1kka8)
+!yt[Dial Up Internet in 2021](https://www.youtube.com/watch?v=T6I3qv1kka8)
 
 - Dialup In The Age of Broadband: [https://gekk.info/articles/ata-dialup.html](https://gekk.info/articles/ata-dialup.html)
 - The Internet Archive: [http://www.archive.org](http://www.archive.org)
 - TheOldNet: [http://theoldnet.com](http://theoldnet.com)
 
-The websites featured in the video:
+#### The websites featured in the video:
 
 - [Pokémon TCG University](https://theoldnet.com/get?url=angelfire.com%2Fwi%2Fpokemontcg&year=1998&scripts=false&decode=false)
 - [KaterTater's Homepage](https://theoldnet.com/get?url=geocities.com%2FSouthBeach%2FPointe%2F6765&year=1998&scripts=false&decode=false)
