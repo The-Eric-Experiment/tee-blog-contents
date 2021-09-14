@@ -2,9 +2,9 @@
 title: Re-experiencing the 90's Internet
 date: 05-08-2021
 tags: retro computing, internet, netscape, internet explorer, aol, mirc, dial-up, geocities, web 1.0
-category: Retro Computing, Computing, Videos
+category: Retro Computing, Computing, Videos, Vintage Web
 image: img.jpg
-description: I managed to get the PS5 on launch day, here's how it went.
+description: Let's go back in time and revisit the internet as it was in the late 90's and early 2000's in all of its glory!
 ---
 
 Remember browsing the web in the 90's and early 2000's?
