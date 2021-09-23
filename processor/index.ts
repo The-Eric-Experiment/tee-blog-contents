@@ -22,7 +22,7 @@ import * as chalk from "chalk";
 import yargs from "yargs";
 import { hideBin } from "yargs/helpers";
 
-const currentDir = process.cwd();
+const currentDir = path.join(__dirname, "..");
 const yargies = yargs(hideBin(process.argv));
 const args = yargies.argv as { dest?: string };
 
