@@ -17,11 +17,11 @@ on:
 jobs:
   build:
     runs-on: self-hosted
+    name: Build the-eric-experiment-contents
     steps:
-      - uses: actions/checkout@v2
-      - uses: borales/actions-yarn@v2.3.0
-        with:
-          cmd: install # will run `yarn install` command
-      - uses: borales/actions-yarn@v2.3.0
-        with:
-          cmd: build -- --dest ../../../../tee-contents # will run `yarn build` command
+      # To use this repository's private action,
+      # you must check out the repository
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Build
+        run: docker-compose -f "../../../../docker-compose.yml" up -d --build
