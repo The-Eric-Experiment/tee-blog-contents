@@ -18,9 +18,8 @@ jobs:
   build:
     runs-on: self-hosted
     steps:
+      - run: sudo chmod -R 757 /home/ericmackrodt/tee-contents-runner/_work/tee-blog-contents/tee-blog-contents
       - uses: actions/checkout@v2
-        with:
-          fetch-depth: 1
       - uses: borales/actions-yarn@v2.3.0
         with:
           cmd: install # will run `yarn install` command
