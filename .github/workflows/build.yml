@@ -20,4 +20,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: "build"
-        run: yarn build --dest "../../../../tee-contents"
+        run: yarn build -- --dest "../../../../tee-contents"
