@@ -18,10 +18,12 @@ jobs:
   build:
     runs-on: self-hosted
     steps:
+      - name: permission
+        run: sudo chown -R $USER:$USER /home/github/actions-runner/_work/tee-blog-contents
       - uses: actions/checkout@v2
       - uses: borales/actions-yarn@v2.3.0
         with:
           cmd: install # will run `yarn install` command
       - uses: borales/actions-yarn@v2.3.0
         with:
-          cmd: build -- --dest ../../../../tee-contents # will run `yarn build` command
+          cmd: build -- --dest ~/tee-contents # will run `yarn build` command
