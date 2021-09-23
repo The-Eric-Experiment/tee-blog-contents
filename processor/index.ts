@@ -19,8 +19,12 @@ import { getContentImages } from "./images";
 import { getGalleryImages } from "./gallery";
 import * as yaml from "yaml";
 import * as chalk from "chalk";
+import yargs from "yargs";
+import { hideBin } from "yargs/helpers";
 
 const currentDir = process.cwd();
+const yargies = yargs(hideBin(process.argv));
+const args = yargies.argv as { dest?: string };
 
 const configContent = fs.readFileSync(
   path.join(currentDir, "content-config.yaml"),
@@ -37,7 +41,11 @@ const config: ContentConfig = yaml.parse(configContent);
 const postsDir = path.join(currentDir, config.postsFolder);
 const pagesDir = path.join(currentDir, config.pagesFolder);
 const publicDir = path.join(currentDir, config.publicFolder);
-const tempDir = path.join(currentDir, ".temp/");
+let destDir = path.join(currentDir, ".temp/");
+
+if (args.dest) {
+  destDir = path.join(currentDir, args.dest);
+}
 
 async function processImage(data: Buffer, res: ImageResolution) {
   const fit = (res.fit || "cover") as
@@ -92,7 +100,7 @@ async function processPostThumbnails(
   for (let index = 0; index < posts.length; index++) {
     const post = posts[index];
 
-    const tempPostDir = path.join(tempDir, config.postsFolder);
+    const tempPostDir = path.join(destDir, config.postsFolder);
     const spl = post.image
       .split("/")
       .filter((o) => o !== config.contentsFolder);
@@ -124,7 +132,7 @@ async function processImages(
   for (let index = 0; index < images.length; index++) {
     const image = images[index];
     const spl = image.split("/").filter((o) => o !== config.contentsFolder);
-    const imagePath = path.join(tempDir, ...spl);
+    const imagePath = path.join(destDir, ...spl);
     const buffer = fs.readFileSync(imagePath);
 
     const destPath = path.join(
@@ -310,9 +318,9 @@ function getTags(posts: PostMetadata[]): Tag[] {
 
 async function run() {
   console.log(chalk.bgWhite("Starting Process..."));
-  rimraf.sync(tempDir);
+  rimraf.sync(destDir);
 
-  fs.mkdirSync(tempDir, { recursive: true });
+  fs.mkdirSync(destDir, { recursive: true });
 
   console.log(chalk.white("Creating PHP files..."));
 
@@ -325,7 +333,7 @@ async function run() {
 
   const renderedPosts = ejs.render(postsEjs, { posts });
 
-  fs.writeFileSync(path.join(tempDir, "posts.php"), renderedPosts);
+  fs.writeFileSync(path.join(destDir, "posts.php"), renderedPosts);
 
   const categories = getCategories(posts);
 
@@ -336,7 +344,7 @@ async function run() {
 
   const renderedCategories = ejs.render(categoriesEjs, { categories });
 
-  fs.writeFileSync(path.join(tempDir, "categories.php"), renderedCategories);
+  fs.writeFileSync(path.join(destDir, "categories.php"), renderedCategories);
 
   const tags = getTags(posts);
 
@@ -346,29 +354,29 @@ async function run() {
 
   const renderedTags = ejs.render(tagsEjs, { tags });
 
-  fs.writeFileSync(path.join(tempDir, "tags.php"), renderedTags);
+  fs.writeFileSync(path.join(destDir, "tags.php"), renderedTags);
 
   console.log(chalk.green("PHP Files Created!"));
 
   console.log(chalk.white("Copying pages..."));
-  fse.copySync(pagesDir, path.join(tempDir, config.pagesFolder));
+  fse.copySync(pagesDir, path.join(destDir, config.pagesFolder));
   console.log(chalk.green("Pages copied!"));
   console.log(chalk.white("Copying public folder..."));
-  fse.copySync(publicDir, path.join(tempDir, config.publicFolder));
+  fse.copySync(publicDir, path.join(destDir, config.publicFolder));
   console.log(chalk.green("Public folder copied!"));
   console.log(chalk.white("Copying posts..."));
-  fse.copySync(postsDir, path.join(tempDir, config.postsFolder));
+  fse.copySync(postsDir, path.join(destDir, config.postsFolder));
   console.log(chalk.green("Posts copied!"));
   console.log(chalk.white("Copying intro.md..."));
   fse.copyFileSync(
     path.join(currentDir, "intro.md"),
-    path.join(tempDir, "intro.md")
+    path.join(destDir, "intro.md")
   );
   console.log(chalk.green("Intro.md copied!"));
   console.log(chalk.white("Copying main menu..."));
   fse.copyFileSync(
     path.join(currentDir, "main-menu.json"),
-    path.join(tempDir, "main-menu.json")
+    path.join(destDir, "main-menu.json")
   );
   console.log(chalk.green("Main menu copied!"));
 
@@ -443,7 +451,7 @@ async function run() {
     const renderedImageMaps = ejs.render(imageMapsEjs, { imageMaps });
 
     fs.writeFileSync(
-      path.join(tempDir, theme + "-image-maps.php"),
+      path.join(destDir, theme + "-image-maps.php"),
       renderedImageMaps
     );
   }

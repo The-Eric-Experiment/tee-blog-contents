@@ -7,9 +7,9 @@ name: Build contents
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -24,9 +24,4 @@ jobs:
           cmd: install # will run `yarn install` command
       - uses: borales/actions-yarn@v2.3.0
         with:
-          cmd: build # will run `yarn build` command
-      - name: copy files
-        uses: canastro/copy-file-action@master
-        with:
-          source: ".temp/**/*.*"
-          target: "../../../../tee-contents"
+          cmd: build --dest ../../../../tee-contents # will run `yarn build` command
