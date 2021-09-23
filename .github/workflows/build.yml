@@ -19,5 +19,9 @@ jobs:
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v2
-      - name: "build"
-        run: yarn build -- --dest "../../../../tee-contents"
+      - uses: borales/actions-yarn@v2.3.0
+        with:
+          cmd: install # will run `yarn install` command
+      - uses: borales/actions-yarn@v2.3.0
+        with:
+          cmd: build -- --dest ../../../../tee-contents # will run `yarn build` command
