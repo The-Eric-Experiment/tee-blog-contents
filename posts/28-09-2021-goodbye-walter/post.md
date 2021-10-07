@@ -15,6 +15,21 @@ I would have been able to play you a last time last year if it wasn't for this g
 
 I will never forget how you'd run when we unleashed you while going for a walk, so fast! We could see in your face that you were enjoying yourself so much.
 
+You were so funny when you were little, you had such a big head and I remember you'd bark to get on the couch but because your head was heavy you needed someone to put their hand behind your neck so you could climb without falling over.
+
+[gallery]
+
+- title: Young Walter
+
+- [](/contents/posts/28-09-2021-goodbye-walter/mini-walter-1.png)
+- [](/contents/posts/28-09-2021-goodbye-walter/mini-walter-2.png)
+- [](/contents/posts/28-09-2021-goodbye-walter/mini-walter-3.png)
+- [](/contents/posts/28-09-2021-goodbye-walter/mini-walter-4.png)
+
+[/gallery]
+
+And what about that time you bit something in the backyard that gave you some alergic reaction and you showed up with your face completely inflated? We got scared but that didn't seem to faze you at all, you were still acting like yourself, just with a huge face. I'm sad I didn't take a photo of that, that was hilarious.
+
 I have lost many pets throughout the years. Manuela, my childhood dog at 14. Sheep the cat, at 14. Emily the little cat at 8 and many others. And now Walter at 11. You'd think it gets easier over time, but it doesn't. Those animals touch our lives and they are just as important as any human family member.
 
 And Walter, like most pups, would be there for you, with no judgements, no complaints, just happy that you're around.
