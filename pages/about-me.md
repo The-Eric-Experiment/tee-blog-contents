@@ -136,13 +136,15 @@ In 2010 we adopted this guy:
 
 ![Walter](/contents/pages/about-me/walti.jpg)
 
-His name is Walter, and he is a mixed breed dog as well, but he has some Greyhound in him. He is still around with my parents back in Brazil and he's a great boy.
+His name was Walter, and he was a mixed breed dog as well, but he had some Greyhound in him.
 
 We used to live with him in an apartment and we'd take him for a walk twice a day and he would always wait for his walks to "go to the toilet".
 
-It was hilarious because as soon as we got downstairs in our building's parking lot, we'd release him from his leash and he would bolt, he runs so fast, just like a Greyhound.
+It was hilarious because as soon as we got downstairs in our building's parking lot, we'd release him from his leash and he would bolt, he ran so fast, just like a Greyhound.
 
-He's a really happy and loving guy, I miss him a lot.
+Sadly he recently died, it was very sudden.
+
+He's was really happy and loving guy, I miss him a lot.
 
 Another guy I miss a lot is my cat Sheep.
 
@@ -175,7 +177,7 @@ When I left Brazil, we had 7 cats. Both Sheep and Emily died since I moved to Au
 
 [/gallery]
 
-There were many other pets in my life that came and gone, some of them with really sad stories, but I'll save those for another time.
+There were many other pets in my life that came and went, some of them with really sad stories, but I'll save those for another time.
 
 Eric, if you like animals so much why do you still eat meat, do you think Cows are lesser than dogs and cats?
 
