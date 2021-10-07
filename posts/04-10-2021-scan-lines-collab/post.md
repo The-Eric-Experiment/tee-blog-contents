@@ -1,5 +1,5 @@
 ---
-title: [Collab] Reliving The 90s Internet With A Modern Search Engine For Vintage Computers! ft. The Eric Experiment
+title: (Collab) Reliving The 90s Internet With A Modern Search Engine For Vintage Computers! ft. The Eric Experiment
 date: 04-10-2021
 tags: retro computing, collaboration, interview, scan lines, retro internet, vintage internet, oldavista, netscape
 category: Retro Computing, Videos, Vintage Web
