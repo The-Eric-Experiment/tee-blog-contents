@@ -21,10 +21,10 @@ You were so funny when you were little, you had such a big head and I remember y
 
 - title: Young Walter
 
-- [](/contents/posts/28-09-2021-goodbye-walter/mini-walter-1.png)
-- [](/contents/posts/28-09-2021-goodbye-walter/mini-walter-2.png)
-- [](/contents/posts/28-09-2021-goodbye-walter/mini-walter-3.png)
-- [](/contents/posts/28-09-2021-goodbye-walter/mini-walter-4.png)
+- [](/contents/posts/28-09-2021-goodbye-walter/mini-walter-1.jpg)
+- [](/contents/posts/28-09-2021-goodbye-walter/mini-walter-2.jpg)
+- [](/contents/posts/28-09-2021-goodbye-walter/mini-walter-3.jpg)
+- [](/contents/posts/28-09-2021-goodbye-walter/mini-walter-4.jpg)
 
 [/gallery]
 
