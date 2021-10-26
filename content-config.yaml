@@ -7,13 +7,13 @@ themeImageResolutions:
     postThumbnail:
       width: 143
       aspectRatio: 16:9
-      quality: 50
+      quality: 80
     contentImage:
       width: 350
-      quality: 70
+      quality: 100
     galleryThumbnail:
       width: 120
-      quality: 70
+      quality: 80
     galleryImage:
       width: 600
   modern:

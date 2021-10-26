@@ -75,7 +75,7 @@ async function processImage(data: Buffer, res: ImageResolution) {
 
   height = Math.floor((height * width) / originalWidth);
 
-  image = image.resize(width, height, { fit });
+  image = image.resize(width, height, { fit }).withMetadata();
 
   if (metadata.format === "png") {
     image = image.png({
