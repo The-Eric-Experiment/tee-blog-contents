@@ -27,15 +27,11 @@ I'll really miss how you'd climb onto us just to lie down and sleep.
 
 - [](/contents/posts/19-10-2021-goodbye-mercedes/sleep-on-us.jpg)
 - [](/contents/posts/19-10-2021-goodbye-mercedes/sleep-on-us-1.jpg)
-- [](/contents/posts/19-10-2021-goodbye-mercedes/sleep-on-us-2.jpg)
 - [](/contents/posts/19-10-2021-goodbye-mercedes/sleep-on-us-3.jpg)
 - [](/contents/posts/19-10-2021-goodbye-mercedes/sleep-on-us-4.jpg)
 - [](/contents/posts/19-10-2021-goodbye-mercedes/sleep-on-us-5.jpg)
-- [](/contents/posts/19-10-2021-goodbye-mercedes/sleep-on-us-6.jpg)
 - [](/contents/posts/19-10-2021-goodbye-mercedes/sleep-on-us-7.jpg)
-- [](/contents/posts/19-10-2021-goodbye-mercedes/sleep-on-us-8.jpg)
 - [](/contents/posts/19-10-2021-goodbye-mercedes/sleep-on-us-9.jpg)
-- [](/contents/posts/19-10-2021-goodbye-mercedes/sleep-on-us-10.jpg)
 - [](/contents/posts/19-10-2021-goodbye-mercedes/sleep-on-us-11.jpg)
 - [](/contents/posts/19-10-2021-goodbye-mercedes/sleep-on-us-12.jpg)
 - [](/contents/posts/19-10-2021-goodbye-mercedes/sleep-on-us-13.jpg)
@@ -44,7 +40,7 @@ I'll really miss how you'd climb onto us just to lie down and sleep.
 
 [/gallery]
 
-Every morning, I would make my coffee, sit in bed and while I was drinking it, you'd jump on my chest to lie down making it really difficult for me to drink it. But I didn't care because it was even better to just rub my face on you shile you were napping on me.
+Every morning, I would make my coffee, sit in bed and, while I was drinking it, you'd jump on my chest to lie down making it really difficult for me to drink it. But I didn't care because it was even better to just rub my face on you shile you were napping on me.
 
 [gallery]
 
@@ -53,7 +49,6 @@ Every morning, I would make my coffee, sit in bed and while I was drinking it, y
 - [](/contents/posts/19-10-2021-goodbye-mercedes/coffee-in-bed-1.jpg)
 - [](/contents/posts/19-10-2021-goodbye-mercedes/coffee-in-bed-2.jpg)
 - [](/contents/posts/19-10-2021-goodbye-mercedes/coffee-in-bed-3.jpg)
-- [](/contents/posts/19-10-2021-goodbye-mercedes/coffee-in-bed-4.jpg)
 - [](/contents/posts/19-10-2021-goodbye-mercedes/coffee-in-bed-5.jpg)
 
 [/gallery]
@@ -90,12 +85,7 @@ You'd also sit and loaf on my computer all the time and then come to my chest wh
 - title: While I was working
 
 - [](/contents/posts/19-10-2021-goodbye-mercedes/on-the-pc-1.jpg)
-- [](/contents/posts/19-10-2021-goodbye-mercedes/on-the-pc-2.jpg)
-- [](/contents/posts/19-10-2021-goodbye-mercedes/with-the-pc.jpg)
-- [](/contents/posts/19-10-2021-goodbye-mercedes/on-lap-work.jpg)
-- [](/contents/posts/19-10-2021-goodbye-mercedes/on-lap-work-2.jpg)
 - [](/contents/posts/19-10-2021-goodbye-mercedes/on-chest-work-1.jpg)
-- [](/contents/posts/19-10-2021-goodbye-mercedes/on-chest-work-2.jpg)
 - [](/contents/posts/19-10-2021-goodbye-mercedes/on-chest-work-3.jpg)
 - [](/contents/posts/19-10-2021-goodbye-mercedes/on-chest-work-4.jpg)
 
@@ -133,9 +123,6 @@ I'll miss how you'd lie down comfortably inside of your hut...
 - title: In the hut
 
 - [](/contents/posts/19-10-2021-goodbye-mercedes/in-the-hut-1.jpg)
-- [](/contents/posts/19-10-2021-goodbye-mercedes/in-the-hut-2.jpg)
-- [](/contents/posts/19-10-2021-goodbye-mercedes/in-the-hut-3.jpg)
-- [](/contents/posts/19-10-2021-goodbye-mercedes/in-the-hut-4.jpg)
 - [](/contents/posts/19-10-2021-goodbye-mercedes/in-the-hut-5.jpeg)
 
 [/gallery]
@@ -187,13 +174,9 @@ I got home, put my keys down and you ran outside. Without thinking I ran after y
 - [](/contents/posts/19-10-2021-goodbye-mercedes/locked-outside-1.jpg)
 - [](/contents/posts/19-10-2021-goodbye-mercedes/locked-outside-2.jpg)
 - [](/contents/posts/19-10-2021-goodbye-mercedes/locked-outside-3.jpg)
-- [](/contents/posts/19-10-2021-goodbye-mercedes/locked-outside-4.jpg)
 - [](/contents/posts/19-10-2021-goodbye-mercedes/locked-outside-5.jpg)
 - [](/contents/posts/19-10-2021-goodbye-mercedes/locked-outside-6.jpg)
 - [](/contents/posts/19-10-2021-goodbye-mercedes/locked-outside-7.jpg)
-- [](/contents/posts/19-10-2021-goodbye-mercedes/locked-outside-8.jpg)
-- [](/contents/posts/19-10-2021-goodbye-mercedes/locked-outside-9.jpg)
-- [](/contents/posts/19-10-2021-goodbye-mercedes/locked-outside-10.jpg)
 - [](/contents/posts/19-10-2021-goodbye-mercedes/locked-outside-11.jpg)
 
 [/gallery]
@@ -219,15 +202,12 @@ You really loved the outside, huh? I remember the first few times we took you fo
 - title: Meadowbank
 
 - [](/contents/posts/19-10-2021-goodbye-mercedes/meadowbank-1.jpeg)
-- [](/contents/posts/19-10-2021-goodbye-mercedes/meadowbank-2.jpeg)
 - [](/contents/posts/19-10-2021-goodbye-mercedes/meadowbank-3.jpeg)
 - [](/contents/posts/19-10-2021-goodbye-mercedes/meadowbank-4.jpg)
 - [](/contents/posts/19-10-2021-goodbye-mercedes/meadowbank-5.jpg)
 - [Flopping on the ground](/contents/posts/19-10-2021-goodbye-mercedes/meadowbank-7.jpg)
-- [](/contents/posts/19-10-2021-goodbye-mercedes/meadowbank-8.jpg)
 - [](/contents/posts/19-10-2021-goodbye-mercedes/meadowbank-9.jpg)
 - [](/contents/posts/19-10-2021-goodbye-mercedes/meadowbank-10.jpg)
-- [](/contents/posts/19-10-2021-goodbye-mercedes/meadowbank-11.jpg)
 
 [/gallery]
 
@@ -255,18 +235,13 @@ I wish I had taken you out more when you were healthy, but I'm glad we got to go
 - [](/contents/posts/19-10-2021-goodbye-mercedes/last-few-weeks-at-the-parks-1.jpg)
 - [](/contents/posts/19-10-2021-goodbye-mercedes/last-few-weeks-at-the-parks-2.jpg)
 - [](/contents/posts/19-10-2021-goodbye-mercedes/last-few-weeks-at-the-parks-3.jpg)
-- [](/contents/posts/19-10-2021-goodbye-mercedes/last-few-weeks-at-the-parks-4.jpg)
 - [](/contents/posts/19-10-2021-goodbye-mercedes/last-few-weeks-at-the-parks-5.jpg)
 - [](/contents/posts/19-10-2021-goodbye-mercedes/last-few-weeks-at-the-parks-6.jpg)
 - [](/contents/posts/19-10-2021-goodbye-mercedes/last-few-weeks-at-the-parks-7.jpg)
 - [](/contents/posts/19-10-2021-goodbye-mercedes/last-few-weeks-at-the-parks-8.jpg)
-- [](/contents/posts/19-10-2021-goodbye-mercedes/last-few-weeks-at-the-parks-9.jpg)
 - [](/contents/posts/19-10-2021-goodbye-mercedes/last-few-weeks-at-the-parks-10.jpg)
 - [](/contents/posts/19-10-2021-goodbye-mercedes/last-few-weeks-at-the-parks-11.jpg)
-- [](/contents/posts/19-10-2021-goodbye-mercedes/last-few-weeks-at-the-parks-12.jpg)
 - [](/contents/posts/19-10-2021-goodbye-mercedes/last-few-weeks-at-the-parks-13.jpg)
-- [](/contents/posts/19-10-2021-goodbye-mercedes/last-few-weeks-at-the-parks-14.jpg)
-- [](/contents/posts/19-10-2021-goodbye-mercedes/last-few-weeks-at-the-parks-15.jpg)
 
 [/gallery]
 
@@ -283,7 +258,6 @@ There are so many other memories, many of them hilarious, like when we dressed y
 - title: Santa Mermees
 
 - [](/contents/posts/19-10-2021-goodbye-mercedes/santa-1.jpeg)
-- [](/contents/posts/19-10-2021-goodbye-mercedes/santa-2.jpeg)
 - [](/contents/posts/19-10-2021-goodbye-mercedes/santa-3.jpeg)
 
 [/gallery]
@@ -307,7 +281,6 @@ There was also that time you were playing with a line of yarn and we took those 
 - [](/contents/posts/19-10-2021-goodbye-mercedes/yarn-0.jpeg)
 - [](/contents/posts/19-10-2021-goodbye-mercedes/yarn-1.jpeg)
 - [](/contents/posts/19-10-2021-goodbye-mercedes/yarn-2.jpeg)
-- [](/contents/posts/19-10-2021-goodbye-mercedes/yarn-3.jpeg)
 
 [/gallery]
 
@@ -362,8 +335,6 @@ A small cat with such a big heart.
 
 - [](/contents/posts/19-10-2021-goodbye-mercedes/three-guys-1.jpg)
 - [](/contents/posts/19-10-2021-goodbye-mercedes/three-guys-2.jpg)
-- [](/contents/posts/19-10-2021-goodbye-mercedes/three-guys-3.jpg)
-- [](/contents/posts/19-10-2021-goodbye-mercedes/three-guys-4.jpg)
 - [](/contents/posts/19-10-2021-goodbye-mercedes/three-guys-5.jpg)
 
 [/gallery]
@@ -398,51 +369,34 @@ Goodbye, my beautiful Mercedes.
 - [Snuggle](/contents/posts/19-10-2021-goodbye-mercedes/mermee-3.jpeg)
 - [Lazy Girl](/contents/posts/19-10-2021-goodbye-mercedes/mermee-4.jpeg)
 - [Sleepyhead](/contents/posts/19-10-2021-goodbye-mercedes/mermee-5.jpeg)
-- [Tunnel explorer](/contents/posts/19-10-2021-goodbye-mercedes/mermee-6.jpeg)
 - [Crossed Pawsies](/contents/posts/19-10-2021-goodbye-mercedes/mermee-7.jpeg)
 - [Maple is taking some space here](/contents/posts/19-10-2021-goodbye-mercedes/mermee-8.jpeg)
 - [=P](/contents/posts/19-10-2021-goodbye-mercedes/mermee-9.jpeg)
 - [Hat](/contents/posts/19-10-2021-goodbye-mercedes/mermee-10.jpeg)
 - [Hat](/contents/posts/19-10-2021-goodbye-mercedes/mermee-11.jpeg)
-- [Hat](/contents/posts/19-10-2021-goodbye-mercedes/mermee-12.jpeg)
 - [Mommy and Mermee](/contents/posts/19-10-2021-goodbye-mercedes/mermee-13.jpeg)
 - [Enjoying the Sun](/contents/posts/19-10-2021-goodbye-mercedes/merbee-14.jpg)
-- [Relaxing on the Couch](/contents/posts/19-10-2021-goodbye-mercedes/merbee-15.jpg)
 - [Relaxing on the Couch](/contents/posts/19-10-2021-goodbye-mercedes/merbee-16.jpg)
 - [Sunny days](/contents/posts/19-10-2021-goodbye-mercedes/merbee-17.jpg)
 - [Sunny days](/contents/posts/19-10-2021-goodbye-mercedes/mermee-18.jpg)
-- [Comfy](/contents/posts/19-10-2021-goodbye-mercedes/mermee-19.jpg)
 - [I swear this is a comfy position](/contents/posts/19-10-2021-goodbye-mercedes/mermee-20.jpg)
-- [Hello](/contents/posts/19-10-2021-goodbye-mercedes/mermee-21.jpg)
 - [](/contents/posts/19-10-2021-goodbye-mercedes/mermee-22.jpg)
 - [I'm sure I can fit here](/contents/posts/19-10-2021-goodbye-mercedes/mermee-23.jpg)
 - [Food time?](/contents/posts/19-10-2021-goodbye-mercedes/mermee-24.jpg)
-- [Belly girl](/contents/posts/19-10-2021-goodbye-mercedes/mermee-25.jpg)
 - [What's that](/contents/posts/19-10-2021-goodbye-mercedes/mermee-26.jpg)
 - [Pawsies](/contents/posts/19-10-2021-goodbye-mercedes/mermee-27.jpg)
 - [I go back home now](/contents/posts/19-10-2021-goodbye-mercedes/mermee-28.jpg)
 - [Snuggle](/contents/posts/19-10-2021-goodbye-mercedes/mermee-29.jpg)
 - [This makes my butt warm](/contents/posts/19-10-2021-goodbye-mercedes/mermee-30.jpg)
-- [Can I sit here?](/contents/posts/19-10-2021-goodbye-mercedes/mermee-31.jpg)
 - [Pawsies](/contents/posts/19-10-2021-goodbye-mercedes/mermee-32.jpg)
-- [Wearing a hat made out of Maple and Maddy fur](/contents/posts/19-10-2021-goodbye-mercedes/merbee-32.jpg)
 - [Wearing a hat made out of Maple and Maddy fur](/contents/posts/19-10-2021-goodbye-mercedes/merbee-33.jpg)
-- [](/contents/posts/19-10-2021-goodbye-mercedes/mermee-34.jpg)
-- [](/contents/posts/19-10-2021-goodbye-mercedes/mermee-35.jpg)
 - [](/contents/posts/19-10-2021-goodbye-mercedes/mermee-36.jpg)
-- [](/contents/posts/19-10-2021-goodbye-mercedes/mermee-37.jpg)
 - [](/contents/posts/19-10-2021-goodbye-mercedes/mermee-38.jpg)
-- [I'm confy](/contents/posts/19-10-2021-goodbye-mercedes/merbee-39.jpg)
 - [Sniff footsy](/contents/posts/19-10-2021-goodbye-mercedes/merbee-40.jpg)
 - [Hello Daddy](/contents/posts/19-10-2021-goodbye-mercedes/merbee-41.jpg)
-- [Comfy girl](/contents/posts/19-10-2021-goodbye-mercedes/merbee-42.jpg)
-- [I sleep now](/contents/posts/19-10-2021-goodbye-mercedes/merbee-43.jpg)
-- [Hi Daddy](/contents/posts/19-10-2021-goodbye-mercedes/merbee-44.jpg)
 - [I'm comfy](/contents/posts/19-10-2021-goodbye-mercedes/merbee-45.jpg)
-- [Keyboard buddy](/contents/posts/19-10-2021-goodbye-mercedes/merbee-46.jpg)
 - [I swear this is comfy](/contents/posts/19-10-2021-goodbye-mercedes/merbee-47.jpg)
 - [](/contents/posts/19-10-2021-goodbye-mercedes/merbee-48.jpg)
-- [Let's take another meeting](/contents/posts/19-10-2021-goodbye-mercedes/merbee-49.jpg)
 - [Double trouble](/contents/posts/19-10-2021-goodbye-mercedes/merbee-50.jpg)
 - [HELLO?](/contents/posts/19-10-2021-goodbye-mercedes/merbee-51.jpg)
 - [Did you talk to me?](/contents/posts/19-10-2021-goodbye-mercedes/merbee-52.jpg)
@@ -451,12 +405,10 @@ Goodbye, my beautiful Mercedes.
 - [Sleepy head](/contents/posts/19-10-2021-goodbye-mercedes/merbee-55.jpg)
 - [Whattup?](/contents/posts/19-10-2021-goodbye-mercedes/merbee-56.jpg)
 - [](/contents/posts/19-10-2021-goodbye-mercedes/merbee-57.jpg)
-- [Sleepsy](/contents/posts/19-10-2021-goodbye-mercedes/merbee-58.jpg)
 - [Sleepsy](/contents/posts/19-10-2021-goodbye-mercedes/merbee-59.jpg)
 - [Oh, the outside](/contents/posts/19-10-2021-goodbye-mercedes/merbee-60.jpg)
 - [Pawsies](/contents/posts/19-10-2021-goodbye-mercedes/merbee-61.jpg)
 - [Comfy girl](/contents/posts/19-10-2021-goodbye-mercedes/merbee-63.jpg)
-- [Comfy girl](/contents/posts/19-10-2021-goodbye-mercedes/merbee-64.jpg)
 - [Helloo??](/contents/posts/19-10-2021-goodbye-mercedes/merbee-65.jpg)
 - [What's that?](/contents/posts/19-10-2021-goodbye-mercedes/merbee-66.jpg)
 - [What's that?](/contents/posts/19-10-2021-goodbye-mercedes/merbee-67.jpg)

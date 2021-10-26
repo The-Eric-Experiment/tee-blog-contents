@@ -98,9 +98,11 @@ He's a big guy and he has a bald belly which results in some really funny photos
 
 ![Merbees](/contents/pages/about-me/the-girl.jpg)
 
-This old girl has been with my girlfriend since she was 5 years old, she didn't do really well in previous foster homes, and she used to overgroom a lot. My girlfriend initially got her to foster for a few weeks, but it was the first time she felt comfortable and stopped overgrooming and my girlfriend ended up adopting her.
+This old girl lived with my girlfriend since she was 2 years old, she didn't do really well in previous foster homes, and she used to overgroom a lot. My girlfriend initially got her to foster for a few weeks, but it was the first time she felt comfortable and stopped overgrooming and my girlfriend ended up adopting her.
 
-Mercedes is hilarious, she isn't the smartest tool in the shed, and she gets annoyed easily if you try to pick her up or play with her a lot, but she can be very loving when she wants to, she'll jump on your lap, give you headbutts, lie down on you and so on.
+Mercedes was hilarious, she wasn't the smartest tool in the shed, and she would get annoyed easily if you try to pick her up or play with her a lot, but she could be very loving when she wanted to, she would jump on your lap, give you headbutts, lie down on you and so on.
+
+She also loved to explore the outside world, she would love when we took her out to the park.
 
 Both Maddy and Mercedes were my girlfriend's cats before she moved in, but recently we adopted another cat.
 
