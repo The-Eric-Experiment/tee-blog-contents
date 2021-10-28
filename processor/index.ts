@@ -316,11 +316,21 @@ function getTags(posts: PostMetadata[]): Tag[] {
   return tags;
 }
 
-async function run() {
-  console.log(chalk.bgWhite("Starting Process..."));
-  rimraf.sync(destDir);
+function cleanupContentDir() {
+  if (!fs.existsSync(destDir)) {
+    fs.mkdirSync(destDir, { recursive: true });
+  }
 
-  fs.mkdirSync(destDir, { recursive: true });
+  const files = fs.readdirSync(destDir);
+
+  for (const file of files) {
+    rimraf.sync(path.join(destDir, file));
+  }
+}
+
+async function run() {
+  cleanupContentDir();
+  console.log(chalk.bgWhite("Starting Process..."));
 
   console.log(chalk.white("Creating PHP files..."));
 
