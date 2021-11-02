@@ -11,7 +11,7 @@ I have been having some thoughts about the state of the software industry recent
 
 I’m doing this instead of a video because I don’t think it fits in the niche of my channel, so I thought it would be interesting to try to write an opinion piece.
 
-I have been working in the software industry for around 11 years now, all of the roles have been for SaaS companies, which is the model that the vast majority of software companies follow these days.
+I have been working in the software industry for around 11 years now, most of the roles have been for SaaS companies, which is the model that the vast majority of software companies follow these days.
 
 In all these years in the industry, I have had this weird feeling of emptiness and lack of satisfaction about my work which the source I could never pinpoint.
 
