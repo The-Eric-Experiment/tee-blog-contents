@@ -11,7 +11,7 @@ Have you ever wondered if it's possible to use old PCI cards like the S3 Trio, T
 
 Well, in this part of the experiment I will try to answer that question.
 
-Here are the articles and forum bosts mentioned in the video:
+### Here are the articles and forum bosts mentioned in the video:
 
 - 3dfx Voodoo 2 with Windows 10 - [https://robertkrau.se/blog/3dfx-voodoo-2-with-windows-10/](https://robertkrau.se/blog/3dfx-voodoo-2-with-windows-10/)
 - 3dfx Voodoo 2 with any\* Windows 11 system - [https://robertkrau.se/blog/3dfx-voodoo-2-with-any-windows-11-system/](https://robertkrau.se/blog/3dfx-voodoo-2-with-any-windows-11-system/)
