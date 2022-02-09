@@ -6,7 +6,7 @@
     "removeComments": true,
     "preserveConstEnums": true,
     "declaration": false,
-    "target": "es5",
+    "target": "es6",
     "lib": ["ESNext", "dom"],
     "outDir": "./dist",
     "rootDir": "./src",

@@ -1,12 +1,12 @@
 import * as fs from "fs";
 import * as path from "path";
 import {
-  Category,
+  Category as CategoryData,
   ContentConfig,
   ImageMap,
   ImageResolution,
   PostMetadata,
-  Tag,
+  Tag as TagData,
 } from "./types";
 import { DateTime } from "luxon";
 import * as fm from "front-matter";
@@ -21,6 +21,8 @@ import * as yaml from "yaml";
 import * as chalk from "chalk";
 import yargs from "yargs";
 import { hideBin } from "yargs/helpers";
+import db from "./db";
+import * as moment from "moment";
 
 const currentDir = path.join(__dirname, "..");
 const yargies = yargs(hideBin(process.argv));
@@ -46,6 +48,8 @@ let destDir = path.join(currentDir, ".temp/");
 if (args.dest) {
   destDir = path.join(currentDir, args.dest);
 }
+
+const { connect, Post, Category, Tag, PostTags, PostCategories } = db(destDir);
 
 async function processImage(data: Buffer, res: ImageResolution) {
   const fit = (res.fit || "cover") as
@@ -286,8 +290,8 @@ async function getPages(): Promise<PostMetadata[]> {
     });
 }
 
-function getCategories(posts: PostMetadata[]): Category[] {
-  const categories: Category[] = [];
+function getCategories(posts: PostMetadata[]): CategoryData[] {
+  const categories: CategoryData[] = [];
   posts.forEach((post) => {
     post.categories.forEach((cat) => {
       let category = categories.find((o) => o.id === cat.id);
@@ -301,8 +305,8 @@ function getCategories(posts: PostMetadata[]): Category[] {
   return categories;
 }
 
-function getTags(posts: PostMetadata[]): Tag[] {
-  const tags: Tag[] = [];
+function getTags(posts: PostMetadata[]): TagData[] {
+  const tags: TagData[] = [];
   posts.forEach((post) => {
     post.tags.forEach((t) => {
       let tag = tags.find((o) => o.id === t.id);
@@ -330,6 +334,9 @@ function cleanupContentDir() {
 
 async function run() {
   cleanupContentDir();
+
+  await connect();
+
   console.log(chalk.bgWhite("Starting Process..."));
 
   console.log(chalk.white("Creating PHP files..."));
@@ -345,7 +352,36 @@ async function run() {
 
   fs.writeFileSync(path.join(destDir, "posts.php"), renderedPosts);
 
+  await Post.bulkCreate(
+    posts.map((post) => ({
+      id: md5(post.slug),
+      title: post.title,
+      date: moment(post.date, "DD-mm-yyyy").format("yyyy-mm-DD"),
+      image: post.image,
+      slug: post.slug,
+      description: post.description,
+    }))
+  );
+
   const categories = getCategories(posts);
+
+  for (const cat of categories) {
+    await Category.create(
+      {
+        id: cat.id,
+        name: cat.name,
+      },
+      { ignoreDuplicates: true }
+    );
+
+    await PostCategories.bulkCreate(
+      cat.slugs.map((slg) => ({
+        post_id: md5(slg),
+        category_id: cat.id,
+      })),
+      { ignoreDuplicates: true }
+    );
+  }
 
   const categoriesEjs = fs.readFileSync(
     path.join(__dirname, "templates/categories.ejs"),
@@ -357,6 +393,24 @@ async function run() {
   fs.writeFileSync(path.join(destDir, "categories.php"), renderedCategories);
 
   const tags = getTags(posts);
+
+  for (const tag of tags) {
+    await Tag.create(
+      {
+        id: tag.id,
+        name: tag.name,
+      },
+      { ignoreDuplicates: true }
+    );
+
+    await PostTags.bulkCreate(
+      tag.slugs.map((slg) => ({
+        post_id: md5(slg),
+        tag_id: tag.id,
+      })),
+      { ignoreDuplicates: true }
+    );
+  }
 
   const tagsEjs = fs.readFileSync(path.join(__dirname, "templates/tags.ejs"), {
     encoding: "utf-8",
