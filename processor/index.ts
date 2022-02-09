@@ -49,8 +49,6 @@ if (args.dest) {
   destDir = path.join(currentDir, args.dest);
 }
 
-const { connect, Post, Category, Tag, PostTags, PostCategories } = db(destDir);
-
 async function processImage(data: Buffer, res: ImageResolution) {
   const fit = (res.fit || "cover") as
     | "fill"
@@ -334,6 +332,9 @@ function cleanupContentDir() {
 
 async function run() {
   cleanupContentDir();
+
+  const { connect, Post, Category, Tag, PostTags, PostCategories } =
+    db(destDir);
 
   await connect();
 
