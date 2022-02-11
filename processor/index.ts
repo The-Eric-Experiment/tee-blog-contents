@@ -1,5 +1,20 @@
+import * as chalk from "chalk";
+import * as ejs from "ejs";
+import * as fm from "front-matter";
 import * as fs from "fs";
+import * as fse from "fs-extra";
+import { DateTime } from "luxon";
+import * as md5 from "md5";
+import * as moment from "moment";
 import * as path from "path";
+import * as rimraf from "rimraf";
+import * as sharp from "sharp";
+import * as yaml from "yaml";
+import yargs from "yargs";
+import { hideBin } from "yargs/helpers";
+import db from "./db";
+import { getGalleryImages } from "./gallery";
+import { getContentImages } from "./images";
 import {
   Category as CategoryData,
   ContentConfig,
@@ -8,21 +23,6 @@ import {
   PostMetadata,
   Tag as TagData,
 } from "./types";
-import { DateTime } from "luxon";
-import * as fm from "front-matter";
-import * as ejs from "ejs";
-import * as rimraf from "rimraf";
-import * as md5 from "md5";
-import * as fse from "fs-extra";
-import * as sharp from "sharp";
-import { getContentImages } from "./images";
-import { getGalleryImages } from "./gallery";
-import * as yaml from "yaml";
-import * as chalk from "chalk";
-import yargs from "yargs";
-import { hideBin } from "yargs/helpers";
-import db from "./db";
-import * as moment from "moment";
 
 const currentDir = path.join(__dirname, "..");
 const yargies = yargs(hideBin(process.argv));
@@ -33,12 +33,6 @@ const configContent = fs.readFileSync(
   { encoding: "utf-8" }
 );
 const config: ContentConfig = yaml.parse(configContent);
-
-// const ftpConfigContent = fs.readFileSync(
-//   path.join(currentDir, "ftp-config.yaml"),
-//   { encoding: "utf-8" }
-// );
-// const ftpConfig: FtpConfig = yaml.parse(ftpConfigContent);
 
 const postsDir = path.join(currentDir, config.postsFolder);
 const pagesDir = path.join(currentDir, config.pagesFolder);
@@ -340,18 +334,9 @@ async function run() {
 
   console.log(chalk.bgWhite("Starting Process..."));
 
-  console.log(chalk.white("Creating PHP files..."));
+  console.log(chalk.white("Writing to DB..."));
 
   const posts: PostMetadata[] = await getPosts();
-
-  const postsEjs = fs.readFileSync(
-    path.join(__dirname, "templates/posts.ejs"),
-    { encoding: "utf-8" }
-  );
-
-  const renderedPosts = ejs.render(postsEjs, { posts });
-
-  fs.writeFileSync(path.join(destDir, "posts.php"), renderedPosts);
 
   await Post.bulkCreate(
     posts.map((post) => ({
@@ -384,15 +369,6 @@ async function run() {
     );
   }
 
-  const categoriesEjs = fs.readFileSync(
-    path.join(__dirname, "templates/categories.ejs"),
-    { encoding: "utf-8" }
-  );
-
-  const renderedCategories = ejs.render(categoriesEjs, { categories });
-
-  fs.writeFileSync(path.join(destDir, "categories.php"), renderedCategories);
-
   const tags = getTags(posts);
 
   for (const tag of tags) {
@@ -413,15 +389,7 @@ async function run() {
     );
   }
 
-  const tagsEjs = fs.readFileSync(path.join(__dirname, "templates/tags.ejs"), {
-    encoding: "utf-8",
-  });
-
-  const renderedTags = ejs.render(tagsEjs, { tags });
-
-  fs.writeFileSync(path.join(destDir, "tags.php"), renderedTags);
-
-  console.log(chalk.green("PHP Files Created!"));
+  console.log(chalk.green("DB Written!"));
 
   console.log(chalk.white("Copying pages..."));
   fse.copySync(pagesDir, path.join(destDir, config.pagesFolder));
