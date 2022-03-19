@@ -145,7 +145,7 @@ async function main(): Promise<any> {
       const hours = arr[arr.length - 3] || 0;
       const t = hours * 60 * 60 + min * 60 + secs;
       const url = `https://www.youtube.com/watch?v=${videoId}&t=${t}`;
-      return `[${p1}](${url})${match.substring(p1.length)}`;
+      return `- [${p1}](${url})${match.substring(p1.length)}`;
     }
   );
 
