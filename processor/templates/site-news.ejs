@@ -1,0 +1,8 @@
+<%- "<?php" %>
+
+define('SITE_NEWS', array (<% if (news) { %><% news.forEach(function(n) { %>
+  [ 
+    "date" => '<%- n.date %>',
+    "content" => '<%- n.content %>',
+  ],
+<% }); %><% } %>));

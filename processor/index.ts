@@ -489,6 +489,22 @@ async function run() {
     );
   }
 
+  console.log(chalk.bgGreen(chalk.white("Generating Site News: ")));
+
+  const siteNews = fs.readFileSync(path.join(__dirname, "../site-news.yaml"), {
+    encoding: "utf-8",
+  });
+  const news = yaml.parse(siteNews);
+
+  const siteNewsEjs = fs.readFileSync(
+    path.join(__dirname, "templates/site-news.ejs"),
+    { encoding: "utf-8" }
+  );
+
+  const renderedSiteNews = ejs.render(siteNewsEjs, { news });
+
+  fs.writeFileSync(path.join(destDir, "site-news.php"), renderedSiteNews);
+
   // console.log(chalk.bgGreen(chalk.white("DEPLOYING...")));
 
   // const client = new basicftp.Client();
