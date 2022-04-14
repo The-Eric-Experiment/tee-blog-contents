@@ -12,6 +12,7 @@ $$ left-content $$
 - [Still Alive](#stillalive)
 - [Web 1.5?!?](#web15)
 - [Computing Resources](#computingresources)
+- [Retro-Gaming](#retrogaming)
 - [Random Stuff](#randomstuff)
 - [Linkback](#linkback)
 
@@ -119,7 +120,7 @@ Some of them are current personal websites, and some of them are just paying an 
 
 - [VOGONS](https://www.vogons.org/) - This needs no introduction, it's the biggest forum about retro computing on the internet.
 
-## Retro-gaming
+## Retro-Gaming {#retrogaming}
 
 - [DCEvolution](http://dcevolution.sourceforge.net/index.php) - A lot of cool pieces of softare for the Sega Dreamcast.
 
