@@ -175,7 +175,7 @@ Just copy the snippet below:
 <tr>
   <td>
     <font color="#000000">
-      &lt;a href=&quot;//www.ericexperiment.com&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;/contents/public/88x31.gif&quot; border=&quot;0&quot; alt=&quot;Eric Experiment&quot; /&gt;&lt;/a&gt;
+      &lt;a href=&quot;//www.ericexperiment.com&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;//www.ericexperiment.com/contents/public/88x31.gif&quot; border=&quot;0&quot; alt=&quot;Eric Experiment&quot; /&gt;&lt;/a&gt;
     </td>
   </font>
 </tr>
