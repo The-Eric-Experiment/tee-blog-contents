@@ -113,7 +113,7 @@ I decided to call these the Web 1.9. It's the Web 2.0 without the BS.
 
 - [Wiby](https://wiby.me/) - A search engine for user submitted websites. You know? The good old personal Websites.
 
-- <a href="https://neocities.org/" target="_blank"><img src="/content/public/neocities2.gif"></a> - This is what GeoCities was supposed to be if it was still alive today. Neocities allows you to host your own personal website very easily so you don't have to deal with BS from the major hosting websites. (I got the 88x31 from the TurtleWhich website.)
+- <a href="https://neocities.org/" target="_blank"><img src="/contents/public/neocities2.gif"></a> - This is what GeoCities was supposed to be if it was still alive today. Neocities allows you to host your own personal website very easily so you don't have to deal with BS from the major hosting websites. (I got the 88x31 from the TurtleWhich website.)
 
 - [88x31 Button Maker](https://hekate2.github.io/buttonmaker/) - This is a simple 88x31 button maker. This is a huge part of the Web 1.0 and you can create your own with it if you don't want to use a more complex image editing software.
 
