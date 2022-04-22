@@ -47,6 +47,8 @@ Some websites here will repeated because they fit in multiple categories.
 
 - [68k.news](http://68k.news) - Do you find yourself browsing websites like the bbc.co.uk via TheOldNet and thinking. Maaan... This is all old news, I wish I could see what's going on now on my very low memory Vintage Computer! Well, you are in luck again! Also built by [Action Retro](https://www.youtube.com/ActionRetro), 68k.news is a website that shows the Google News in basic HTML. Now you can get pissed off with the state of the world on your Vintate Computer as well!!
 
+- [This is a motherfucking website.](http://www.motherfuckingwebsite.com/) - Basically the most effective guidelines and standards for a perfect website.
+
 ## Preservation {#preservation}
 
 Places dedicated to keeping the internet of old alive. With these we can still access websites and software from the old internet today. You probably already know about these but they should be linked anyway.
@@ -109,7 +111,9 @@ I decided to call these the Web 1.9. It's the Web 2.0 without the BS.
 
 - <a href="https://cadence.moe" target="_blank"><img src="https://cadence.moe/static/img/cadence_now.png" alt="The text &quot;cadence now!&quot; on a purple background. There is a moon-shaped logo on the left side and a tiny star in the bottom right." width="88" height="31"></a> - Another site like the example above, but a bit simpler. Also with a really nice design and some really interesting content.
 
-- [SADGRL.ONLINE](https://sadgrl.online/) - The author of this website seems like a huge advocate for the spirit of the Web 1.0 today. They really have put a lot of work to give a lot of interesting resources to people who want to build a cool website.
+- [SADGRL.ONLINE](https://sadgrl.online/) - The author of this website, Sadness, seems like a huge advocate for the spirit of the Web 1.0 today. They really have put a lot of work to give a lot of interesting resources to people who want to build a cool website.
+
+- [The Yesterweb](https://yesterweb.org/) - Created by the same author of sadgrl.online, Sadness, this website is dedicated to the broader movement around making the internet a fun and personal place again.
 
 - [Wiby](https://wiby.me/) - A search engine for user submitted websites. You know? The good old personal Websites.
 
@@ -120,6 +124,12 @@ I decided to call these the Web 1.9. It's the Web 2.0 without the BS.
 - [Cheapskate's Guide](https://cheapskatesguide.org/) - A simple blog with a LOT of interesting articles.
 
 - [Vistaserv.net](https://www.vistaserv.net/) - They describe themselves as "a grass-roots web hosting initiative hailing from Thornbury, Australia. Inspired by the quirky web of the 90s, we allow users to create home pages, your own little sandbox on the World Wide Web, as it were". It's another cool hosting website for personal pages.
+
+- [3GI Industries](https://www.the3gi.com/) - I don't know what this is, but I like it.
+
+- [The Top Notch List of Top Shelf Links](https://demlinks.com/) - Created by Richard Bettridge, the creator of The Old Net. This is basically a list of links built with such style that will defintelly bring your cpu its knees.
+
+- [Richard Bettridge](https://richardbettridge.com/) - The personal website of Richard Bettridge, the creator of The Old Net, with all of the projects he's worked on.
 
 ## Computing Resources {#computingresources}
 
@@ -153,7 +163,17 @@ I decided to call these the Web 1.9. It's the Web 2.0 without the BS.
 
 ## Retro-Gaming {#retrogaming}
 
-- [DCEvolution](http://dcevolution.sourceforge.net/index.php) - A lot of cool pieces of softare for the Sega Dreamcast.
+- [DCEvolution](http://dcevolution.sourceforge.net/index.php) - A lot of cool pieces of software for the Sega Dreamcast.
+
+- [Psilocybin Dreams](http://pc.psilocybindreams.com/) - A page dedicated to the Sega Dreamcast, home of the XDP Browser, a homebrew browser for the Dreamcast, but it also has other resources.
+
+- [Blue Swirl](http://bswirl.kitsunet.org/) - Another page dedicated to the Sega Dreamcast with tools and other things for download.
+
+- [Sonic the Hedgehog Info Page](https://www.deco.franken.de/) - More resources about Sonic and the Sega Dreamcast, this website is very delightfully Web 1.0. I think it might work on the Dreamcast browsers.
+
+- [DreamPipe](http://dreampipe.net/) - A Sega Dreamcast portal built with the Sega Dreamcast browsers in mind with resources and . It's built with the design of the SegaNet website containing Leaderboards, VMU content and so on.
+
+- [The Dreamcast Junkyard](https://www.thedreamcastjunkyard.co.uk/) - One of the biggest websites dedicated to the Sega Dreamcast.
 
 ## Random Stuff {#randomstuff}
 
