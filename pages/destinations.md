@@ -49,6 +49,8 @@ Some websites here will repeated because they fit in multiple categories.
 
 - [This is a motherfucking website.](http://www.motherfuckingwebsite.com/) - Basically the most effective guidelines and standards for a perfect website.
 
+- [Fan of the 90's](https://fanofthe90s.neocities.org/index.html) - I discovered this website by Googling Old'aVista. And for some reason I fell in love with it, there's something about it's simple but very 90's design that is really appealing to me. It's really well done and it's supposed to work on old browsers.
+
 ## Preservation {#preservation}
 
 Places dedicated to keeping the internet of old alive. With these we can still access websites and software from the old internet today. You probably already know about these but they should be linked anyway.
@@ -130,6 +132,8 @@ I decided to call these the Web 1.9. It's the Web 2.0 without the BS.
 - [The Top Notch List of Top Shelf Links](https://demlinks.com/) - Created by Richard Bettridge, the creator of The Old Net. This is basically a list of links built with such style that will defintelly bring your cpu its knees.
 
 - [Richard Bettridge](https://richardbettridge.com/) - The personal website of Richard Bettridge, the creator of The Old Net, with all of the projects he's worked on.
+
+- [SpaceHey](https://spacehey.com/) - An early 2000's MySpace replica. It's pretty cool!
 
 ## Computing Resources {#computingresources}
 
