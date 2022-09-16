@@ -502,10 +502,18 @@ async function run() {
   console.log(chalk.green("Galleries done!"));
 
   console.log(chalk.white("Processing intro.md..."));
-  fse.copyFileSync(
-    path.join(currentDir, "intro.md"),
-    path.join(destDir, "intro.md")
-  );
+  // fse.copyFileSync(
+  //   path.join(currentDir, "intro.md"),
+  //   path.join(destDir, "intro.md")
+  // );
+
+  const introMd = fs.readFileSync(path.join(currentDir, "intro.md"), {
+    encoding: "utf-8",
+  });
+
+  const introPhp = convertToHtml(currentDir, introMd);
+
+  fs.writeFileSync(path.join(destDir, "intro.php"), introPhp);
 
   console.log(chalk.green("Intro.md processed!"));
   console.log(chalk.white("Copying main menu..."));
