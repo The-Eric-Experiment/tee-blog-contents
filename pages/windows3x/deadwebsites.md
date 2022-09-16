@@ -1,3 +1,7 @@
+---
+title: Windows 3.x Dead Websites
+---
+
 $$ left-content $$
 
 [inject-md "/menu.md"]

@@ -17,12 +17,12 @@ So, in this part of The Eric Experiment we are going to travel back in time to r
 
 [Click here](https://www.youtube.com/watch?v=HnKV2belxgs) to go to the Youtube Video.
 
-!yt[This Is What The Internet Was Like In The 90's](https://www.youtube.com/watch?v=HnKV2belxgs)
+^^youtube [This Is What The Internet Was Like In The 90's](https://www.youtube.com/watch?v=HnKV2belxgs)
 
 ### Here are some links related to this video:
 
 The Livingroom Video I mentioned in the video:
-!yt[Dial Up Internet in 2021](https://www.youtube.com/watch?v=T6I3qv1kka8)
+^^youtube [Dial Up Internet in 2021](https://www.youtube.com/watch?v=T6I3qv1kka8)
 
 - Dialup In The Age of Broadband: [https://gekk.info/articles/ata-dialup.html](https://gekk.info/articles/ata-dialup.html)
 - The Internet Archive: [http://www.archive.org](http://www.archive.org)

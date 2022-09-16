@@ -23,4 +23,4 @@ Here's the result:
 
 [Click here](https://www.youtube.com/watch?v=d9L4jBC_tfU) to go to the Youtube Video.
 
-!yt[Lindsey Stirling Minimal Beat Cover](https://www.youtube.com/watch?v=d9L4jBC_tfU)
+^^youtube [Lindsey Stirling Minimal Beat Cover](https://www.youtube.com/watch?v=d9L4jBC_tfU)

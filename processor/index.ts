@@ -13,8 +13,11 @@ import * as yaml from "yaml";
 import yargs from "yargs";
 import { hideBin } from "yargs/helpers";
 import db from "./db";
+import { getGalleries } from "./galleries";
 import { getGalleryImages } from "./gallery";
 import { getContentImages } from "./images";
+import { convertToHtml } from "./markdown";
+import { renderTemplate } from "./template";
 import {
   Category as CategoryData,
   ContentConfig,
@@ -26,7 +29,7 @@ import {
 
 const currentDir = path.join(__dirname, "..");
 const yargies = yargs(hideBin(process.argv));
-const args = yargies.argv as { dest?: string };
+const args = yargies.argv as { dest?: string; ["no-image"]?: string };
 
 const configContent = fs.readFileSync(
   path.join(currentDir, "content-config.yaml"),
@@ -62,14 +65,14 @@ async function processImage(data: Buffer, res: ImageResolution) {
       .split(":")
       .map((o) => parseInt(o));
 
-    height = Math.floor((h * width) / w);
+    height = Math.floor((h * (width || 0)) / w);
   }
 
-  if (res.width && res.width < width) {
+  if (res.width && res.width < (width || 0)) {
     width = res.width;
   }
 
-  height = Math.floor((height * width) / originalWidth);
+  height = Math.floor(((height || 0) * (width || 0)) / originalWidth);
 
   image = image.resize(width, height, { fit }).withMetadata();
 
@@ -260,7 +263,7 @@ async function getPages(): Promise<PostMetadata[]> {
         const metadata = fm<TMetadata>(content);
         resolve({
           ...metadata.attributes,
-          slug: page,
+          slug: path.relative(pagesDir, page),
           content: metadata.body,
         });
       })
@@ -325,6 +328,8 @@ function cleanupContentDir() {
 }
 
 async function run() {
+  const noImages = args["no-image"] === "true";
+
   cleanupContentDir();
 
   const { connect, Post, Category, Tag, PostTags, PostCategories } =
@@ -391,21 +396,118 @@ async function run() {
 
   console.log(chalk.green("DB Written!"));
 
-  console.log(chalk.white("Copying pages..."));
-  fse.copySync(pagesDir, path.join(destDir, config.pagesFolder));
-  console.log(chalk.green("Pages copied!"));
+  console.log(chalk.white("Processing pages..."));
+  fse.copySync(pagesDir, path.join(destDir, config.pagesFolder), {
+    filter: (src) => {
+      const ext = path.extname(src);
+      return ext !== ".md";
+    },
+  });
+  const pages = await getPages();
+
+  const pageTemplateEjs = fs.readFileSync(
+    path.join(__dirname, "templates/page.ejs"),
+    { encoding: "utf-8" }
+  );
+
+  for (const pg of pages) {
+    const origPath = path.dirname(path.join(pagesDir, pg.slug));
+    const destPath = path.dirname(
+      path.join(destDir, config.pagesFolder, pg.slug)
+    );
+    const html = convertToHtml(origPath, pg.content, {
+      slug: pg.slug.replace(".md", ""),
+    });
+
+    const renderedPage = ejs.render(pageTemplateEjs, { ...pg, html });
+
+    if (!fs.existsSync(destPath)) {
+      fs.mkdirSync(destPath, { recursive: true });
+    }
+
+    fs.writeFileSync(
+      path.join(destPath, path.basename(pg.slug, ".md") + ".php"),
+      renderedPage
+    );
+  }
+
+  console.log(chalk.green("Pages processed!"));
   console.log(chalk.white("Copying public folder..."));
   fse.copySync(publicDir, path.join(destDir, config.publicFolder));
   console.log(chalk.green("Public folder copied!"));
-  console.log(chalk.white("Copying posts..."));
-  fse.copySync(postsDir, path.join(destDir, config.postsFolder));
-  console.log(chalk.green("Posts copied!"));
-  console.log(chalk.white("Copying intro.md..."));
+  console.log(chalk.white("Processing posts..."));
+  fse.copySync(postsDir, path.join(destDir, config.postsFolder), {
+    filter: (src) => {
+      const ext = path.extname(src);
+      return ext !== ".md";
+    },
+  });
+
+  const postTemplateEjs = fs.readFileSync(
+    path.join(__dirname, "templates/post.ejs"),
+    { encoding: "utf-8" }
+  );
+
+  for (const post of posts) {
+    const { content: _, tags, categories, ...data } = post;
+    const origPath = path.dirname(path.join(postsDir, post.slug));
+    const destPath = path.join(destDir, config.postsFolder, post.slug);
+    const content = convertToHtml(origPath, post.content, {
+      slug: data.slug.replace(".md", ""),
+    });
+
+    const renderedPost = ejs.render(postTemplateEjs, {
+      data: {
+        ...Object.keys(data).reduce((acc, key) => {
+          acc[key] = data[key as keyof typeof data];
+          return acc;
+        }, {} as Record<string, string>),
+      },
+      tags: renderTemplate("tags.ejs", { data: tags }),
+      categories: renderTemplate("tags.ejs", { data: categories }),
+      content,
+    });
+
+    if (!fs.existsSync(destPath)) {
+      fs.mkdirSync(destPath, { recursive: true });
+    }
+
+    fs.writeFileSync(path.join(destPath, "post.php"), renderedPost);
+  }
+
+  console.log(chalk.green("Posts processed!"));
+
+  console.log(chalk.green("Processing Galleries..."));
+
+  const galleries = getGalleries();
+
+  const galleryTemplateEjs = fs.readFileSync(
+    path.join(__dirname, "templates/gallery.ejs"),
+    { encoding: "utf-8" }
+  );
+
+  for (const key in galleries) {
+    const gallery = galleries[key];
+    const destPath = path.join(destDir, config.galleriesFolder);
+
+    const renderedGallery = ejs.render(galleryTemplateEjs, { ...gallery });
+
+    if (!fs.existsSync(destPath)) {
+      fs.mkdirSync(destPath, { recursive: true });
+    }
+
+    fs.writeFileSync(path.join(destPath, key + ".php"), renderedGallery);
+  }
+
+  console.log(chalk.green("Galleries done!"));
+
+  console.log(chalk.white("Processing intro.md..."));
   fse.copyFileSync(
     path.join(currentDir, "intro.md"),
     path.join(destDir, "intro.md")
   );
-  console.log(chalk.green("Intro.md copied!"));
+
+  console.log(chalk.green("Intro.md processed!"));
   console.log(chalk.white("Copying main menu..."));
   fse.copyFileSync(
     path.join(currentDir, "main-menu.json"),
@@ -413,80 +515,86 @@ async function run() {
   );
   console.log(chalk.green("Main menu copied!"));
 
-  const pages = await getPages();
+  if (!noImages) {
+    const themes = Object.keys(config.themeImageResolutions);
+    for (let index = 0; index < themes.length; index++) {
+      const theme = themes[index];
 
-  const themes = Object.keys(config.themeImageResolutions);
-  for (let index = 0; index < themes.length; index++) {
-    const theme = themes[index];
+      console.log(
+        chalk.bgGreen(chalk.white("Processing Theme Images:")) + theme
+      );
+      const imageTypes = config.themeImageResolutions[theme];
 
-    console.log(chalk.bgGreen(chalk.white("Processing Theme Images:")) + theme);
-    const imageTypes = config.themeImageResolutions[theme];
+      const imageMaps: Record<string, ImageMap[]> = {};
 
-    const imageMaps: Record<string, ImageMap[]> = {};
+      if (imageTypes.postThumbnail) {
+        console.log(chalk.bgGreen(chalk.white("Processing Post Thumbnails")));
 
-    if (imageTypes.postThumbnail) {
-      console.log(chalk.bgGreen(chalk.white("Processing Post Thumbnails")));
+        const maps = await processPostThumbnails(
+          theme + "-thumbnail",
+          posts,
+          imageTypes.postThumbnail
+        );
 
-      const maps = await processPostThumbnails(
-        theme + "-thumbnail",
-        posts,
-        imageTypes.postThumbnail
+        imageMaps["postThumbnail"] = maps;
+      }
+
+      if (imageTypes.contentImage) {
+        console.log(chalk.bgGreen(chalk.white("Processing Content Images")));
+
+        const contentImages = getContentImages([...posts, ...pages]);
+
+        const maps = await processImages(
+          theme,
+          contentImages,
+          imageTypes.contentImage
+        );
+
+        imageMaps["contentImage"] = maps;
+      }
+
+      const galleryImages = getGalleryImages([...posts, ...pages]);
+
+      if (imageTypes.galleryImage) {
+        console.log(chalk.bgGreen(chalk.white("Processing Gallery Images")));
+        const maps = await processImages(
+          theme + "-gallery",
+          galleryImages,
+          imageTypes.galleryImage
+        );
+
+        imageMaps["galleryImage"] = maps;
+      }
+
+      if (imageTypes.galleryThumbnail) {
+        console.log(
+          chalk.bgGreen(chalk.white("Processing Gallery Thumbnails"))
+        );
+        const maps = await processImages(
+          theme + "-gallery-thumb",
+          galleryImages,
+          imageTypes.galleryThumbnail
+        );
+
+        imageMaps["galleryThumbnail"] = maps;
+      }
+
+      console.log(
+        chalk.bgGreen(chalk.white("Generating Image Maps: ")) + theme
       );
 
-      imageMaps["postThumbnail"] = maps;
-    }
-
-    if (imageTypes.contentImage) {
-      console.log(chalk.bgGreen(chalk.white("Processing Content Images")));
-
-      const contentImages = getContentImages([...posts, ...pages]);
-
-      const maps = await processImages(
-        theme,
-        contentImages,
-        imageTypes.contentImage
+      const imageMapsEjs = fs.readFileSync(
+        path.join(__dirname, "templates/image-maps.ejs"),
+        { encoding: "utf-8" }
       );
 
-      imageMaps["contentImage"] = maps;
-    }
+      const renderedImageMaps = ejs.render(imageMapsEjs, { imageMaps });
 
-    const galleryImages = getGalleryImages([...posts, ...pages]);
-
-    if (imageTypes.galleryImage) {
-      console.log(chalk.bgGreen(chalk.white("Processing Gallery Images")));
-      const maps = await processImages(
-        theme + "-gallery",
-        galleryImages,
-        imageTypes.galleryImage
+      fs.writeFileSync(
+        path.join(destDir, theme + "-image-maps.php"),
+        renderedImageMaps
       );
-
-      imageMaps["galleryImage"] = maps;
     }
-
-    if (imageTypes.galleryThumbnail) {
-      console.log(chalk.bgGreen(chalk.white("Processing Gallery Thumbnails")));
-      const maps = await processImages(
-        theme + "-gallery-thumb",
-        galleryImages,
-        imageTypes.galleryThumbnail
-      );
-
-      imageMaps["galleryThumbnail"] = maps;
-    }
-
-    console.log(chalk.bgGreen(chalk.white("Generating Image Maps: ")) + theme);
-
-    const imageMapsEjs = fs.readFileSync(
-      path.join(__dirname, "templates/image-maps.ejs"),
-      { encoding: "utf-8" }
-    );
-
-    const renderedImageMaps = ejs.render(imageMapsEjs, { imageMaps });
-
-    fs.writeFileSync(
-      path.join(destDir, theme + "-image-maps.php"),
-      renderedImageMaps
-    );
   }
 
   console.log(chalk.bgGreen(chalk.white("Generating Site News: ")));

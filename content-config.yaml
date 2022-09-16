@@ -2,6 +2,7 @@ contentsFolder: contents
 pagesFolder: pages
 postsFolder: posts
 publicFolder: public
+galleriesFolder: galleries
 themeImageResolutions:
   retro:
     postThumbnail:

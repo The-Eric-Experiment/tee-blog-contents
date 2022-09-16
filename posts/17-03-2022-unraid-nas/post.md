@@ -13,13 +13,13 @@ So for this unplanned part of The Eric Experiment, I decided to build an UNRAID 
 
 ## References from the Video:
 
-- Unraid website: https://unraid.net/
-- About ZFS: https://en.wikipedia.org/wiki/ZFS
-- About Reed-Solomon Error Correction Code: https://en.wikipedia.org/wiki/Reed%E2%80%93Solomon_error_correction
-- Linus Tech Tips Petabyte Project: https://www.youtube.com/watch?v=pqZFcrQTZ_E
-  !yt[Linus Tech Tips Petabyte Project](https://www.youtube.com/watch?v=pqZFcrQTZ_E)
-- Spaceinvader One Video about Krusader: https://www.youtube.com/watch?v=MVSxiN2hr4I
-  !yt[Spaceinvader One Video about Krusader](https://www.youtube.com/watch?v=MVSxiN2hr4I)
+- Unraid website: [https://unraid.net/](https://unraid.net/)
+- About ZFS: [https://en.wikipedia.org/wiki/ZFS](https://en.wikipedia.org/wiki/ZFS)
+- About Reed-Solomon Error Correction Code: [https://en.wikipedia.org/wiki/Reed%E2%80%93Solomon_error_correction](https://en.wikipedia.org/wiki/Reed%E2%80%93Solomon_error_correction)
+- Linus Tech Tips Petabyte Project: [https://www.youtube.com/watch?v=pqZFcrQTZ_E](https://www.youtube.com/watch?v=pqZFcrQTZ_E)
+^^youtube [Linus Tech Tips Petabyte Project](https://www.youtube.com/watch?v=pqZFcrQTZ_E)
+- Spaceinvader One Video about Krusader: [https://www.youtube.com/watch?v=MVSxiN2hr4I](https://www.youtube.com/watch?v=MVSxiN2hr4I)
+^^youtube [Spaceinvader One Video about Krusader](https://www.youtube.com/watch?v=MVSxiN2hr4I)
 
 Chapters:
 
@@ -50,4 +50,4 @@ Chapters:
 
 [Click here](https://www.youtube.com/watch?v=vrMCfrqkMzU) to go to the Youtube Video.
 
-!yt[I Ran Out Of Space, Let's Build An UNRAID NAS!](https://www.youtube.com/watch?v=vrMCfrqkMzU)
+^^youtube [I Ran Out Of Space, Let's Build An UNRAID NAS!](https://www.youtube.com/watch?v=vrMCfrqkMzU)

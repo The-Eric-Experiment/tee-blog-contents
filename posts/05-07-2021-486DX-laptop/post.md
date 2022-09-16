@@ -13,4 +13,4 @@ The problem is that the CMOS battery is dead and it doesn't boot anymore, so in 
 
 [Click here](https://www.youtube.com/watch?v=1CQPOzAXQyg) to go to the Youtube Video.
 
-!yt[486DX Laptop](https://www.youtube.com/watch?v=1CQPOzAXQyg)
+^^youtube [486DX Laptop](https://www.youtube.com/watch?v=1CQPOzAXQyg)

@@ -1,3 +1,7 @@
+---
+title: Windows 3.x Essential Software
+---
+
 $$ left-content $$
 
 [inject-md "/menu.md"]

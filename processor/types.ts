@@ -46,6 +46,7 @@ export type ContentConfig = {
   pagesFolder: string;
   postsFolder: string;
   publicFolder: string;
+  galleriesFolder: string;
   themeImageResolutions: Record<string, ImageResolutions>;
 };
 

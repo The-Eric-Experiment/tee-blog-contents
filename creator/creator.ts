@@ -155,7 +155,7 @@ async function main(): Promise<any> {
     postFile,
     `[Click here](${video}) to go to the Youtube Video.\n\n`
   );
-  fs.appendFileSync(postFile, `!yt[${metadata.title}](${video})\n`);
+  fs.appendFileSync(postFile, `^^youtube [${metadata.title}](${video})\n`);
 
   process.exit(0);
 }

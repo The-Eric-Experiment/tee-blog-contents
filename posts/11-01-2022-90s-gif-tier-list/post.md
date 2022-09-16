@@ -31,4 +31,4 @@ https://github.com/ijemmao/tutorials/tree/master/tier-list
 
 [Click here](https://www.youtube.com/watch?v=dYoW-RoWCI0) to go to the Youtube Video.
 
-!yt[$10 3dfx Voodoo 5 Build](https://www.youtube.com/watch?v=dYoW-RoWCI0)
+^^youtube [$10 3dfx Voodoo 5 Build](https://www.youtube.com/watch?v=dYoW-RoWCI0)

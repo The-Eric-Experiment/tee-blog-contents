@@ -1,0 +1,4 @@
+[<% data.forEach(function(d) { %>
+  [<% Object.keys(d).forEach(function(key) { %>"<%- key %>" => "<%= d[key] %>",<% }); %>],<% });
+%>
+],

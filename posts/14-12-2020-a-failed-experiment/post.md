@@ -17,6 +17,6 @@ I made a short video explaining this, make sure to check it out.
 
 [Click here](https://www.youtube.com/watch?v=L557Ty2oSZI) to go to the Youtube Video.
 
-!yt[A failed experiment](https://www.youtube.com/watch?v=L557Ty2oSZI)
+^^youtube [A failed experiment](https://www.youtube.com/watch?v=L557Ty2oSZI)
 
 It is disappointing but sometimes experiments fail, and that's life.

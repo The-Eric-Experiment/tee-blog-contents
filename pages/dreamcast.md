@@ -50,13 +50,13 @@ With that in mind, there is still a great reason for having a GDEMU, playing bac
 
 So I decided to build my own dreamcast with everything I would have been crazy about when I was a kid, this was a really fun part of The Experiment to make, so here's the link to the video of the build below:
 
-!yt[A Custom Dreamcast Build](https://www.youtube.com/watch?v=ddM8N19WhWs)
+^^youtube [A Custom Dreamcast Build](https://www.youtube.com/watch?v=ddM8N19WhWs)
 
 ## Ripping games {#rippinggames}
 
 To use the GD-EMU, I have ripped my games. There are a few methods you can use to do it, the best one probably being the one that uses the Broadband Adaptor to download the disc files on your computer as Adam Koralik outlines here:
 
-!yt[How & Why I Rip All Videogame Discs to a PC - Adam Koralik](https://www.youtube.com/watch?v=ElckU57hJFg&t=792)
+^^youtube [How & Why I Rip All Videogame Discs to a PC - Adam Koralik](https://www.youtube.com/watch?v=ElckU57hJFg&t=792)
 
 The problem with that is that I don't have a broadband adaptor and those are going for a premium these days because they are fairly rare, so my only option is to use a serial to sd-card adapter with some piece of software to dump the contents of the disc to the sd-card using the Dreamcast itself.
 

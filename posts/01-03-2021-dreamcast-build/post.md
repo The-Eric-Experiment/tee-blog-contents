@@ -25,6 +25,6 @@ In this part of the Eric Experiment you can check out the whole build process an
 
 [Click here](https://www.youtube.com/watch?v=ddM8N19WhWs) to go to the Youtube Video.
 
-!yt[A Custom Dreamcast Build](https://www.youtube.com/watch?v=ddM8N19WhWs)
+^^youtube [A Custom Dreamcast Build](https://www.youtube.com/watch?v=ddM8N19WhWs)
 
 Also, make sure to checkout the [Dreamcast Resource Page](/dreamcast) which is a bit of a companion for this part of the experiment with some resources about the console and the tools you need to rip games using your console.

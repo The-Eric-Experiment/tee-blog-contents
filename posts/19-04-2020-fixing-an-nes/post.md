@@ -11,4 +11,4 @@ In this part of The Eric Experiment, we will repair an NES which had an issue wi
 
 [Click here](https://www.youtube.com/watch?v=WDMRZrTfALg) to go to the Youtube Video.
 
-!yt[Fixing an NES](https://www.youtube.com/watch?v=WDMRZrTfALg)
+^^youtube [Fixing an NES](https://www.youtube.com/watch?v=WDMRZrTfALg)

@@ -15,4 +15,4 @@ In this part of The Eric Experiment, we're gonna see if this card is working and
 
 [Click here](https://www.youtube.com/watch?v=j5kn9ZJ_w8g) to go to the Youtube Video.
 
-!yt[$10 3dfx Voodoo 5 Build](https://www.youtube.com/watch?v=j5kn9ZJ_w8g)
+^^youtube [$10 3dfx Voodoo 5 Build](https://www.youtube.com/watch?v=j5kn9ZJ_w8g)

@@ -19,7 +19,7 @@ So in this part of The Eric Experience I'll show you what it is and what it can 
 
 [Click here](https://www.youtube.com/watch?v=HpSYLD1xHPE) to go to the Youtube Video.
 
-!yt[I Made A Search Engine To Find OLD Websites](https://www.youtube.com/watch?v=HpSYLD1xHPE)
+^^youtube [I Made A Search Engine To Find OLD Websites](https://www.youtube.com/watch?v=HpSYLD1xHPE)
 
 You can access the website here: [www.oldavista.com](//www.oldavista.com)
 

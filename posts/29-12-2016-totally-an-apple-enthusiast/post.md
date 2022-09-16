@@ -21,4 +21,4 @@ Yes, it was too much work and risk for a silly 1:21 min video. Here's the result
 
 [Click here](https://www.youtube.com/watch?v=mVp2DUCyjoQ) to go to the Youtube Video.
 
-!yt[MacBook Pro 2015 | Totally a Mac Enthusiast](https://www.youtube.com/watch?v=mVp2DUCyjoQ)
+^^youtube [MacBook Pro 2015 | Totally a Mac Enthusiast](https://www.youtube.com/watch?v=mVp2DUCyjoQ)

@@ -1,3 +1,7 @@
+---
+title: Windows 3.x Gaming
+---
+
 $$ left-content $$
 
 [inject-md "/menu.md"]

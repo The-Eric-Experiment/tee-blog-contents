@@ -1,0 +1,8 @@
+<%- "<?php" %>
+if(!isset($galleries)) {
+    $galleries = [];
+}
+
+$galleries["<%- id %>"] = ['title' => "<%= title %>", "slug" => "<%- slug %>", 'images' => [<% images.forEach(function(n) { %>
+  [ "src" => '<%- n.src %>', "text" => '<%= n.text %>'],<% }); %>
+]];

@@ -19,4 +19,4 @@ I think it turned out pretty good, I hope you like it too and, I don't know, I t
 
 [Click here](https://www.youtube.com/watch?v=k6xnsieaUsw) to go to the Youtube Video.
 
-!yt[Can I Install An SSD On An Original Xbox?](https://www.youtube.com/watch?v=k6xnsieaUsw)
+^^youtube [Can I Install An SSD On An Original Xbox?](https://www.youtube.com/watch?v=k6xnsieaUsw)

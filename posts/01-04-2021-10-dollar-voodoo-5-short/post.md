@@ -23,4 +23,4 @@ I will build an actual computer with the video card though, and I'll probably br
 
 [Click here](https://www.youtube.com/watch?v=hxe_yOpfjRU) to go to the Youtube Short.
 
-!yt[3dfx Voodoo 5 for $10 #Short](https://www.youtube.com/watch?v=hxe_yOpfjRU)
+^^youtube [3dfx Voodoo 5 for $10 #Short](https://www.youtube.com/watch?v=hxe_yOpfjRU)

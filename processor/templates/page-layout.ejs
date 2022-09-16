@@ -1,0 +1,11 @@
+<% if (leftContent) { %>
+<%- "<?php $this->push('left-content') ?>" %>
+<%- leftContent %>
+<%- "<?php $this->end(); ?>" %>
+<% } %>
+<%- content %>
+<% if (rightContent) { %>
+<%- "<?php $this->push('right-content'); ?>" %>
+<%- rightContent %>
+<%- "<?php $this->end(); ?>" %>
+<% } %>

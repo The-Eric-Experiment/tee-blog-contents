@@ -1,0 +1,7 @@
+<%- "<?php" %> $this->layout(withVariant('post'), ['data' => [<% Object.keys(data).forEach(function(key) { %>
+"<%- key %>" => "<%= data[key] %>",<% }); %>
+"tags" => <%- tags %>
+"categories" => <%- categories %>
+]]) <%- "?>" %>
+
+<%- content %>

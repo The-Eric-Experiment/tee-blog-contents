@@ -25,12 +25,22 @@
     "label": "Drivers"
   },
   {
+    "icon": "/contents/public/winafile.gif",
+    "path": "/music",
+    "label": "Music"
+  },
+  {
     "icon": "/contents/public/destinations.gif",
     "path": "/destinations",
     "label": "Destinations"
   },
   {
     "icon": "/contents/public/msn.gif",
+    "path": "/community",
+    "label": "Community"
+  },
+  {
+    "icon": "/contents/public/help.gif",
     "path": "/about-me",
     "label": "About me"
   }

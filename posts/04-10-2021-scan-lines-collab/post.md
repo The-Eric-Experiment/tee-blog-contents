@@ -11,6 +11,6 @@ My search engine, [Old'aVista](//www.oldavista.com), was featured on the Youtube
 
 [Click here](https://www.youtube.com/watch?v=mX1InGXMDIs) to go to the Youtube Video.
 
-!yt[Reliving The 90s Internet With A Modern Search Engine For Vintage Computers! ft. The Eric Experiment](https://www.youtube.com/watch?v=mX1InGXMDIs)
+^^youtube [Reliving The 90s Internet With A Modern Search Engine For Vintage Computers! ft. The Eric Experiment](https://www.youtube.com/watch?v=mX1InGXMDIs)
 
 Make sure to [subscribe](https://www.youtube.com/channel/UC5uFS0GKqusdHPQoBi2ZmzA?sub_confirmation=1) to Scan Lines on Youtube!

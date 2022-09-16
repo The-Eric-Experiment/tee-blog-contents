@@ -19,4 +19,4 @@ Well, in this part of the experiment I will try to answer that question.
 
 [Click here](https://www.youtube.com/watch?v=7NVOjZ7-rhI) to go to the Youtube Video.
 
-!yt[Can We Use OLD PCI Cards On a RYZEN 9 Computer?](https://www.youtube.com/watch?v=7NVOjZ7-rhI)
+^^youtube [Can We Use OLD PCI Cards On a RYZEN 9 Computer?](https://www.youtube.com/watch?v=7NVOjZ7-rhI)

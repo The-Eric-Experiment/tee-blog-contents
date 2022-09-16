@@ -15,4 +15,4 @@ So, in this part of the Eric Experiment, we'll disassemble both controllers and 
 
 [Click here](https://www.youtube.com/watch?v=qnojsxltZa0) to go to the Youtube Video.
 
-!yt[Repairing my PS3 controllers](https://www.youtube.com/watch?v=qnojsxltZa0)
+^^youtube [Repairing my PS3 controllers](https://www.youtube.com/watch?v=qnojsxltZa0)

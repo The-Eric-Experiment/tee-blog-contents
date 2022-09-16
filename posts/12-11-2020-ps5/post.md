@@ -11,7 +11,7 @@ This is not a normal part of the Experiment, today we're not fixing or playing a
 
 [Click here](https://www.youtube.com/watch?v=oXSceh7u7ms) to go to the Youtube Video.
 
-!yt[Playstation 5 Launch Day - Rare Vlogs](https://www.youtube.com/watch?v=oXSceh7u7ms)
+^^youtube [Playstation 5 Launch Day - Rare Vlogs](https://www.youtube.com/watch?v=oXSceh7u7ms)
 
 Admittedly this is a fairly unstructured video as it was totally unscripted, I just had a few ideas in my head and just went with it. I required a lot of cutting, especially in the final thoughts, to get a coherent stream of thoughts going.
 

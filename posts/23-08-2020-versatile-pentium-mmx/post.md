@@ -13,4 +13,4 @@ With a mix of old and brand new parts we'll build an ultra versatile and compati
 
 [Click here](https://www.youtube.com/watch?v=KgCz1t05Ctw) to go to the Youtube Video.
 
-!yt[A versatile retro Pentium MMX build](https://www.youtube.com/watch?v=KgCz1t05Ctw)
+^^youtube [A versatile retro Pentium MMX build](https://www.youtube.com/watch?v=KgCz1t05Ctw)
