@@ -28,6 +28,9 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-          cache: 'yarn'
+      - name: Run install
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: install
       - run: yarn
       - run: yarn build -- --dest ../../../../appdata/the-eric-experiment/contents
