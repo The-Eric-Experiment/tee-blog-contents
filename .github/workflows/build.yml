@@ -29,4 +29,4 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: yarn
-      - run: yarn build -- --dest ../../../../tee-contents
+      - run: yarn build -- --dest ../../../../appdata/the-eric-experiment/contents
