@@ -2,7 +2,7 @@
 title: Software as a Service is bad for job satisfaction
 date: 02-11-2021
 tags: off-topic, information techonology, software engineering, software industry, saas, software as a service
-category: Off-Topic
+category: Off-Topic, Opinion
 image: img.jpg
 description: A post about a realization I recently had about the software industry. How SaaS is bad for software engineer work satisfaction.
 ---
