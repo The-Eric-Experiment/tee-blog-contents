@@ -78,4 +78,5 @@ Thank you for having been part of my life, I could never repay just the fact tha
 
 Goodbye, Stella.
 
-![Nov/1990](/contents/posts/30-06-2022-goodbye-stella/nov90.jpg "Nov/1990")
+![Nov/1990](/contents/posts/30-06-2022-goodbye-stella/nov90.jpg)
+Nov/1990

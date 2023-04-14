@@ -1,7 +1,7 @@
 ---
 title: Spotify - Just a Legalized Napster?
 date: 14-04-2023
-tags: Spotify, Napster, streaming, music industry, artists, playlists, stream farms, discoverability
+tags: spotify, napster, streaming, piracy, music industry, music, playlists, stream farms
 category: Off-Topic, Opinion
 image: spotify-napster.jpg
 description: Spotify is not much different from Napster in my opinion, the only difference is who wins and who loses and artists lose with both.
