@@ -30,7 +30,7 @@ One funny story was this time I was hanging out with some of my cousin's friends
 
 When I started smelling it I was like "this smell is familiar... wait... This is my aunt Stella's house smell!!".
 
-It was never a secret but I had never realized she smoked marijuana until that point. And she did it a lot because it really helped with her severe depression.
+Okay, maybe not all the time, but it was a familiar smell nevertheless. And it was never a secret but I had never realized she smoked marijuana until that point. And she did it a lot because it really helped with her severe depression.
 
 That's one of the reasons I'm in favor of legalizing it, because I've seen firsthand how it can help people, aside from the fact that you should be able to do whatever you want with your body, but let's not go into that tangent right now.
 
@@ -79,4 +79,6 @@ Thank you for having been part of my life, I could never repay just the fact tha
 Goodbye, Stella.
 
 ![Nov/1990](/contents/posts/30-06-2022-goodbye-stella/nov90.jpg)
-Nov/1990
+<br>
+
+<center>Nov/1990</center>
