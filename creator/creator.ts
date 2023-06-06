@@ -165,7 +165,7 @@ async function main(): Promise<any> {
   fs.appendFileSync(postFile, `date: ${date}\n`);
   fs.appendFileSync(
     postFile,
-    `tags: ${metadata.tags.map((o) => o.toLowerCase()).join(", ")}\n`
+    `tags: ${metadata.tags?.map((o) => o.toLowerCase()).join(", ") ?? ""}\n`
   );
   fs.appendFileSync(postFile, `category: ${selectedCategories.join(", ")}\n`);
   fs.appendFileSync(postFile, `image: ${imageFileName}\n`);
