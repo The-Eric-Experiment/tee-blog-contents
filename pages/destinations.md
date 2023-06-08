@@ -71,6 +71,8 @@ Places dedicated to keeping the internet of old alive. With these we can still a
 
 - [OoCities.org](https://www.oocities.org/) - In 2009, Yahoo decided to discontinue Geocities, and with it kill a HUGE part of internet history. Could they have kept it up? Yes! Would it have cost them a lot of money to do it? NO! But they did it anyway. Luckily people managed to scrape and save a lot of the contents from Geocities and that content was made available in a few websites, one of them being OoCities. You can actually download the whole archive via torrent, it's about 600gb (which is nothing for Yahoo...)
 
+- [MUZEUM INTERNETU.cz](https://www.muzeuminternetu.cz/) - This website is a gem I found recently, it has a lot of cool stuff related to internet history, but for me the best part is the videos section. Apparently the author used to record videos browsing the internet for computer classes they used to teach in the 90's and they made those videos available on the site. There are some areas of some sites you can't access via the Internet Archive that can be seen in their videos. The website is in Czech though, so you might need to use Google Translate to browse through it, which is not a problem at all in my opinion.
+
 ## Still alive {#stillalive}
 
 Websites from yesterday that are still online! Some of them may have not been updated in thousands of years, but they can still be useful.
