@@ -1,5 +1,33 @@
 import { extension } from "showdown";
 import { renderTemplate } from "../template";
+import path, { join } from "path";
+import config from "../config";
+
+type YoutubeThumb = {
+  path: string;
+  videoId: string;
+};
+
+export const YOUTUBE_THUMBS: YoutubeThumb[] = [];
+
+function slugJoin(filePath: string, slug: string): string {
+  // Normalize paths (replace '\\' with '/') and split into segments
+  const filePathSegments = filePath.replace(/\\/g, "/").split("/");
+  const slugSegments = slug.replace(/\\/g, "/").split("/");
+
+  // Check if the last segment of filePath is the same as the first segment of slug
+  if (
+    filePathSegments.length > 0 &&
+    slugSegments.length > 0 &&
+    filePathSegments[filePathSegments.length - 1] === slugSegments[0]
+  ) {
+    // Remove the first segment of slug
+    slugSegments.shift();
+  }
+
+  // Join the segments back into paths and concatenate them
+  return join(filePathSegments.join("/"), slugSegments.join("/"));
+}
 
 /**
  * Replace with video iframes
@@ -33,10 +61,21 @@ extension("youtube", function () {
           } else {
             return match;
           }
+
+          if (options.slug && options.filePath) {
+            YOUTUBE_THUMBS.push({
+              path: slugJoin(options.filePath, options.slug),
+              videoId: vid,
+            });
+          }
+
           return renderTemplate("youtube.ejs", {
             url: fUrl,
             videoId: vid,
             title,
+            thumbPath:
+              options.contentPath &&
+              path.join(options.contentPath, `${vid}.jpg`),
           });
         });
       },

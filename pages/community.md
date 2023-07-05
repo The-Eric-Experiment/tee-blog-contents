@@ -20,9 +20,10 @@ Right now the community is pretty small, but over time I'm hoping to have enough
 <a href="https://discord.gg/PsnWrjadqt" target="_blank"><img src="/contents/pages/community/discord.gif" alt="Join Discord" border="0"></a>
 </center>
 
-<!-- [ShowFor "modern"] -->
+[no-retro]
+
 <iframe src="https://discord.com/widget?id=866467903381176330&theme=dark" width="100%" height="400" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-<!-- [EndShowFor] -->
+[/no-retro]
 
 <center>
   <img src="/contents/public/anibar.gif" />

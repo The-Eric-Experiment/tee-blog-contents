@@ -16,7 +16,7 @@ I decided to go with a sythwave design because... It just looks cool okay?
 
 This is the logo I came up with:
 
-![Result](/contents/posts/03-12-2018-inspections-tribe-shipit/img.jpg)
+![Result](/contents/posts/03-12-2018-inspections-tribe-shipit/logo.jpg)
 
 Here's how the t-shirt we made turned out:
 

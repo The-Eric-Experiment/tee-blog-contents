@@ -1,3 +1,4 @@
+import axios from "axios";
 import chalk from "chalk";
 import * as ejs from "ejs";
 import fm from "front-matter";
@@ -12,17 +13,20 @@ import sharp from "sharp";
 import * as yaml from "yaml";
 import yargs from "yargs";
 import { hideBin } from "yargs/helpers";
+import config from "./config";
 import db from "./db";
 import { getGalleries } from "./galleries";
 import { getGalleryImages } from "./gallery";
 import { getContentImages } from "./images";
 import { convertToHtml } from "./markdown";
+import { YOUTUBE_THUMBS } from "./markdown-extensions/youtube";
+import { makeMenu } from "./menu";
 import { renderTemplate } from "./template";
 import {
   Category as CategoryData,
-  ContentConfig,
   ImageMap,
   ImageResolution,
+  isImageResolution,
   PostMetadata,
   Tag as TagData,
 } from "./types";
@@ -30,12 +34,6 @@ import {
 const currentDir = path.join(__dirname, "..");
 const yargies = yargs(hideBin(process.argv));
 const args = yargies.argv as { dest?: string; ["no-image"]?: string };
-
-const configContent = fs.readFileSync(
-  path.join(currentDir, "content-config.yaml"),
-  { encoding: "utf-8" }
-);
-const config: ContentConfig = yaml.parse(configContent);
 
 const postsDir = path.join(currentDir, config.postsFolder);
 const pagesDir = path.join(currentDir, config.pagesFolder);
@@ -77,8 +75,9 @@ async function processImage(data: Buffer, res: ImageResolution) {
   image = image.resize(width, height, { fit }).withMetadata();
 
   if (metadata.format === "png") {
-    image = image.png({
+    image = image.jpeg({
       quality: res.quality || 100,
+      chromaSubsampling: "4:4:4",
     });
   } else {
     image = image.jpeg({
@@ -88,6 +87,107 @@ async function processImage(data: Buffer, res: ImageResolution) {
   }
 
   return image.toBuffer();
+}
+
+async function copyPostThumbnails(filePrefix: string, posts: PostMetadata[]) {
+  for (let index = 0; index < posts.length; index++) {
+    const post = posts[index];
+    const imagePath = path.join(
+      __dirname,
+      "..",
+      config.contentsFolder,
+      post.image
+    );
+
+    // Define spl here
+    const spl = imagePath.split("/").filter((o) => o !== config.contentsFolder);
+
+    const extension = path.extname(imagePath);
+    const isPng = extension === ".png";
+    const newName =
+      (filePrefix ? filePrefix + "-" : "") +
+      path.basename(imagePath, extension) +
+      (isPng ? ".jpg" : extension);
+
+    const destPath = path.join(
+      path.dirname(path.join(destDir, ...spl)),
+      newName
+    );
+
+    console.log(
+      `${chalk.white("-")} ${chalk.blueBright(imagePath)} ${chalk.white(
+        "->"
+      )} ${chalk.green(destPath)}`
+    );
+
+    if (isPng) {
+      const buffer = fs.readFileSync(imagePath);
+      const imageBuffer = await sharp(buffer)
+        .jpeg({
+          quality: 100,
+        })
+        .toBuffer();
+      fs.writeFileSync(destPath, imageBuffer);
+    } else {
+      fse.copyFileSync(imagePath, destPath);
+    }
+  }
+}
+
+async function processYoutubeThumbs(filePrefix: string, res: ImageResolution) {
+  const thumbs = YOUTUBE_THUMBS;
+
+  for (let index = 0; index < thumbs.length; index++) {
+    const { path: slugPath, videoId } = thumbs[index];
+    const filename = `${videoId}.jpg`;
+    const filePath = path.join(slugPath, filename);
+
+    if (fs.existsSync(filePath)) {
+      console.log("Thumbnail:", videoId, "for:", slugPath, "already exists!");
+      continue;
+    }
+
+    if (!fs.existsSync(slugPath)) {
+      fs.mkdirSync(slugPath, { recursive: true });
+    }
+
+    const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+
+    console.log("Downloading thumbnail:", videoId, "for:", slugPath);
+    // Fetch the thumbnail
+    const response = await axios.get(thumbnailUrl, {
+      responseType: "arraybuffer",
+    });
+
+    // Save the thumbnail to the specified directory
+    fs.writeFileSync(filePath, response.data);
+  }
+
+  // Copy to destination
+  for (let index = 0; index < thumbs.length; index++) {
+    const { path: slugPath, videoId } = thumbs[index];
+    const currentBaseDir = __dirname.split("/");
+    currentBaseDir.pop();
+    const tempDir = path.join(
+      destDir,
+      path.relative(currentBaseDir.join("/"), slugPath)
+    );
+    if (!fs.existsSync(tempDir)) {
+      fs.mkdirSync(tempDir, { recursive: true });
+    }
+
+    const filename = `${videoId}.jpg`;
+    const imagePath = path.join(slugPath, filename);
+
+    const buffer = fs.readFileSync(imagePath);
+    const img = await processImage(buffer, res);
+    const destPath = path.join(
+      tempDir,
+      (filePrefix ? filePrefix + "-" : "") + path.basename(imagePath)
+    );
+
+    fs.writeFileSync(destPath, img);
+  }
 }
 
 async function processPostThumbnails(
@@ -103,14 +203,17 @@ async function processPostThumbnails(
     const spl = post.image
       .split("/")
       .filter((o) => o !== config.contentsFolder);
-    const imagePath = path.join(...spl);
+    const imagePath = path.join(__dirname, "..", ...spl);
     const buffer = fs.readFileSync(imagePath);
     const img = await processImage(buffer, res);
-    const destPath = path.join(
-      tempPostDir,
-      post.slug,
-      filePrefix + "-" + path.basename(post.image)
-    );
+
+    const extension = path.extname(post.image);
+    const newName =
+      (filePrefix ? filePrefix + "-" : "") +
+      path.basename(post.image, extension) +
+      (extension === ".png" ? ".jpg" : extension);
+
+    const destPath = path.join(tempPostDir, post.slug, newName);
 
     map.push({
       from: post.image,
@@ -122,6 +225,45 @@ async function processPostThumbnails(
   return map;
 }
 
+async function copyImages(filePrefix: string, images: string[]) {
+  for (let index = 0; index < images.length; index++) {
+    const image = images[index];
+    const spl = image.split("/").filter((o) => o !== config.contentsFolder);
+    const location = path.join(...spl);
+    const imagePath = path.join(__dirname, "..", location);
+
+    const extension = path.extname(imagePath);
+    const isPng = extension === ".png";
+    const newName =
+      (filePrefix ? filePrefix + "-" : "") +
+      path.basename(imagePath, extension) +
+      (isPng ? ".jpg" : extension);
+
+    const destPath = path.join(
+      path.dirname(path.join(destDir, ...spl)),
+      newName
+    );
+
+    console.log(
+      `${chalk.white("-")} ${chalk.blueBright(image)} ${chalk.white(
+        "->"
+      )} ${chalk.green(destPath)}`
+    );
+
+    if (isPng) {
+      const buffer = fs.readFileSync(imagePath);
+      const imageBuffer = await sharp(buffer)
+        .jpeg({
+          quality: 100,
+        })
+        .toBuffer();
+      fs.writeFileSync(destPath, imageBuffer);
+    } else {
+      fse.copyFileSync(imagePath, destPath);
+    }
+  }
+}
+
 async function processImages(
   filePrefix: string,
   images: string[],
@@ -131,12 +273,20 @@ async function processImages(
   for (let index = 0; index < images.length; index++) {
     const image = images[index];
     const spl = image.split("/").filter((o) => o !== config.contentsFolder);
-    const imagePath = path.join(destDir, ...spl);
+    const location = path.join(...spl);
+    const imagePath = path.join(__dirname, "..", location);
     const buffer = fs.readFileSync(imagePath);
 
+    const extension = path.extname(imagePath);
+    const isPng = extension === ".png";
+    const newName =
+      (filePrefix ? filePrefix + "-" : "") +
+      path.basename(imagePath, extension) +
+      (isPng ? ".jpg" : extension);
+
     const destPath = path.join(
-      path.dirname(imagePath),
-      filePrefix + "-" + path.basename(image)
+      path.dirname(path.join(destDir, location)),
+      newName
     );
 
     map.push({
@@ -149,6 +299,7 @@ async function processImages(
         "->"
       )} ${chalk.green(destPath)}`
     );
+
     const img = await processImage(buffer, res);
     fs.writeFileSync(destPath, img);
   }
@@ -344,14 +495,22 @@ async function run() {
   const posts: PostMetadata[] = await getPosts();
 
   await Post.bulkCreate(
-    posts.map((post) => ({
-      id: md5(post.slug),
-      title: post.title,
-      date: moment(post.date, "DD-mm-yyyy").format("yyyy-mm-DD"),
-      image: post.image,
-      slug: post.slug,
-      description: post.description,
-    }))
+    posts.map((post) => {
+      const extension = path.extname(post.image);
+      const isPng = extension === ".png";
+      const newImageName = isPng
+        ? post.image.replace(".png", ".jpg")
+        : post.image;
+
+      return {
+        id: md5(post.slug),
+        title: post.title,
+        date: moment(post.date, "DD-mm-yyyy").format("yyyy-mm-DD"),
+        image: newImageName,
+        slug: post.slug,
+        description: post.description,
+      };
+    })
   );
 
   const categories = getCategories(posts);
@@ -400,7 +559,7 @@ async function run() {
   fse.copySync(pagesDir, path.join(destDir, config.pagesFolder), {
     filter: (src) => {
       const ext = path.extname(src);
-      return ext !== ".md";
+      return ![".md", ".jpg", ".jpeg", ".png", ".gif", ".bmp"].includes(ext);
     },
   });
   const pages = await getPages();
@@ -415,8 +574,10 @@ async function run() {
     const destPath = path.dirname(
       path.join(destDir, config.pagesFolder, pg.slug)
     );
+    const slug = pg.slug.replace(".md", "");
     const html = convertToHtml(origPath, pg.content, {
-      slug: pg.slug.replace(".md", ""),
+      slug,
+      contentPath: path.join(config.contentsFolder, config.pagesFolder, slug),
     });
 
     const renderedPage = ejs.render(pageTemplateEjs, { ...pg, html });
@@ -435,11 +596,16 @@ async function run() {
   console.log(chalk.white("Copying public folder..."));
   fse.copySync(publicDir, path.join(destDir, config.publicFolder));
   console.log(chalk.green("Public folder copied!"));
+
+  console.log(chalk.white("Creating Menu..."));
+  await makeMenu();
+  console.log(chalk.green("Menu created!"));
+
   console.log(chalk.white("Processing posts..."));
   fse.copySync(postsDir, path.join(destDir, config.postsFolder), {
     filter: (src) => {
       const ext = path.extname(src);
-      return ext !== ".md";
+      return ![".md", ".jpg", ".jpeg", ".png", ".gif", ".bmp"].includes(ext);
     },
   });
 
@@ -452,8 +618,10 @@ async function run() {
     const { content: _, tags, categories, ...data } = post;
     const origPath = path.dirname(path.join(postsDir, post.slug));
     const destPath = path.join(destDir, config.postsFolder, post.slug);
+    const slug = data.slug.replace(".md", "");
     const content = convertToHtml(origPath, post.content, {
-      slug: data.slug.replace(".md", ""),
+      slug,
+      contentPath: path.join(config.contentsFolder, config.pagesFolder, slug),
     });
 
     const renderedPost = ejs.render(postTemplateEjs, {
@@ -490,7 +658,21 @@ async function run() {
     const gallery = galleries[key];
     const destPath = path.join(destDir, config.galleriesFolder);
 
-    const renderedGallery = ejs.render(galleryTemplateEjs, { ...gallery });
+    // Process the images and change the extension for PNG files
+    const processedImages = gallery.images.map((image) => {
+      const extension = path.extname(image.src);
+      const isPng = extension === ".png";
+      return {
+        src: isPng ? image.src.replace(".png", ".jpg") : image.src,
+        text: image.text,
+      };
+    });
+
+    // Render the gallery with the processed images
+    const renderedGallery = ejs.render(galleryTemplateEjs, {
+      ...gallery,
+      images: processedImages,
+    });
 
     if (!fs.existsSync(destPath)) {
       fs.mkdirSync(destPath, { recursive: true });
@@ -516,35 +698,53 @@ async function run() {
   fs.writeFileSync(path.join(destDir, "intro.php"), introPhp);
 
   console.log(chalk.green("Intro.md processed!"));
-  console.log(chalk.white("Copying main menu..."));
-  fse.copyFileSync(
-    path.join(currentDir, "main-menu.json"),
-    path.join(destDir, "main-menu.json")
-  );
-  console.log(chalk.green("Main menu copied!"));
+  // console.log(chalk.white("Copying main menu..."));
+  // fse.copyFileSync(
+  //   path.join(currentDir, "main-menu.json"),
+  //   path.join(destDir, "main-menu.json")
+  // );
+  // console.log(chalk.green("Main menu copied!"));
 
   if (!noImages) {
-    const themes = Object.keys(config.themeImageResolutions);
-    for (let index = 0; index < themes.length; index++) {
-      const theme = themes[index];
+    const resos = Object.keys(config.imageResolutions);
+    for (let index = 0; index < resos.length; index++) {
+      const reso = resos[index] as keyof typeof config.imageResolutions;
+
+      const imageTypes = config.imageResolutions[reso];
 
       console.log(
-        chalk.bgGreen(chalk.white("Processing Theme Images:")) + theme
+        chalk.bgGreen(chalk.white("Processing Youtube Thumbnails:")),
+        reso
       );
-      const imageTypes = config.themeImageResolutions[theme];
 
-      const imageMaps: Record<string, ImageMap[]> = {};
+      if (imageTypes.youtubeThumbnail) {
+        if (isImageResolution(imageTypes.youtubeThumbnail)) {
+          await processYoutubeThumbs(
+            imageTypes.prefix,
+            imageTypes.youtubeThumbnail
+          );
+        }
+      }
+      // TODO: Implement copy of thumbnails if youtubeThumbnail is true
+
+      console.log(
+        chalk.bgGreen(chalk.white("Processing Resolution Images:")) + reso
+      );
 
       if (imageTypes.postThumbnail) {
         console.log(chalk.bgGreen(chalk.white("Processing Post Thumbnails")));
 
-        const maps = await processPostThumbnails(
-          theme + "-thumbnail",
-          posts,
-          imageTypes.postThumbnail
-        );
+        if (isImageResolution(imageTypes.postThumbnail)) {
+          await processPostThumbnails(
+            imageTypes.prefix,
+            posts,
+            imageTypes.postThumbnail
+          );
+        } else if (imageTypes.postThumbnail) {
+          await copyPostThumbnails(imageTypes.prefix, posts);
+        }
 
-        imageMaps["postThumbnail"] = maps;
+        // imageMaps["postThumbnail"] = maps;
       }
 
       if (imageTypes.contentImage) {
@@ -552,56 +752,102 @@ async function run() {
 
         const contentImages = getContentImages([...posts, ...pages]);
 
-        const maps = await processImages(
-          theme,
-          contentImages,
-          imageTypes.contentImage
-        );
-
-        imageMaps["contentImage"] = maps;
+        if (isImageResolution(imageTypes.contentImage)) {
+          await processImages(
+            imageTypes.prefix ?? "",
+            contentImages,
+            imageTypes.contentImage
+          );
+        } else if (imageTypes.contentImage) {
+          await copyImages(imageTypes.prefix ?? "", contentImages);
+        }
       }
 
       const galleryImages = getGalleryImages([...posts, ...pages]);
 
-      if (imageTypes.galleryImage) {
-        console.log(chalk.bgGreen(chalk.white("Processing Gallery Images")));
-        const maps = await processImages(
-          theme + "-gallery",
-          galleryImages,
-          imageTypes.galleryImage
+      if (imageTypes.avatar) {
+        console.log(chalk.bgGreen(chalk.white("Processing Avatar...")));
+
+        const profile = fs.readFileSync(
+          path.join(currentDir, config.publicFolder, config.avatarFilename)
         );
 
-        imageMaps["galleryImage"] = maps;
+        if (isImageResolution(imageTypes.avatar)) {
+          const avatar = await processImage(profile, imageTypes.avatar);
+
+          fs.writeFileSync(
+            path.join(
+              destDir,
+              config.publicFolder,
+              (imageTypes.prefix ? imageTypes.prefix + "-" : "") +
+                (config.avatarDestinationFilename ?? config.avatarFilename)
+            ),
+            avatar
+          );
+        } else if (imageTypes.avatar) {
+          fs.writeFileSync(
+            path.join(
+              destDir,
+              config.publicFolder,
+              (imageTypes.prefix ? imageTypes.prefix + "-" : "") +
+                (config.avatarDestinationFilename ?? config.avatarFilename)
+            ),
+            profile
+          );
+        }
+      }
+
+      if (imageTypes.galleryImage) {
+        console.log(chalk.bgGreen(chalk.white("Processing Gallery Images")));
+
+        if (isImageResolution(imageTypes.galleryImage)) {
+          await processImages(
+            (imageTypes.prefix ? imageTypes.prefix + "-" : "") + "gallery",
+            galleryImages,
+            imageTypes.galleryImage
+          );
+        } else if (imageTypes.galleryImage) {
+          await copyImages(
+            (imageTypes.prefix ? imageTypes.prefix + "-" : "") + "gallery",
+            galleryImages
+          );
+        }
       }
 
       if (imageTypes.galleryThumbnail) {
         console.log(
           chalk.bgGreen(chalk.white("Processing Gallery Thumbnails"))
         );
-        const maps = await processImages(
-          theme + "-gallery-thumb",
-          galleryImages,
-          imageTypes.galleryThumbnail
-        );
 
-        imageMaps["galleryThumbnail"] = maps;
+        if (isImageResolution(imageTypes.galleryThumbnail)) {
+          await processImages(
+            (imageTypes.prefix ? imageTypes.prefix + "-" : "") +
+              "gallery-thumb",
+            galleryImages,
+            imageTypes.galleryThumbnail
+          );
+        } else if (imageTypes.galleryThumbnail) {
+          await copyImages(
+            (imageTypes.prefix ? imageTypes.prefix + "-" : "") +
+              "gallery-thumb",
+            galleryImages
+          );
+        }
       }
 
-      console.log(
-        chalk.bgGreen(chalk.white("Generating Image Maps: ")) + theme
-      );
+      // console.log(chalk.bgGreen(chalk.white("Generating Image Maps: ")) + reso);
 
-      const imageMapsEjs = fs.readFileSync(
-        path.join(__dirname, "templates/image-maps.ejs"),
-        { encoding: "utf-8" }
-      );
+      // const imageMapsEjs = fs.readFileSync(
+      //   path.join(__dirname, "templates/image-maps.ejs"),
+      //   { encoding: "utf-8" }
+      // );
 
-      const renderedImageMaps = ejs.render(imageMapsEjs, { imageMaps });
+      // const renderedImageMaps = ejs.render(imageMapsEjs, { imageMaps });
 
-      fs.writeFileSync(
-        path.join(destDir, theme + "-image-maps.php"),
-        renderedImageMaps
-      );
+      // fs.writeFileSync(
+      //   path.join(destDir, reso + "-image-maps.php"),
+      //   renderedImageMaps
+      // );
     }
   }
 

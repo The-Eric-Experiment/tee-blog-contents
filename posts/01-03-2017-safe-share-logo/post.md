@@ -29,6 +29,6 @@ After doing that, the marketing person at the company put the designs for vote w
 
 After a few tweaks this was the final logo, it's nothing incredible, but hey, it was better than the professional design company's designs:
 
-![New safe share logo](/contents/posts/01-03-2017-safe-share-logo/img.jpg)
+![New safe share logo](/contents/posts/01-03-2017-safe-share-logo/sslogo.jpg)
 
 And as a reward for the good work I got a super duper ultra cool.... \$50 gift card. yay...

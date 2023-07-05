@@ -1,5 +1,5 @@
 <%- "<?php" %>
-$this->insert(withVariant('page-menu'), ['items' => array(
+$this->insert('_page-menu', ['items' => array(
 <% menuItems.forEach(function(n) { %>
   [ "href" => '<%- n.href %>', "text" => '<%- n.text %>'],
 <% }); %>

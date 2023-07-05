@@ -1,0 +1,13 @@
+<%- "<?php" %>
+
+define('MAIN_MENU', array (<% menuLines.forEach(function(item) { %>
+    [
+        <% if (item.path) { %>'path' => '<%= item.path %>',<% } %>
+        'image_off' => '<%= item.imageOff %>',
+        <% if (item.imageOn) { %>'image_on' => '<%= item.imageOn %>',<% } %>
+        'width' => '<%= item.width %>',
+        'height' => '<%= item.height %>',
+        <% if (item.label) { %>'label' => '<%= item.label %>',<% } %>
+        <% if (item.icon) { %>'icon' => '<%= item.icon %>',<% } %>
+    ],<% }) %> 
+));

@@ -3,7 +3,7 @@ title: Goodbye, Walter.
 date: 28-09-2021
 tags: off-topic
 category: Off-topic
-image: walti.jpg
+image: img.jpg
 description: ...
 ---
 

@@ -1,5 +1,6 @@
 import { extension } from "showdown";
 import { renderTemplate } from "../template";
+import path from "path";
 
 function parseProperties(rest: string) {
   let src: string = "";
@@ -11,6 +12,12 @@ function parseProperties(rest: string) {
     alt = (d = /alt="(.+?)"/.exec(rest)) ? d[1] : "";
   }
 
+  // Check if the src is a PNG and change the extension to jpg
+  const extension = path.extname(src);
+  if (extension === ".png") {
+    src = src.replace(".png", ".jpg");
+  }
+
   return {
     src,
     alt,
@@ -20,8 +27,6 @@ function parseProperties(rest: string) {
 extension("image-wrap", function () {
   return [
     {
-      // It's a bit hackish but we let the core parsers replace the reference image for an image tag
-      // then we replace the full img tag in the output with our iframe
       type: "output",
       filter: function (text) {
         const imgRegex = /<p><img(.*?)\/?><\/p>?/gi;

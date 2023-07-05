@@ -3,25 +3,42 @@ pagesFolder: pages
 postsFolder: posts
 publicFolder: public
 galleriesFolder: galleries
-themeImageResolutions:
-  retro:
+avatarFilename: profile.jpg
+avatarDestinationFilename: avatar.jpg
+imageResolutions:
+  default:
+    avatar:
+      width: 80
+      aspectRatio: 1:1
+      quality: 100
     postThumbnail:
-      width: 143
+      width: 80
       aspectRatio: 16:9
       quality: 80
     contentImage:
       width: 350
       quality: 100
     galleryThumbnail:
-      width: 120
+      width: 100
+      aspectRatio: 1:1
       quality: 80
     galleryImage:
       width: 600
+    youtubeThumbnail:
+      width: 350
+      aspectRatio: 16:9
   modern:
+    prefix: "modern"
+    avatar:
+      width: 100
+      aspectRatio: 1:1
+      quality: 100
     postThumbnail:
-      width: 600
+      width: 200
       aspectRatio: 16:9
     contentImage:
       width: 650
     galleryThumbnail:
+      aspectRatio: 1:1
       width: 150
+    galleryImage: true

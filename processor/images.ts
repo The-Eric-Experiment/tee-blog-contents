@@ -18,14 +18,30 @@ function parseProperties(rest: string) {
   };
 }
 
+function isSrcWithDomain(src: string): boolean {
+  // Check if src starts with a domain name
+  return /^(http:\/\/|https:\/\/|\/\/)/i.test(src);
+}
+
+function isContentPublic(url: string): boolean {
+  const contentPublicRegex = /^\/contents\/public\/.+/i;
+  return contentPublicRegex.test(url);
+}
+
 function getImageTagPath(ln: string) {
-  const imgRegex = /<p><img(.*?)\/?><\/p>?/gi;
+  const imgRegex = /<img(.*?)\/?>/gi;
   const match = imgRegex.exec(ln);
   if (!match || !match.length) {
     return undefined;
   }
 
   const { src } = parseProperties(match[1]);
+
+  // Check if src starts with a domain name
+  if (isSrcWithDomain(src) || isContentPublic(src)) {
+    return undefined;
+  }
+
   return src;
 }
 
@@ -36,7 +52,14 @@ function getImageMdPath(ln: string) {
     return undefined;
   }
 
-  return match[2];
+  const src = match[2];
+
+  // Check if src starts with a domain name
+  if (isSrcWithDomain(src) || isContentPublic(src)) {
+    return undefined;
+  }
+
+  return src;
 }
 
 function getContentImagesFromMD(content: string) {

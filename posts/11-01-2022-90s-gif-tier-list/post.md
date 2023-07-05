@@ -27,7 +27,7 @@ Today we'll do something a bit different from what we usually do on the Youtube 
 
 ### Here's the repository where I found the original tier list code:
 
-https://github.com/ijemmao/tutorials/tree/master/tier-list
+[https://github.com/ijemmao/tutorials/tree/master/tier-list](https://github.com/ijemmao/tutorials/tree/master/tier-list)
 
 [Click here](https://www.youtube.com/watch?v=dYoW-RoWCI0) to go to the Youtube Video.
 

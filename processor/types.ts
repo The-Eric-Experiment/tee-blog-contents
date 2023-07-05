@@ -35,19 +35,33 @@ export type ImageResolution = {
 };
 
 export type ImageResolutions = {
-  postThumbnail?: ImageResolution;
-  contentImage?: ImageResolution;
-  galleryThumbnail?: ImageResolution;
-  galleryImage?: ImageResolution;
+  prefix?: string;
+  avatar?: ImageResolution | boolean;
+  postThumbnail?: ImageResolution | boolean;
+  contentImage?: ImageResolution | boolean;
+  galleryThumbnail?: ImageResolution | boolean;
+  galleryImage?: ImageResolution | boolean;
+  youtubeThumbnail?: ImageResolution | boolean;
 };
+
+export function isImageResolution(
+  input: ImageResolution | boolean
+): input is ImageResolution {
+  return typeof input === "object";
+}
 
 export type ContentConfig = {
   contentsFolder: string;
   pagesFolder: string;
   postsFolder: string;
   publicFolder: string;
+  avatarFilename: string;
+  avatarDestinationFilename?: string;
   galleriesFolder: string;
-  themeImageResolutions: Record<string, ImageResolutions>;
+  imageResolutions: {
+    default: ImageResolutions;
+    modern: ImageResolutions;
+  };
 };
 
 export type FtpConfig = {

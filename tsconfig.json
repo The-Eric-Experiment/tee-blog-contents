@@ -9,8 +9,8 @@
     "target": "es6",
     "lib": ["ESNext", "dom"],
     "outDir": "./dist",
-    "rootDir": "./src",
-    "noUnusedLocals": true,
+    "rootDir": ".",
+    "noUnusedLocals": false,
     "noImplicitReturns": true,
     "noImplicitThis": true,
     "noUnusedParameters": false,
@@ -20,6 +20,11 @@
     "noFallthroughCasesInSwitch": true,
     "allowUnreachableCode": false
   },
-  "include": ["src/**/*.ts", "@types/*", "@types/**/*"],
+  "include": [
+    "creator/**/*.ts",
+    "processor/**/*.ts",
+    "@types/*",
+    "@types/**/*"
+  ],
   "exclude": ["node_modules"]
 }

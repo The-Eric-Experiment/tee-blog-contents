@@ -7,8 +7,10 @@ import "./markdown-extensions/hash-html-blocks";
 import "./markdown-extensions/headers";
 import "./markdown-extensions/image-wrap";
 import "./markdown-extensions/inject-md";
+import "./markdown-extensions/no-retro";
 import "./markdown-extensions/page-layout";
 import "./markdown-extensions/page-menu";
+import "./markdown-extensions/png-to-jpg";
 import "./markdown-extensions/youtube";
 import "./markdown-extensions/show-for";
 
@@ -16,12 +18,14 @@ const COMMON: string[] = [];
 const EXTENSIONS = [
   ...COMMON,
   "inject-md",
+  "no-retro",
   "headers",
   "youtube",
   "page-layout",
   "gallery",
   "image-wrap",
   "page-menu",
+  "png-to-jpg",
   "file-download",
   "show-for",
 ];

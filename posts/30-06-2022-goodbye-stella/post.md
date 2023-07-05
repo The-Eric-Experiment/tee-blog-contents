@@ -3,7 +3,7 @@ title: Goodbye, Stella.
 date: 30-06-2022
 tags: off-topic
 category: Off-topic
-image: nov90.jpg
+image: img.jpg
 description: ...
 ---
 
@@ -78,7 +78,7 @@ Thank you for having been part of my life, I could never repay just the fact tha
 
 Goodbye, Stella.
 
-![Nov/1990](/contents/posts/30-06-2022-goodbye-stella/nov90.jpg)
+![Nov-1990](/contents/posts/30-06-2022-goodbye-stella/nov90.jpg)
 <br>
 
 <center>Nov/1990</center>
