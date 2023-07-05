@@ -10,6 +10,17 @@ import { promises as fs } from "fs";
 import { GifCodec, GifFrame, GifUtil } from "gifwrap";
 import { join } from "path";
 import sharp from "sharp";
+import yargs from "yargs";
+import { hideBin } from "yargs/helpers";
+
+const currentDir = join(__dirname, "..");
+const yargies = yargs(hideBin(process.argv));
+const args = yargies.argv as { dest?: string; ["no-image"]?: string };
+let destDir = join(currentDir, ".temp/");
+
+if (args.dest) {
+  destDir = join(currentDir, args.dest);
+}
 
 registerFont(join(__dirname, "..", "public/font/W95FA.otf"), {
   family: "W95FA",
@@ -202,8 +213,8 @@ async function drawAndSaveFrame(
 
   // Save the GIF to file
   const outputFilePath = join(
-    __dirname,
-    `../.temp/public/menu/${fileNameBase}-${onOffState}.gif`
+    destDir,
+    `/public/menu/${fileNameBase}-${onOffState}.gif`
   );
   await fs.writeFile(outputFilePath, gifBuffer.buffer);
 
@@ -445,8 +456,8 @@ export async function makeMenu(): Promise<void> {
   await createImages(menuItems, normalBgImage, hoverBgImage);
 
   // Specify the directory where the gif images are saved
-  const outputDir = join(__dirname, "../.temp");
-  const imagesDir = join(__dirname, "../.temp/public/menu");
+  const outputDir = destDir;
+  const imagesDir = join(destDir, "/public/menu");
 
   // Export HTML
   await exportHTML(menuItems, imagesDir, outputDir);
