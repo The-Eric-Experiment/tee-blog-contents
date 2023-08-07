@@ -437,15 +437,6 @@ async function exportHTML(
   await fs.writeFile(outputFilePath, html);
 }
 
-// Function to create a solid blue gif with base64 encoding
-function createBlueGifBase64(width: number, height: number): string {
-  const canvas = createCanvas(width, height);
-  const ctx = canvas.getContext("2d");
-  ctx.fillStyle = "blue";
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
-  return canvas.toBuffer().toString("base64");
-}
-
 export async function makeMenu(): Promise<void> {
   const menuItems: MenuItem[] = JSON.parse(
     await fs.readFile(join(__dirname, "../main-menu.json"), "utf8")

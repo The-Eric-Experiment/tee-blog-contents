@@ -6,42 +6,52 @@
   },
   {
     "icon": "/public/windows.gif",
-    "path": "/windows3x",
+    "path": "/page/windows3x",
     "label": "Windows 3.x"
   },
   {
     "icon": "/public/dreamcast.gif",
-    "path": "/dreamcast",
+    "path": "/page/dreamcast",
     "label": "Dreamcast"
   },
   {
     "icon": "/public/programs.gif",
-    "path": "/software",
+    "path": "/page/software",
     "label": "Software"
   },
   {
     "icon": "/public/devices.gif",
-    "path": "/drivers",
+    "path": "/page/drivers",
     "label": "Drivers"
   },
   {
     "icon": "/public/winafile.gif",
-    "path": "/music",
+    "path": "/page/music",
     "label": "Music"
   },
   {
     "icon": "/public/destinations.gif",
-    "path": "/destinations",
+    "path": "/page/destinations",
     "label": "Destinations"
   },
   {
+    "icon": "/public/desktop.gif",
+    "path": "/page/projects",
+    "label": "Projects"
+  },
+  {
+    "icon": "/public/guestbook.gif",
+    "path": "/guestbook",
+    "label": "Guestbook"
+  },
+  {
     "icon": "/public/msn.gif",
-    "path": "/community",
+    "path": "/page/community",
     "label": "Community"
   },
   {
     "icon": "/public/help.gif",
-    "path": "/about-me",
+    "path": "/page/about-me",
     "label": "About me"
   }
 ]

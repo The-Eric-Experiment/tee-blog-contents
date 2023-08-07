@@ -1,15 +1,17 @@
+- date: 07/08/2023
+  content: Added a Guestbook to the website so you can leave messages, a Projects page with the ongoing projects I\'m working on and I have finally added the <a href="http://ucanet.net" target="_blank">Ucanet</a> button to the home page.
 - date: 05/07/2023
   content: Huge design update, the website is now retro first and it doesn\'t have to switch between two different templates.
 - date: 16/09/2022
   content: Updated the website layout and several internal changes.
 - date: 06/07/2022
   content: A couple more sites added to Destinations.
-- date: 27/04/2022
-  content: Added the Mystify screensaver from Windows 3.1 as a background for modern browsers. It will appear randomly or in specific pages when they are loaded.
-- date: 22/04/2022
-  content: I have added a few more links to the Destinations page.
-- date: 19/04/2022
-  content: I have added more links to the Destinations page.
+# - date: 27/04/2022
+#   content: Added the Mystify screensaver from Windows 3.1 as a background for modern browsers. It will appear randomly or in specific pages when they are loaded.
+# - date: 22/04/2022
+#   content: I have added a few more links to the Destinations page.
+# - date: 19/04/2022
+#   content: I have added more links to the Destinations page.
 # - date: 14/04/2022
 #   content: I have just reorganized and updated the Destinations page with a a lot of cool websites. Let me know on Discord if you have any other suggestions of websites that should go there.
 # - date: 08/04/2022
