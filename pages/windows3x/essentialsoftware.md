@@ -26,11 +26,33 @@ Some pieces of software you have to get the most out of your Windows 3.x install
 
 [file-download]
 
+- name: "Netscape Communicator 4.08"
+- file: "CC16E408.EXE"
+- url: "/downloads/windows3x/EssentialSoftware/CC16E408.EXE"
+- description:
+  This is the last version of the Netscape Communicator Suite available for Windows 3.x and it's my favorite browser even though it's not as compliant to standards as IE5. It works great for browsing [The Old Net](http://www.theoldnet.com) or using the [Web Rendering Proxy](https://github.com/tenox7/wrp). You can get it to kinda work with [Browservice](https://github.com/ttalvitie/browservice) but the experience is horrible, you can find more information about it [here](/post/02-04-2021-todays-web-on-old-browsers).
+
+Also make sure to browse this website in it! =)
+[/file-download]
+
+[file-download]
+
+- name: "Netscape Navigator 4.08"
+- file: "N16E408.EXE"
+- url: "/downloads/windows3x/EssentialSoftware/N16E408.EXE"
+- description:
+  This is the last version of the standalone Netscape Navigator available for Windows 3.x and it's my favorite browser even though it's not as compliant to standards as IE5. It works great for browsing [The Old Net](http://www.theoldnet.com) or using the [Web Rendering Proxy](https://github.com/tenox7/wrp). You can get it to kinda work with [Browservice](https://github.com/ttalvitie/browservice) but the experience is horrible, you can find more information about it [here](/post/02-04-2021-todays-web-on-old-browsers).
+
+Also make sure to browse this website in it! =)
+[/file-download]
+
+[file-download]
+
 - name: "Netscape Communicator 4.07"
 - file: "n16e407.zip"
 - url: "/downloads/windows3x/EssentialSoftware/n16e407.zip"
 - description:
-  This is the last version of the Netscape Communicator Suite available for Windows 3.x and it's my favorite browser even though it's not as compliant to standards as IE5. It works great for browsing [The Old Net](http://www.theoldnet.com) or using the [Web Rendering Proxy](https://github.com/tenox7/wrp). You can get it to kinda work with [Browservice](https://github.com/ttalvitie/browservice) but the experience is horrible, you can find more information about it [here](/post/02-04-2021-todays-web-on-old-browsers).
+  One of the last versions of the Netscape Communicator Suite available for Windows 3.x and it's my favorite browser even though it's not as compliant to standards as IE5. It works great for browsing [The Old Net](http://www.theoldnet.com) or using the [Web Rendering Proxy](https://github.com/tenox7/wrp). You can get it to kinda work with [Browservice](https://github.com/ttalvitie/browservice) but the experience is horrible, you can find more information about it [here](/post/02-04-2021-todays-web-on-old-browsers).
 
 Also make sure to browse this website in it! =)
 [/file-download]
@@ -101,6 +123,15 @@ Serial: LxCGg76EPoG7a833a672b4
   This is an update for the Internet Explorer 5 that adds support for 128-bit encryption for SSL certificates.
   [/file-download]
 
+[file-download]
+
+- name: "Macromedia Shockwave Plugin for Netscape 3.0 r8"
+- file: "SHOCK16.EXE"
+- url: "/downloads/windows3x/EssentialSoftware/SHOCK16.EXE"
+- description:
+  Allows playring SWF files from early versions of Flash on Netscape.
+  [/file-download]
+
 [Back to the top](#windows3xessentialsoftware)
 
 ### Networking {#networking}
@@ -130,8 +161,8 @@ Serial: LxCGg76EPoG7a833a672b4
 [file-download]
 
 - name: "Adobe Acrobat Reader 3.01"
-- file: "acro301.zip"
-- url: "/downloads/windows3x/EssentialSoftware/acro301.zip"
+- file: "RS16E301.EXE"
+- url: "/downloads/windows3x/EssentialSoftware/RS16E301.EXE"
 - description:
   This is the latest version of Acrobat Reader, the PDF Reader, for Windows 3.x.
   [/file-download]
@@ -192,6 +223,42 @@ Serial: LxCGg76EPoG7a833a672b4
 - url: "/downloads/windows3x/EssentialSoftware/xing_31.zip"
 - description:
   It's a great MPEG and VCD Player for Windows 3.x.
+  [/file-download]
+
+[file-download]
+
+- name: "VivoActive Player 2.01"
+- file: "PLAYER16.EXE"
+- url: "/downloads/windows3x/EssentialSoftware/PLAYER16.EXE"
+- description:
+  One of the first players that allowed video streaming over the internet in a standalone player but also over a Netscape plugin.
+  [/file-download]
+
+[file-download]
+
+- name: "RealPlayer 4.01"
+- file: "rp16_401.exe"
+- url: "/downloads/windows3x/EssentialSoftware/rp16_401.exe"
+- description:
+  Real Player does not need introduction, this is the 4.01 version of the player that allowed playing videos, audio and stream from the internet in the Real format.
+  [/file-download]
+
+[file-download]
+
+- name: "RealPlayer 5.0"
+- file: "RP16_50.EXE"
+- url: "/downloads/windows3x/EssentialSoftware/RP16_50.EXE"
+- description:
+  This is the somewhat rare 5.0 version of the Real Player for Windows 3.x. This supports more codec types and is supposedly faster.
+  [/file-download]
+
+[file-download]
+
+- name: "VDOLive Video Player 2.1"
+- file: "VDPLAY16.EXE"
+- url: "/downloads/windows3x/EssentialSoftware/VDPLAY.EXE"
+- description:
+  Another early player that supported video streaming over its own player and via the Netscape Browser.
   [/file-download]
 
 [Back to the top](#windows3xessentialsoftware)
