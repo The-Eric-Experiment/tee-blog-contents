@@ -230,8 +230,8 @@ This page does not contain Windows 3.x specific software, if you want software f
 [file-download]
 
 - name: "VivoActive Player 2.1"
-- file: "VIVOPLAY.exe"
-- url: "/downloads/Software/VIVOPLAY.exe"
+- file: "VIVOPLAYER.EXE"
+- url: "/downloads/Software/VIVOPLAYER.EXE"
 - description:
   Allowed playing VivoPlayer (.viv) files and streams on the Netscape Browser.
 
