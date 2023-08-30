@@ -54,7 +54,7 @@ This page does not contain Windows 3.x specific software, if you want software f
 [file-download]
 
 - name: "Real Player 8"
-- file: "rp8.zipo"
+- file: "rp8.zip"
 - url: "/downloads/Software/rp8.zip"
 - description:
   This is the free version of Real Player 8 for Windows 9x.
@@ -74,8 +74,8 @@ This page does not contain Windows 3.x specific software, if you want software f
 [file-download]
 
 - name: "Real Player 7"
-- file: "rp7.zipo"
-- url: "/downloads/Software/rp7.zipo"
+- file: "rp7.zip"
+- url: "/downloads/Software/rp7.zip"
 - description:
   This is the free version of Real Player 7 for Windows 9x.
 
