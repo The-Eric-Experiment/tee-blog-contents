@@ -334,8 +334,8 @@ This page does not contain Windows 3.x specific software, if you want software f
 [file-download]
 
 - name: "Mackromedia Sockwave for Netscape"
-- file: "SHOCK32.exe"
-- url: "/downloads/Software/SHOCK32.exe"
+- file: "SHOCK32.EXE"
+- url: "/downloads/Software/SHOCK32.EXE"
 - description:
   Macromedia Plugin that allowed the execution of SWF files on Netscape on Windows 9x systems.
 
