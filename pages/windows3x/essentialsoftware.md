@@ -256,7 +256,7 @@ Serial: LxCGg76EPoG7a833a672b4
 
 - name: "VDOLive Video Player 2.1"
 - file: "VDPLAY16.EXE"
-- url: "/downloads/windows3x/EssentialSoftware/VDPLAY.EXE"
+- url: "/downloads/windows3x/EssentialSoftware/VDPLAY16.EXE"
 - description:
   Another early player that supported video streaming over its own player and via the Netscape Browser.
   [/file-download]
