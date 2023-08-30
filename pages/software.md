@@ -114,8 +114,8 @@ This page does not contain Windows 3.x specific software, if you want software f
 [file-download]
 
 - name: "Real Player 5.0"
-- file: "R32_50.EXE"
-- url: "/downloads/Software/R32_50.EXE"
+- file: "RP32_50.EXE"
+- url: "/downloads/Software/RP32_50.EXE"
 - description:
   This is the free version of Real Player 5 for Windows 9x.
 
