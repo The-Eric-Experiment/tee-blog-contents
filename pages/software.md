@@ -134,8 +134,8 @@ This page does not contain Windows 3.x specific software, if you want software f
 [file-download]
 
 - name: "Real Player 4.01"
-- file: "r32_401.zip"
-- url: "/downloads/Software/r32_401.zip"
+- file: "rp32_401.zip"
+- url: "/downloads/Software/rp32_401.zip"
 - description:
   This is the free version of Real Player 4.01 for Windows 9x.
 
