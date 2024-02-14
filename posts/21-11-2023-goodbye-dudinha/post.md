@@ -59,7 +59,7 @@ But she would still go out and hang around other areas of the apartment.
 
 - title: 2012-2015 apartment
 
-- [](/contents/posts/21-11-2023-goodbye-dudinha/2012-2015-1.jpg)
+- [](/contents/posts/21-11-2023-goodbye-dudinha/2012-2015-1.JPG)
 - [](/contents/posts/21-11-2023-goodbye-dudinha/2012-2015-2.jpg)
 - [](/contents/posts/21-11-2023-goodbye-dudinha/2012-2015-3.jpg)
 - [](/contents/posts/21-11-2023-goodbye-dudinha/201311-1.jpg)
