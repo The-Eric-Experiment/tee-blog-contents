@@ -1,6 +1,6 @@
 ---
 title: Her Meow's Voice
-date: 23-06-2020
+date: 25-12-2022
 tags: 3d printing, mp3, music, mp3 player, tinkering, cats, original music, composition, christmas, fiancée, speaker, electronics
 category: 3D Printing, Design, Music, Tinkering
 image: img.jpg
