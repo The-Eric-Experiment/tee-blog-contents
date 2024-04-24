@@ -151,16 +151,28 @@ async function processYoutubeThumbs(filePrefix: string, res: ImageResolution) {
       fs.mkdirSync(slugPath, { recursive: true });
     }
 
-    const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+    const opts = ["maxresdefault", "0"];
 
-    console.log("Downloading thumbnail:", videoId, "for:", slugPath);
-    // Fetch the thumbnail
-    const response = await axios.get(thumbnailUrl, {
-      responseType: "arraybuffer",
-    });
+    while (opts.length) {
+      const img = opts.shift();
 
-    // Save the thumbnail to the specified directory
-    fs.writeFileSync(filePath, response.data);
+      const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/${img}.jpg`;
+      try {
+        console.log("Trying img", thumbnailUrl);
+
+        console.log("Downloading thumbnail:", videoId, "for:", slugPath);
+        // Fetch the thumbnail
+        const response = await axios.get(thumbnailUrl, {
+          responseType: "arraybuffer",
+        });
+
+        // Save the thumbnail to the specified directory
+        fs.writeFileSync(filePath, response.data);
+        break;
+      } catch (ex) {
+        console.log("Failed:", thumbnailUrl);
+      }
+    }
   }
 
   // Copy to destination
