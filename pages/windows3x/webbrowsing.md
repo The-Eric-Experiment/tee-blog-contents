@@ -2,11 +2,9 @@
 title: Windows 3.x Web Browsing
 ---
 
-$$ left-content $$
+$$ content $$
 
 [inject-md "/menu.md"]
-
-$$ content $$
 
 # Windows 3.x Web Browsing
 

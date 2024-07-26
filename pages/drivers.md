@@ -2,7 +2,7 @@
 title: Drivers
 ---
 
-$$ left-content $$
+$$ content $$
 
 [page-menu]
 
@@ -12,8 +12,6 @@ $$ left-content $$
 - [Modem](#modem)
 
 [/page-menu]
-
-$$ content $$
 
 # Drivers {#drivers}
 

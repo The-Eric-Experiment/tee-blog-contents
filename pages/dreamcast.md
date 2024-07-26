@@ -2,7 +2,7 @@
 title: Sega Dreamcast resource page
 ---
 
-$$ left-content $$
+$$ content $$
 
 [page-menu]
 
@@ -12,8 +12,6 @@ $$ left-content $$
 - [Favorite Games](#favoritegames)
 
 [/page-menu]
-
-$$ content $$
 
 # Sega Dreamcast resource page {#segadreamcastresourcepage}
 

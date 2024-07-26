@@ -2,11 +2,9 @@
 title: Windows 3.x resource page
 ---
 
-$$ left-content $$
+$$ content $$
 
 [inject-md "/windows3x/menu.md"]
-
-$$ content $$
 
 # Windows 3.x resource page {#windows3xresourcepage}
 

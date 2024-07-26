@@ -2,7 +2,7 @@
 title: Destinations
 ---
 
-$$ left-content $$
+$$ content $$
 
 [page-menu]
 
@@ -17,8 +17,6 @@ $$ left-content $$
 - [Linkback](#linkback)
 
 [/page-menu]
-
-$$ content $$
 
 # Destinations {#destinations}
 

@@ -2,7 +2,7 @@
 title: Software
 ---
 
-$$ left-content $$
+$$ content $$
 
 [page-menu]
 
@@ -16,8 +16,6 @@ $$ left-content $$
 - [Updates](#updates)
 
 [/page-menu]
-
-$$ content $$
 
 # Software {#software}
 
