@@ -4,6 +4,12 @@ title: Software
 
 $$ content $$
 
+# Software {#software}
+
+This page contains software that is useful for your retro-computing needs.
+
+This page does not contain Windows 3.x specific software, if you want software for Windows 3.x specifically, please visit the [Windows 3.x resource page](/windows3x)
+
 [page-menu]
 
 - [Multimedia](#multimedia)
@@ -16,12 +22,6 @@ $$ content $$
 - [Updates](#updates)
 
 [/page-menu]
-
-# Software {#software}
-
-This page contains software that is useful for your retro-computing needs.
-
-This page does not contain Windows 3.x specific software, if you want software for Windows 3.x specifically, please visit the [Windows 3.x resource page](/windows3x)
 
 <center>
 <img src="/contents/public/cdrom.gif"><img src="/contents/public/cdrom.gif"><img src="/contents/public/cdrom.gif">

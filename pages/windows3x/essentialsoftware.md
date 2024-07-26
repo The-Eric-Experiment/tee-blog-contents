@@ -2,11 +2,11 @@
 title: Windows 3.x Essential Software
 ---
 
-$$ left-content $$
+$$ content $$
+
+## Windows 3.x resource page {#windows3xresourcepage}
 
 [inject-md "/menu.md"]
-
-$$ content $$
 
 # Windows 3.x Essential Software {#windows3xessentialsoftware}
 

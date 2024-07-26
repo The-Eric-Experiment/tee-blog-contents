@@ -4,6 +4,8 @@ title: Windows 3.x Web Browsing
 
 $$ content $$
 
+## Windows 3.x resource page {#windows3xresourcepage}
+
 [inject-md "/menu.md"]
 
 # Windows 3.x Web Browsing

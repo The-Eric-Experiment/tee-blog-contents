@@ -4,11 +4,11 @@ title: Windows 3.x resource page
 
 $$ content $$
 
-[inject-md "/windows3x/menu.md"]
-
 # Windows 3.x resource page {#windows3xresourcepage}
 
-Welcome to the Windows 3.x resource page.
+[inject-md "/windows3x/menu.md"]
+
+### Welcome to the Windows 3.x resource page.
 
 ![Logos](/contents/pages/windows3x/title-screens.png)
 

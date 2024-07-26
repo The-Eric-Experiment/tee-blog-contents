@@ -4,15 +4,6 @@ title: Sega Dreamcast resource page
 
 $$ content $$
 
-[page-menu]
-
-- [Welcome](#segadreamcastresourcepage)
-- [My custom build](#mycustombuild)
-- [Ripping Games](#rippinggames)
-- [Favorite Games](#favoritegames)
-
-[/page-menu]
-
 # Sega Dreamcast resource page {#segadreamcastresourcepage}
 
 Welcome to the Sega Dreamcast resource page
@@ -23,6 +14,15 @@ Welcome to the Sega Dreamcast resource page
   <img src="/contents/pages/dreamcast/system_segalogo.gif">
   <img src="/contents/pages/dreamcast/tectoy.png">
 </center>
+
+[page-menu]
+
+- [Welcome](#segadreamcastresourcepage)
+- [My custom build](#mycustombuild)
+- [Ripping Games](#rippinggames)
+- [Favorite Games](#favoritegames)
+
+[/page-menu]
 
 The Sega Dreamcast is one of my favorite consoles of all time, and a console I have a bit of a sad history with.
 

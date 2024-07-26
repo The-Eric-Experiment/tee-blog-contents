@@ -4,15 +4,6 @@ title: Drivers
 
 $$ content $$
 
-[page-menu]
-
-- [Graphics](#graphics)
-- [Sound](#sound)
-- [Networking](#networking)
-- [Modem](#modem)
-
-[/page-menu]
-
 # Drivers {#drivers}
 
 This page contains drivers that I gathered over time for the pieces of hardware I own.
@@ -22,6 +13,15 @@ Even though some downloads might drivers for Windows 3.x if they have drivers fo
 <center>
 <img src="/contents/public/cdrom.gif"><img src="/contents/public/cdrom.gif"><img src="/contents/public/cdrom.gif">
 </center>
+
+[page-menu]
+
+- [Graphics](#graphics)
+- [Sound](#sound)
+- [Networking](#networking)
+- [Modem](#modem)
+
+[/page-menu]
 
 ### Graphics {#graphics}
 

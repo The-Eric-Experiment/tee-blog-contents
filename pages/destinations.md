@@ -4,6 +4,12 @@ title: Destinations
 
 $$ content $$
 
+# Destinations {#destinations}
+
+Places on the internet worth visiting. This is a list of my favorite websites.
+
+The websites in this list are not necessarily compatible with old browsers.
+
 [page-menu]
 
 - [Destinations](#destinations)
@@ -17,12 +23,6 @@ $$ content $$
 - [Linkback](#linkback)
 
 [/page-menu]
-
-# Destinations {#destinations}
-
-Places on the internet worth visiting. This is a list of my favorite websites.
-
-The websites in this list are not necessarily compatible with old browsers.
 
 <center>
   <img src="/contents/public/anibar.gif" />

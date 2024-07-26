@@ -1,16 +1,14 @@
 ---
-title: Windows 3.x Gaming
+title: Windows 3.x Programming
 ---
-
-$$ content $$
 
 ## Windows 3.x resource page {#windows3xresourcepage}
 
 [inject-md "/menu.md"]
 
-# Windows 3.x Gaming
+# Windows 3.x Programming
 
-Here are some gaming resources for Windows 3.x
+Resources about developing Windows 3.x software.
 
 <center>
   <img src="/contents/public/construction.gif" alt="under construction" width="400" />
