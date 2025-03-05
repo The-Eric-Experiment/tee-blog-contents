@@ -46,7 +46,7 @@ function getImageTagPath(ln: string) {
 }
 
 function getImageMdPath(ln: string) {
-  const imgMdRegex = /\!\[(.+)\]\((.+)\)/gi;
+  const imgMdRegex = /\!\[([^\[]+)\]\(([^\)]+)\)/gi;
   const match = imgMdRegex.exec(ln);
   if (!match || !match.length) {
     return undefined;

@@ -1,12 +1,14 @@
 import * as fs from "fs";
 import * as path from "path";
-import { Converter } from "showdown";
+import { Converter, ConverterOptions } from "showdown";
 import "./markdown-extensions/file-download";
+import "./markdown-extensions/fix-block-elements";
 import "./markdown-extensions/gallery";
 import "./markdown-extensions/hash-html-blocks";
 import "./markdown-extensions/headers";
 import "./markdown-extensions/image-wrap";
 import "./markdown-extensions/inject-md";
+import "./markdown-extensions/music";
 import "./markdown-extensions/no-retro";
 import "./markdown-extensions/page-layout";
 import "./markdown-extensions/page-menu";
@@ -17,7 +19,9 @@ import "./markdown-extensions/show-for";
 const COMMON: string[] = [];
 const EXTENSIONS = [
   ...COMMON,
+  "fix-block-elements",
   "inject-md",
+  "music",
   "no-retro",
   "headers",
   "youtube",
@@ -33,7 +37,7 @@ const EXTENSIONS = [
 export function convertToHtml(
   filePath: string,
   input: string,
-  opts: Record<string, string> = {}
+  opts: ConverterOptions = {}
 ) {
   const converter = new Converter({
     extensions: EXTENSIONS,
@@ -63,7 +67,12 @@ export function loadFromMarkdown(
       }
 
       const content = data.toString("utf-8");
-      const result = convertToHtml(filePath, content);
+      const result = convertToHtml(filePath, content, {
+        parseBlockHTML: true,
+        omitExtraWLInCodeBlocks: true,
+        literalMidWordUnderscores: true,
+        disableForced4SpacesIndentedSublists: true,
+      });
       resolve(result);
     });
   });
