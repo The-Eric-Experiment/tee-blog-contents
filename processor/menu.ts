@@ -1,10 +1,11 @@
 import {
-  CanvasRenderingContext2D,
   createCanvas,
-  Image,
   loadImage,
-  registerFont,
-} from "canvas";
+  GlobalFonts,
+  Canvas,
+  SKRSContext2D,
+  Image,
+} from "@napi-rs/canvas";
 import * as ejs from "ejs";
 import { promises as fs } from "fs";
 import { GifCodec, GifFrame, GifUtil } from "gifwrap";
@@ -22,17 +23,20 @@ if (args.dest) {
   destDir = join(currentDir, args.dest);
 }
 
-registerFont(join(__dirname, "..", "public/font/W95FA.otf"), {
-  family: "W95FA",
-});
+GlobalFonts.registerFromPath(
+  join(__dirname, "..", "public/font/W95FA.otf"),
+  "W95FA"
+);
 
-registerFont(join(__dirname, "..", "public/font/Windows Regular.ttf"), {
-  family: "Windows Regular",
-});
+GlobalFonts.registerFromPath(
+  join(__dirname, "..", "public/font/Windows Regular.ttf"),
+  "Windows Regular"
+);
 
-registerFont(join(__dirname, "..", "public/font/MS Sans Serif 8pt.ttf"), {
-  family: "MSF",
-});
+GlobalFonts.registerFromPath(
+  join(__dirname, "..", "public/font/MS Sans Serif 8pt.ttf"),
+  "MSF"
+);
 
 type MenuItem = {
   icon: string;
@@ -54,7 +58,7 @@ async function createTextImage(
   text: string,
   fontColor: string,
   strokeColor: string
-) {
+): Promise<Buffer> {
   const fontSize = 72;
   const lineWidth = 12;
   const fontSizeAfterResize = 12;
@@ -81,13 +85,11 @@ async function createTextImage(
   textCtx.textBaseline = "top";
   textCtx.strokeText(text, lineWidth, lineWidth);
   textCtx.fillText(text, lineWidth, lineWidth);
-  // textCtx.antialias = "none";
 
   // Convert the text canvas to buffer
-  const textBuffer = textCanvas.toBuffer();
+  const textBuffer = textCanvas.toBuffer("image/png");
 
   // Calculate the new height taking the stroke into consideration.
-
   const newHeight = Math.ceil(
     fontSizeAfterResize + (lineWidth * 2) / fontSizeAfterResize
   );
@@ -132,29 +134,23 @@ async function getRotatedImage(image: Image, angleY: number): Promise<Image> {
     );
 
     // Convert the canvas to a Buffer
-    const buffer = canvas.toBuffer();
+    const buffer = canvas.toBuffer("image/png");
 
-    // Create a new Image using node-canvas Image class
-    const rotatedImage = new Image();
-    rotatedImage.onload = () => {
-      resolve(rotatedImage);
-    };
-    rotatedImage.onerror = (err) => {
-      reject(err);
-    };
-    rotatedImage.src = buffer;
+    // Create a new Image using loadImage
+    loadImage(buffer).then(resolve).catch(reject);
   });
 }
 
 async function drawAndSaveFrame(
-  ctx: CanvasRenderingContext2D,
+  ctx: SKRSContext2D,
+  canvas: Canvas,
   bgImage: Image,
   iconImage: Image,
   textImage: Image,
   fileNameBase: string,
   onOffState: string,
   isAnimated: boolean
-) {
+): Promise<void> {
   const frames = [];
 
   const numFrames = isAnimated ? 30 : 1;
@@ -181,22 +177,17 @@ async function drawAndSaveFrame(
     );
 
     // Get image data
-    const frameData = ctx.getImageData(
-      0,
-      0,
-      ctx.canvas.width,
-      ctx.canvas.height
-    ).data;
+    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
 
-    // Create a new GifFrame
-    const frame = new GifFrame(
-      ctx.canvas.width,
-      ctx.canvas.height,
-      Buffer.from(frameData),
-      {
-        delayCentisecs: frameDelay,
-      }
+    // Convert Uint8ClampedArray to proper Buffer for GifFrame
+    const pixelBuffer = Buffer.from(
+      imageData.data.buffer,
+      imageData.data.byteOffset,
+      imageData.data.byteLength
     );
+    const frame = new GifFrame(canvas.width, canvas.height, pixelBuffer, {
+      delayCentisecs: frameDelay,
+    });
 
     // Quantize frame
     GifUtil.quantizeDekker(frame, 256);
@@ -204,7 +195,7 @@ async function drawAndSaveFrame(
     frames.push(frame);
 
     // Clear the canvas for the next frame
-    ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
   }
 
   // Create the GIF
@@ -216,7 +207,8 @@ async function drawAndSaveFrame(
     destDir,
     `/public/menu/${fileNameBase}-${onOffState}.gif`
   );
-  await fs.writeFile(outputFilePath, gifBuffer.buffer);
+  // Use Uint8Array constructor to ensure proper typing
+  await fs.writeFile(outputFilePath, new Uint8Array(gifBuffer.buffer));
 
   console.log(`Gif written to ${outputFilePath}`);
 }
@@ -225,7 +217,7 @@ async function createImages(
   menuItems: MenuItem[],
   normalBgImage: string,
   hoverBgImage: string
-) {
+): Promise<void> {
   try {
     // Load background images
     const normalBg = await loadImage(normalBgImage);
@@ -248,14 +240,19 @@ async function createImages(
 
       // Load and resize the icon
       const iconImage = await loadImage(join(__dirname, "..", item.icon));
-      const iconBuffer = await sharp(iconImage.src)
+
+      // Convert image to buffer via canvas
+      const tempCanvas = createCanvas(iconImage.width, iconImage.height);
+      const tempCtx = tempCanvas.getContext("2d");
+      tempCtx.drawImage(iconImage, 0, 0);
+      const iconImageBuffer = tempCanvas.toBuffer("image/png");
+
+      const iconBuffer = await sharp(iconImageBuffer)
         .resize(16, 16, {
           kernel: sharp.kernel.cubic,
         })
         .toBuffer();
       const loadedIcon = await loadImage(iconBuffer);
-
-      // ctx.antialias = "none";
 
       // Generate the resized text image
       const resizedTextOffBuffer = await createTextImage(
@@ -268,6 +265,7 @@ async function createImages(
       // Normal State
       await drawAndSaveFrame(
         ctx,
+        canvas,
         normalBg,
         loadedIcon,
         loadedResizedOffText,
@@ -286,6 +284,7 @@ async function createImages(
       // Hover State
       await drawAndSaveFrame(
         ctx,
+        canvas,
         hoverBg,
         loadedIcon,
         loadedResizedOnText,
@@ -303,7 +302,7 @@ async function exportHTML(
   menuItems: MenuItem[],
   imagesDir: string,
   outputDir: string
-) {
+): Promise<void> {
   const outputFilePath = join(outputDir, "main-menu.php");
   const tableWidth = 700;
   const emptyFullWidth = 100; // Width for menu-empty-full.gif
@@ -376,8 +375,8 @@ async function exportHTML(
     lines.push({
       imageOff: offGifPath,
       imageOn: onGifPath,
-      width: `${gifSize.width}px`,
-      height: `${gifSize.height}px`,
+      width: `${gifSize!.width}px`,
+      height: `${gifSize!.height}px`,
       label: item.label,
       path: item.path,
       icon: item.icon,

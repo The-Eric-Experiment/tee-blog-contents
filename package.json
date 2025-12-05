@@ -10,6 +10,8 @@
     "np": "ts-node ./creator/creator.ts"
   },
   "dependencies": {
+    "@napi-rs/canvas": "^0.1.77",
+    "@skyra/gifenc": "^1.0.1",
     "@types/axios": "^0.14.0",
     "@types/chalk": "^2.2.0",
     "@types/ejs": "^3.0.7",
@@ -28,7 +30,6 @@
     "@types/yargs": "^17.0.3",
     "axios": "^0.26.1",
     "basic-ftp": "^4.6.6",
-    "canvas-gif": "^1.0.3",
     "chalk": "^4.1.1",
     "ejs": "^3.1.6",
     "front-matter": "^4.0.2",
