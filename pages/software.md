@@ -287,6 +287,16 @@ This page does not contain Windows 3.x specific software, if you want software f
 
 [/file-download]
 
+[file-download]
+
+- name: "Apple AirPort 5.6.1 for Windows"
+- file: "AirPortSetup.exe"
+- url: "/downloads/Software/AirPortSetup.exe"
+- description:
+  AirPort Utility 5.6.1 allows you to configure and manage the AirPort Express routers with simultaneous dual band 802.11n. It works on Windows 7 and later.
+
+[/file-download]
+
 <center>
   <img src="/contents/public/construction.gif" alt="under construction" width="400" />
 </center>

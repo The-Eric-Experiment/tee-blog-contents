@@ -22,6 +22,7 @@ For this to work you'll need to install Windows For Workgroups 3.11 as the TCP s
   - [The Old Net Wifi Modem](#theoldnetmodem)
 - [Drivers](#drivers)
 - [TCP/IP stack](#tcpipstack)
+- [Setting-up Ethernet TCP Networking](#settingupethernettcpnetworking)
 - [Web Browsers](#webbrowsers)
 - [Browsing Old Websites](#browsingoldwebsites)
 - [Some current websites that still can run natively](#somecurrentwebsitesthatcanstillrunnatively)
@@ -71,7 +72,7 @@ This thing is cool because it has a phone jack that can be configured to receive
 
 Another cool thing about this device is that it can be used to connect old Wifi devices that don't work on modern routes because of weak encryption.
 
-One thing to keep in mind is that you need an older version of the Apple AirPort utility to configure this device, I used the 5.6.1 version which can be downloaded [here](...download)
+One thing to keep in mind is that you need an older version of the Apple AirPort utility to configure this device, I used the 5.6.1 version which can be downloaded [here](/software#appleairport561forwindows)
 
 I learned about the possibility of using this device from this Youtube video:
 
@@ -125,11 +126,11 @@ Sadly, as I mentioned before, Windows For Workgroups 3.11 is the only only one i
 
 You can get the TCP/IP right [here](/windows3x/essentialsoftware#tcp/ip-32forwindowsforworkgroups311).
 
-I'll add a guide on how to install it soon, but it should be pretty straightforward.
+## Setting-up Ethernet TCP Networking {#settingupethernettcpnetworking}
 
-<center>
-  <img src="/contents/public/construction.gif" alt="under construction" width="400" />
-</center>
+I have written a step-by-step on how to get [Ethernet working with TCP/IP on Windows For Workgroups 3.11](/windows3x/webbrowsing/ethernet-tutorial).
+
+[Click Here](/windows3x/webbrowsing/ethernet-tutorial) to check it out.
 
 ## Web Browsers {#webbrowsers}
 

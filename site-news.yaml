@@ -1,3 +1,5 @@
+- date: 06/12/2025
+  content: I have added a tutoril on how to install Ethernet with TCP/IP on Windows 3.11 in the Web Browsing page in Windows 3.x Resources.
 - date: 05/03/2025
   content: You can now listen to my music on retro computers using Real Player!
 - date: 26/07/2024
@@ -8,8 +10,8 @@
   content: Added a Guestbook to the website so you can leave messages, a Projects page with the ongoing projects I\'m working on and I have finally added the <a href="http://ucanet.net" target="_blank">Ucanet</a> button to the home page.
 - date: 05/07/2023
   content: Huge design update, the website is now retro first and it doesn\'t have to switch between two different templates.
-- date: 16/09/2022
-  content: Updated the website layout and several internal changes.
+# - date: 16/09/2022
+#   content: Updated the website layout and several internal changes.
 # - date: 06/07/2022
 #   content: A couple more sites added to Destinations.
 # - date: 27/04/2022
