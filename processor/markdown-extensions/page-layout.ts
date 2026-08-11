@@ -1,7 +1,12 @@
-import { extension, Converter, ConverterOptions } from "showdown";
+import showdown from "showdown";
+import type { Converter, ConverterOptions } from "showdown";
+const { extension } = showdown;
 import * as fs from "fs";
 import * as path from "path";
-import * as ejs from "ejs";
+import ejs from "ejs";
+import { fileURLToPath } from "url";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 type Layout = Record<string, string>;
 

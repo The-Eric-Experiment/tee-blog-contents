@@ -1,0 +1,31 @@
+<table border="0" cellpadding="4" cellspacing="2" width="700">
+  <tr>
+    <td bgcolor="#777777"><font size="-1"><b>Airline:</b></font><br /><%= flight.airline %></td>
+    <td bgcolor="#777777"><font size="-1"><b>Flight:</b></font><br /><%= flight.flightNumber %></td>
+    <td bgcolor="#777777"><%= flight.from %> <img src="/contents/public/arrow.gif" alt="to"> <%= flight.to %></td>
+    <td bgcolor="#777777"><font size="-1"><b>Date:</b></font><br /><%= flight.formattedDate %></td>
+    <td bgcolor="#777777"><font size="-1"><b>Duration:</b></font><br /><%= flight.flightDuration %></td>
+  </tr>
+</table>
+<table border="0" cellpadding="4" cellspacing="2" width="700">
+  <tr>
+    <td bgcolor="#777777">
+      <font size="-1"><b>Aircraft:</b></font><br /><%= flight.aircraft %>
+    </td>
+    <td bgcolor="#777777">
+      <font size="-1"><b>Engines:</b></font><br /><%= flight.engines %>
+    </td>
+    <td bgcolor="#777777">
+      <font size="-1"><b>Status:</b></font><br /><%= flight.airframeStatus %>
+    </td>
+  </tr>
+</table>
+<% if (flight && flight.airframeMd) { %>
+<%= flight.airframeMd %>
+<% } %>
+
+<% if (flight && flight.flightMd) { %>
+### Field notes
+
+<%= flight.flightMd %>
+<% } %>

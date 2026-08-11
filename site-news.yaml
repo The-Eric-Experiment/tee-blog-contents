@@ -1,3 +1,5 @@
+- date: 11/08/2026
+  content: This is probably not of interest to anyone but myself, but I have added a flight log of all the flights I\'ve been on to the About Me page. <a href="/about-me/flights">You can check it out here</a>.
 - date: 06/12/2025
   content: I have added a tutorial on how to install Ethernet with TCP/IP on Windows 3.11 in the Web Browsing page in Windows 3.x Resources.
 - date: 05/03/2025
@@ -8,8 +10,8 @@
   content: Added new programs for download in the Windows 3.x Essential Software and the Software sections.
 - date: 07/08/2023
   content: Added a Guestbook to the website so you can leave messages, a Projects page with the ongoing projects I\'m working on and I have finally added the <a href="http://ucanet.net" target="_blank">Ucanet</a> button to the home page.
-- date: 05/07/2023
-  content: Huge design update, the website is now retro first and it doesn\'t have to switch between two different templates.
+# - date: 05/07/2023
+#   content: Huge design update, the website is now retro first and it doesn\'t have to switch between two different templates.
 # - date: 16/09/2022
 #   content: Updated the website layout and several internal changes.
 # - date: 06/07/2022

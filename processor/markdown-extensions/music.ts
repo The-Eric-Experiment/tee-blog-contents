@@ -1,4 +1,5 @@
-import { extension } from "showdown";
+import showdown from "showdown";
+const { extension } = showdown;
 import { parse } from "yaml";
 import { v5 } from "uuid";
 

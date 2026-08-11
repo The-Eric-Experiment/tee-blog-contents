@@ -6,21 +6,9 @@ $$ content $$
 
 # About me
 
-## What's up with this website? {#whatsupwiththiswebsite}
+[inject-md "/about-me/menu.md"]
 
-Well, modern websites are kinda boring with their static looking contents, flat designs, pastel colors and simplistic graphics. Aren't you kinda tired of them? Well I am, that's why this site is inspired on the Web 1.0.
-
-I feel that in the 90's and early 2000's the internet had a lot more personality, especially with services like Geocities. Having your own websites felt a lot more accessible, so ordinary people would have their own and those websites would reflect their personality.
-
-Now people have social media accounts which all look the same aside from the profile pictures and the banner on the top.
-
-I also feel the internet was a lot less toxic in that time period because updating your website required a bit more effort and people would generally focus on the stuff they like.
-
-Social media doesn't give you time to think about what you're gonna post, so it tends to be a lot more toxic.
-
-With that in mind, make sure to try this website out on your retro computer running an old browser such as <a href="/windows3x/essentialsoftware#netscapecommunicator407">Netscape 4</a>. I built a mode that is 100% compatible with them.
-
-## Anyway, who is this guy and why should I care?
+## Who is this guy and why should I care?
 
 Hi, I'm Eric Mackrodt and I can't tell you why you should care, that's up to you, but here are a few things about me.
 

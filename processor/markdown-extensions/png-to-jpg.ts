@@ -1,4 +1,5 @@
-import * as Showdown from "showdown";
+import Showdown from "showdown";
+import type { ShowdownExtension } from "showdown";
 
 // Function to detect if a URL is relative
 function isRelativeUrl(url: string): boolean {
@@ -7,7 +8,7 @@ function isRelativeUrl(url: string): boolean {
 }
 
 // Define the Showdown extension
-const changeImageExtension: Showdown.ShowdownExtension[] = [
+const changeImageExtension: ShowdownExtension[] = [
   {
     type: "output",
     regex: /<img\s+[^>]*src="([^"]*)"[^>]*>/gi,

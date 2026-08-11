@@ -1,5 +1,6 @@
-import { extension } from "showdown";
-import { renderTemplate } from "../template";
+import showdown from "showdown";
+const { extension } = showdown;
+import { renderTemplate } from "../template.ts";
 import path from "path";
 
 function parseProperties(rest: string) {

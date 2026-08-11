@@ -1,20 +1,22 @@
 import * as fs from "fs";
 import * as path from "path";
-import { Converter, ConverterOptions } from "showdown";
-import "./markdown-extensions/file-download";
-import "./markdown-extensions/fix-block-elements";
-import "./markdown-extensions/gallery";
-import "./markdown-extensions/hash-html-blocks";
-import "./markdown-extensions/headers";
-import "./markdown-extensions/image-wrap";
-import "./markdown-extensions/inject-md";
-import "./markdown-extensions/music";
-import "./markdown-extensions/no-retro";
-import "./markdown-extensions/page-layout";
-import "./markdown-extensions/page-menu";
-import "./markdown-extensions/png-to-jpg";
-import "./markdown-extensions/youtube";
-import "./markdown-extensions/show-for";
+import showdown from "showdown";
+import type { ConverterOptions } from "showdown";
+const { Converter } = showdown;
+import "./markdown-extensions/file-download.ts";
+import "./markdown-extensions/fix-block-elements.ts";
+import "./markdown-extensions/gallery.ts";
+import "./markdown-extensions/hash-html-blocks.ts";
+import "./markdown-extensions/headers.ts";
+import "./markdown-extensions/image-wrap.ts";
+import "./markdown-extensions/inject-md.ts";
+import "./markdown-extensions/music.ts";
+import "./markdown-extensions/no-retro.ts";
+import "./markdown-extensions/page-layout.ts";
+import "./markdown-extensions/page-menu.ts";
+import "./markdown-extensions/png-to-jpg.ts";
+import "./markdown-extensions/youtube.ts";
+import "./markdown-extensions/show-for.ts";
 
 const COMMON: string[] = [];
 const EXTENSIONS = [

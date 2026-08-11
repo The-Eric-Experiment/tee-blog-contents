@@ -1,0 +1,16 @@
+{
+  "editor.formatOnSave": true,
+  "files.associations": {
+    "*.ejs": "ejs",
+    "*.md.ejs": "ejs"
+  },
+  "[ejs]": {
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": null
+  },
+  "[markdown]": {
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": null
+  },
+  "js/ts.tsdk.path": "node_modules/typescript/lib"
+}

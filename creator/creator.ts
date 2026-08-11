@@ -2,10 +2,12 @@ import * as fs from "fs";
 import * as readline from "readline";
 import * as path from "path";
 import axios from "axios";
-import { VideoResponse } from "./types";
+import type { VideoResponse } from "./types.ts";
 import moment from "moment-timezone";
-import sqlite from "../processor/db";
+import sqlite from "../processor/db.ts";
+import { fileURLToPath } from "url";
 
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const f = fs.readFileSync(path.join(__dirname, "../api-key.json"), {
   encoding: "utf-8",
 });

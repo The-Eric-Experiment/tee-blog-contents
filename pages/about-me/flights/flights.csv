@@ -1,0 +1,79 @@
+From,To,Date,Airline,Flight Number,Tail Number,Aircraft Type,Scheduled Departure,Actual Departure,Scheduled Arrival,Actual Arrival,Departure Delay,Arrival Delay,Flight Duration,Terminal From,Gate From,Terminal To,Gate To,Baggage,Status
+Rio de Janeiro (GIG),London (LHR),2015-05-03,British Airways,BA248,-,Boeing 777,21:55,21:53,13:10,12:43,On time,On time,10h 50m,1,K,5,-,-,Arrived
+London (LHR),Singapore (SIN),2015-05-09,British Airways,BA15,-,Boeing 777,21:35,21:29,17:40,17:27,On time,On time,12h 58m,5,-,1,-,19,Arrived
+Singapore (SIN),Sydney (SYD),2015-05-09,British Airways,BA15,-,Boeing 777,7:20PM,7:48PM,5:05 AM,5:08 AM,28 mins,3 mins,7h 20m,1,C11,1,-,-,Arrived
+Sydney (SYD),Brisbane (BNE),2015-09-03,TigerAir Australia,TT372,-,Airbus A320,2:50PM,-,4:20PM,4:10PM,-,On time,1h 30m,2,-,D,-,-,Arrived
+Brisbane (BNE),Sydney (SYD),2015-09-07,TigerAir Australia,TT389,-,Airbus A320,8:05PM,-,9:40PM,-,-,-,1h 35m,D,-,2,-,-,Unknown
+Sydney (SYD),Singapore (SIN),2015-09-22,British Airways,BA16,G-STBI,Boeing 777,15:30,15:36,21:45,22:01,6 mins,16 mins,8h 25m,1,-,1,-,17,Arrived
+Singapore (SIN),London (LHR),2015-09-22,British Airways,BA16,G-STBI,Boeing 777,11:15PM,11:22PM,5:30 AM,5:21 AM,7 mins,On time,12h 59m,1,C25,5,-,3,Arrived
+London (LHR),Rio de Janeiro (GIG),2015-09-23,British Airways,BA249,G-YMMO,Boeing 777,12:20PM,12:20PM,8:00PM,8:02PM,On time,2 mins,11h 42m,5,B33,1,K,-,Arrived
+Rio de Janeiro (GIG),Santiago (SCL),2015-11-20,LATAM Airlines Brasil,JJ8020,-,Airbus A320,07:30,07:26,11:15,11:49,On time,34 mins,5h 23m,2,33,-,-,-,Arrived
+Santiago (SCL),Sydney (SYD),2015-11-20,Quantas Airways,QF28,VH-OEB,Boeing 747-400,13:35,15:03,17:45,19:18,1h 28m,1h 33m,14h 15m,-,-,1,-,-,Arrived
+Sydney (SYD),Avalon (AVV),2016-08-20,Jetstar Airways,JQ607,VH-VQQ,Airbus A320,15:25,16:07,17:00,17:41,42 mins,41 mins,1h 34m,2,A49,-,-,-,Arrived
+Avalon (AVV),Sydney (SYD),2016-08-22,Jetstar Airways,JQ610,VH-VQQ,Airbus A320,20:30,20:30,21:55,21:46,On time,On time,1h 16m,-,-,2,-,D5,Arrived
+Sydney (SYD),Queenstown (ZQN),2017-07-17,Jetstar Airways,JQ223,VH-VGR,Airbus A320,14:45,14:42,19:45,19:35,On time,On time,2h 53m,1,-,-,-,-,Arrived
+Wellington (WLG),Auckland (AKL),2017-07-26,Jetstar Airways,JQ258,VH-VGH,Airbus A320,13:35,13:28,14:40,14:24,On time,On time,56m,-,21,D,-,-,Arrived
+Auckland (AKL),Sydney (SYD),2017-07-29,Jetstar Airways,JQ202,VH-VGA,Airbus A320,07:20,07:20,09:00,08:40,On time,On time,3h 20m,I,-,1,-,-,Arrived
+Sydney (SYD),Brisbane (BNE),2017-08-14,Virgin Australia,VA905,VH-YFW,Boeing 737-800 (winglets) Passenger/BBJ2,6:30 AM AEST,6:30 AM AEST,8:00 AM AEST,8:05 AM AEST,On time,5 mins,1h 35m,2,40,D,43,V01,Arrived
+Brisbane (BNE),Townsville (TSV),2017-08-14,Virgin Australia,VA367,VH-YFW,Boeing 737-800 (winglets) Passenger/BBJ2,8:50 AM AEST,8:50 AM AEST,10:55 AM AEST,10:39 AM AEST,On time,On time,1h 49m,D,43,-,4,-,Arrived
+Townsville (TSV),Brisbane (BNE),2017-08-17,Virgin Australia,VA378,VH-VUH,Boeing 737-800,4:50PM,4:47 PM,6:40PM,6:32PM,On time,On time,1h 45m,-,4,D,39,V01,Arrived
+Brisbane (BNE),Sydney (SYD),2017-08-17,Virgin Australia,VA992,VH-YFT,Boeing 737-800,8:05PM,8:10PM,9:40PM,9:51 PM,5 mins,11 mins,1h 41m,D,41,2,32,-,Arrived
+Sydney (SYD),Townsville (TSV),2017-09-10,Jetstar Airways,JQ912,VH-JQG,Airbus A320,10:25 AM AEST,10:33 AM AEST,1:10PM AEST,1:12PM AEST,8 mins,2 mins,2h 39m,2,-,-,-,-,Arrived
+Townsville (TSV),Sydney (SYD),2017-09-15,Jetstar Airways,JQ913,VH-VQG,Airbus A320,13:40,14:01,16:20,16:25,21 mins,5 mins,2h 24m,-,-,2,-,-,Arrived
+Sydney (SYD),Melbourne (MEL),2017-10-26,Jetstar Airways,JQ529,VH-VWN,Airbus A321,10:00PM,10:34PM,11:35PM,12:13 AM,34 mins,38 mins,1h 39m,2,A54,4,42,-,Arrived
+Melbourne (MEL),Sydney (SYD),2017-10-30,Jetstar Airways,JQ522,VH-VWQ,Airbus A321,7:55PM,8:51 PM,9:20PM,10:15PM,56 mins,55 mins,1h 24m,4,46,2,A49,-,Arrived
+Melbourne (MEL),Sydney (SYD),2018-03-04,TigerAir Australia,TT282,VH-XUG,Airbus A320,9:05PM,9:22PM,10:30PM,10:39PM,17 mins,9 mins,1h 17m,4,15,2,59,-,Arrived
+Sydney (SYD),Hobart (HBA),2018-03-16,Jetstar Airways,JQ723,VH-VFI,Airbus A320,14:00,14:13,15:55,16:06,13 mins,11 mins,1h 53m,2,53,D,-,-,Arrived
+Hobart (HBA),Sydney (SYD),2018-03-18,Jetstar Airways,JQ724,VH-VQR,Airbus A320,20:05,20:08,21:50,21:48,3 mins,On time,1h 40m,D,5,2,A54,-,Arrived
+Sydney (SYD),Townsville (TSV),2018-05-06,Virgin Australia,VA1519,VH-VUT,Boeing 737-800,9:50 AM,9:50 AM,12:40PM,12:41 PM,On time,1 min,2h 51m,2,35,-,4,-,Arrived
+Townsville (TSV),Sydney (SYD),2018-05-11,Virgin Australia,VA1520,VH-VOO,Boeing 737-800 (winglets) Passenger/BBJ2,1:20PM AEST,1:28PM AEST,3:50PM AEST,4:00PM AEST,8 mins,10 mins,2h 32m,-,3,2,A34,-,Arrived
+Sydney (SYD),Singapore (SIN),2018-09-05,Quantas Airways,QF1,VH-OQI,Airbus A380-800 Passenger,3:55PM AEST,4:24PM AEST,10:15PM UTC+08:00,10:45PM UTC+08:00,29 mins,30 mins,8h 21m,1,10,1,-,18,Arrived
+Singapore (SIN),London (LHR),2018-09-05,Quantas Airways,QF1,VH-OQI,Airbus A380-800 Passenger,11:55PM UTC+08:00,12:21 AM UTC+08:00,6:55 AM BST,6:55 AM BST,26 mins,On time,13h 34m,1,C25,3,-,09,Arrived
+Manchester (MAN),Schonefeld (SXF),2018-09-11,Ryanair,FR1145,EI-EFY,Boeing 737-800,12:45PM,-,3:40PM,-,-,-,1h 55m,3,-,-,-,-,Unknown
+Prague (PRG),Dusseldorf (DUS),2018-09-15,Eurowings,EW9773,D-AEWU,Airbus A320,9:00 AM,9:13 AM,10:20 AM,10:20 AM,13 mins,On time,1h 7m,2,D2,-,B91,-,Arrived
+Karlsruhe Baden-Baden (FKB),Seville (SVQ),2018-09-20,Ryanair,FR2471,EI-FZK,Boeing 737-800 Passenger,2:10PM,-,4:45PM,-,-,-,2h 35m,-,-,-,-,-,Arrived
+Seville (SVQ),Dublin (DUB),2018-09-22,Ryanair,FR7147,EI-GDD,Boeing 737-800 Passenger,2:00PM,2:00PM,4:00PM,3:45PM,On time,On time,2h 45m,1,2,1,-,-,Arrived
+Dublin (DUB),London (STN),2018-09-24,Ryanair,FR202,EI-GSD,Boeing 737-800 Passenger,6:25 AM,6:23 AM,7:50 AM,7:51 AM,On time,1 min,1h 28m,1,-,1,-,-,Arrived
+London (LHR),Singapore (SIN),2018-09-25,Quantas Airways,QF2,VH-OQL,Airbus A380-800 Passenger,9:15PM BST,9:25PM BST,5:25PM UTC+08:00,5:35PM UTC+08:00,10 mins,10 mins,13h 10m,3,1,1,-,18,Arrived
+Singapore (SIN),Sydney (SYD),2018-09-25,Quantas Airways,QF2,VH-OQI,Airbus A380-800 Passenger,7:30PM UTC+08:00,8:18PM UTC+08:00,5:10 AM AEST,5:47 AM AEST,48 mins,37 mins,7h 29m,1,D46,1,9,11,Arrived
+Sydney (SYD),Uluru (AYQ),2019-01-19,Virgin Australia,VA1627,VH-VUO,Boeing 737-800 (winglets) Passenger/BBJ2,9:55 AM AEDT,12:26PM AEDT,12:00PM ACST,2:16PM ACST,2h 31m,2h 16m,3h 20m,2,38,-,-,-,Arrived
+Uluru (AYQ),Sydney (SYD),2019-01-20,Virgin Australia,VA1628,VH-VUO,Boeing 737-800,12:35PM,2:59PM,5:10PM,7:28PM,2h 24m,2h 18m,2h 59m,-,-,2,A41,D3,Arrived
+Wollongong (WOL),Wollongong (WOL),2019-04-07,Skydive Australia,-,"VH-SKR",Cessna 208B Grand Caravan,-,-,-,-,-,-,13m,-,-,-,-,-,Jumped
+Sydney (SYD),Wellington (WLG),2019-07-14,Quantas Airways,QF161,VH-XZB,Boeing 737-800 (winglets) Passenger/BBJ2,9:45 AM AEST,9:47 AM AEST,2:55PM NZST,2:44PM NZST,2 mins,On time,2h 57m,1,26F,-,49,3,Arrived
+Wellington (WLG),Sydney (SYD),2019-07-19,Quantas Airways,QF164,VH-VZI,Boeing 737-800 (winglets) Passenger/BBJ2,3:55PM NZST,4:02PM NZST,5:40PM AEST,5:38PM AEST,7 mins,On time,3h 36m,-,48,1,36,8,Arrived
+Sydney (SYD),Melbourne (MEL),2019-10-11,Jetstar Airways,JQ523,VH-VWT,Airbus A321,6:15PM AEDT,8:34PM AEDT,7:50PM AEDT,10:08PM AEDT,2h 19m,2h 18m,1h 34m,2,A55,4,48,-,Arrived
+Melbourne (MEL),Sydney (SYD),2019-10-14,Jetstar Airways,JQ524,VH-VWN,Airbus A321 (sharklets),8:55 AM AEDT,9:39 AM AEDT,10:20 AM AEDT,10:55 AM AEDT,44 mins,35 mins,1h 16m,4,46,2,A49,D5,Arrived
+Sydney (SYD),Melbourne (MEL),2019-11-09,Jetstar Airways,JQ501,VH-VQQ,Airbus A320,6:00 AM AEDT,6:03 AM AEDT,7:35 AM AEDT,7:23 AM AEDT,3 mins,On time,1h 20m,2,A55,4,42,-,Arrived
+Melbourne (MEL),Sydney (SYD),2019-11-12,Jetstar Airways,JQ518,VH-XJE,Airbus A320,8:25PM AEDT,8:31 PM AEDT,9:50PM AEDT,10:39PM AEDT,6 mins,49 mins,2h 8m,4,47,2,A54,D5,Arrived
+Sydney (SYD),Taipei (TPE),2019-12-17,China Airlines,CI56,B-18915,Airbus A350-900,2:25PM AEDT,2:25PM AEDT,8:35PM CST,8:32PM CST,On time,On time,9h 7m,1,59,2,D9,-,Arrived
+Taipei (TPE),Frankfurt (FRA),2019-12-17,China Airlines,CI61,B-18918,Airbus A350-900,11:35PM,-,6:25 AM,6:46 AM,24 mins,21 mins,13h 26m,1,A4,2,-,-,Arrived
+Frankfurt (FRA),Taipei (TPE),2020-01-02,China Airlines,CI62,B-18907,Airbus A350-900,10:40 AM,-,6:10 AM,-,-,15 mins,12h 45m,2,E9,1,D4,-,Arrived
+Taipei (TPE),Sydney (SYD),2020-01-03,China Airlines,CI55,B-18901,Airbus A350-900,7:35 AM,-,8:05PM,-,-,-,9h 30m,2,D5,1,25,13,Arrived
+Sydney (SYD),Doha (DOH),2022-06-09,Qatar Airways,QR909,A7-APJ,Airbus A380-800,9:00PM,9:55PM,4:55 AM,6:06 AM,55 mins,1h 11m,15h 11m,1,61,-,-,-,Arrived
+Doha (DOH),Sao Paulo (GRU),2022-06-10,Qatar Airways,QR773,A7-BEQ,Boeing 777-300ER,07:40,07:52,15:50,16:03,12 mins,13 mins,14h 11m,-,-,3,-,-,Arrived
+Sao Paulo (GRU),Rio de Janeiro (GIG),2022-06-11,GOL Linhas Aéreas,G31098,PR-GEU,Boeing 737-700,20:45,20:45,21:45,21:38,On time,On time,53m,2,-,2,B34,10,Arrived
+Rio de Janeiro (GIG),Sao Paulo (GRU),2022-06-24,LATAM Airlines,LA3321,PT-XPC,Airbus A321 (sharklets),3:55PM UTC-03:00,3:59PM UTC-03:00,5:05PM UTC-03:00,5:03PM UTC-03:00,4 mins,On time,1h 4m,2,B32,2,-,-,Arrived
+Sao Paulo (GRU),Doha (DOH),2022-06-24,Qatar Airways,QR780,A7-BAI,Boeing 777-300ER,8:35PM,9:02PM,4:45PM,4:54PM,27 mins,9 mins,13h 52m,3,-,-,-,-,Arrived
+Doha (DOH),Sydney (SYD),2022-06-25,Qatar Airways,QR908,A7-APF,Airbus A380-800,8:30PM,8:44PM,5:25PM,6:14PM,14 mins,49 mins,14h 30m,-,-,1,61,5-4,Arrived
+Sydney (SYD),Melbourne (MEL),2022-11-16,Jetstar Airways,JQ527,VH-VWW,Airbus A321,4:45PM,4:51 PM,6:20PM,6:26PM,6 mins,6 mins,1h 35m,2,A52,4,44,-,Arrived
+Melbourne (MEL),Sydney (SYD),2022-11-19,Jetstar Airways,JQ532,VH-VFO,Airbus A320,7:50PM,8:33PM,9:15PM,9:46PM,43 mins,31 mins,1h 13m,4,45,2,A49,D5,Arrived
+Sydney (SYD),Hobart (HBA),2023-04-02,Jetstar Airways,JQ723,VH-VQC,Airbus A320,12:50PM,12:52PM,2:45PM,2:38PM,2 mins,On time,1h 46m,2,55,D,8,-,Arrived
+Hobart (HBA),Sydney (SYD),2023-04-04,Jetstar Airways,JQ724,VH-VQR,Airbus A320,7:35PM,7:26PM,9:20PM,9:11 PM,On time,On time,1h 45m,D,6,2,A57,D4,Arrived
+Sydney (SYD),Melbourne (MEL),2023-07-18,Quantas Airways,QF481,VH-VXE,Boeing 737-800 (winglets) Passenger/BBJ2,6:15PM AEST,6:13PM AEST,7:50PM AEST,7:51 PM AEST,On time,1 min,1h 38m,3,8,1,3,-,Arrived
+Melbourne (MEL),Sydney (SYD),2023-07-21,Jetstar Airways,JQ528,VH-YXS,Airbus A320,7:15PM,8:02PM,8:40PM,9:20PM,47 mins,40 mins,1h 18m,4,43,2,A39,D5,Arrived
+Sydney (SYD),Denpasar (DPS),2023-08-08,Jetstar Airways,JQ39,VH-OFQ,Airbus A321neo,6:15 AM,6:20 AM,10:45 AM,10:40 AM,5 mins,On time,6h 20m,1,56,I,-,-,Arrived
+Denpasar (DPS),Jakarta (HLP),2023-08-17,Citilink Indonesia,CTV197,PK-GLV,Airbus A320,6:30PM,7:19PM,7:30PM,-,49 mins,-,1h 11m,-,-,-,-,-,Arrived
+Jakarta (HLP),Malang (MLG),2023-08-18,Citilink Indonesia,CTV164,PK-GLM,Airbus A320,12:20PM,-,1:50PM,-,-,-,1h 30m,-,-,-,-,-,Arrived
+Malang (MLG),Jakarta (CGK),2023-08-22,Citilink Indonesia,CTV751,PK-GQK,Airbus A320 (sharklets),11:15 AM WIB,-,12:45PM WIB,-,-,-,1h 30m,-,-,2,-,-,Arrived
+Jakarta (CGK),Denpasar (DPS),2023-08-22,Citilink Indonesia,CTV688,PK-GLN,Airbus A320,4:40PM,-,7:40PM,-,-,-,2h,2,-,-,-,-,Arrived
+Denpasar (DPS),Sydney (SYD),2023-08-24,Jetstar Airways,JQ38,VH-VKH,Boeing 787-8,10:35PM,10:59PM,6:15 AM,6:28 AM,24 mins,13 mins,5h 29m,I,-,1,34,12,Arrived
+Sydney (SYD),Brisbane (BNE),2024-06-01,Jetstar Airways,JQ810,VH-VWN,Airbus A321,06:00,05:58,07:30,07:26,On time,On time,1h 28m,2,49,D,30,D04,Arrived
+Brisbane (BNE),Tokyo (NRT),2024-06-01,Jetstar Airways,JQ9,VH-VKE,Boeing 787-8,09:30,09:51,17:40,17:32,21 mins,On time,8h 41m,I,83,3,-,-,Arrived
+Tokyo (NRT),Naha (OKA),2024-06-27,Jetstar Japan,GK335,JA26LR,Airbus A321neo,2:25PM JST,2:45PM JST,5:30PM JST,5:53PM JST,20 mins,23 mins,3h 8m,3,164,-,-,-,Arrived
+Naha (OKA),Tokyo (NRT),2024-06-30,Jetstar Japan,GK336,JA27LR,Airbus A321neo,7:30PM JST,7:35PM JST,10:05PM JST,10:06PM JST,5 mins,1 min,2h 31m,-,-,3,-,-,Arrived
+Tokyo (NRT),Brisbane (BNE),2024-07-02,Jetstar Airways,JQ10,VH-VKH,Boeing 787-8,20:50,20:56,06:40,06:35,6 mins,On time,8h 39m,3,150,I,83,I02,Arrived
+Brisbane (BNE),Sydney (SYD),2024-07-03,Jetstar Airways,JQ815,VH-VGD,Airbus A320,09:15,09:23,10:50,11:01,8 mins,11 mins,1h 38m,D,30,2,A57,D5,Arrived
+Sydney (SYD),Gold Coast (OOL),2025-08-15,Jetstar Airways,JQ420,VH-XSJ,Airbus A320,8:45PM,8:34PM,10:05PM,9:47 PM,On time,On time,1h 13m,2,52,1,13,-,Arrived
+Gold Coast (OOL),Sydney (SYD),2025-08-17,Jetstar Airways,JQ405,VH-VQL,Airbus A320,9:15 AM,9:09 AM,10:45 AM,10:35 AM,On time,On time,1h 26m,1,19,2,A33,D4,Arrived
+Sydney (SYD),Queenstown (ZQN),2025-09-10,Jetstar Airways,JQ221,VH-VFP,Airbus A320 (sharklets),6:15 AM AEST,6:08 AM AEST,11:10 AM NZST,10:48 AM NZST,On time,On time,2h 40m,1,51,-,-,-,Arrived
+Queenstown (ZQN),Sydney (SYD),2025-09-24,Jetstar Airways,JQ224,VH-VFO,Airbus A320 (sharklets),8:50PM NZST,9:42PM NZST,10:05PM AEST,10:57 PM AEST,52 mins,52 mins,3h 15m,-,7,1,63,9,Arrived

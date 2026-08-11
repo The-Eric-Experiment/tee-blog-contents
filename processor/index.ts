@@ -1,9 +1,11 @@
 import axios from "axios";
 import chalk from "chalk";
-import * as ejs from "ejs";
-import fm from "front-matter";
+import ejs from "ejs";
+import fmModule from "front-matter";
+import type { FrontMatterResult } from "front-matter";
+const fm = fmModule as unknown as <T>(content: string) => FrontMatterResult<T>;
 import * as fs from "fs";
-import * as fse from "fs-extra";
+import fse from "fs-extra";
 import { DateTime } from "luxon";
 import md5 from "md5";
 import moment from "moment";
@@ -13,24 +15,26 @@ import sharp from "sharp";
 import * as yaml from "yaml";
 import yargs from "yargs";
 import { hideBin } from "yargs/helpers";
-import config from "./config";
-import db from "./db";
-import { getGalleries } from "./galleries";
-import { getGalleryImages } from "./gallery";
-import { getContentImages } from "./images";
-import { convertToHtml } from "./markdown";
-import { YOUTUBE_THUMBS } from "./markdown-extensions/youtube";
-import { makeMenu } from "./menu";
-import { renderTemplate } from "./template";
+import { fileURLToPath } from "url";
+import config from "./config.ts";
+import db from "./db.ts";
+import { getGalleries } from "./galleries.ts";
+import { getGalleryImages } from "./gallery.ts";
+import { getContentImages } from "./images.ts";
+import { convertToHtml } from "./markdown.ts";
+import { YOUTUBE_THUMBS } from "./markdown-extensions/youtube.ts";
+import { makeMenu } from "./menu.ts";
+import { renderTemplate } from "./template.ts";
 import {
-  Category as CategoryData,
-  ImageMap,
-  ImageResolution,
+  type Category as CategoryData,
+  type ImageMap,
+  type ImageResolution,
   isImageResolution,
-  PostMetadata,
-  Tag as TagData,
-} from "./types";
+  type PostMetadata,
+  type Tag as TagData,
+} from "./types.ts";
 
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const currentDir = path.join(__dirname, "..");
 const yargies = yargs(hideBin(process.argv));
 const args = yargies.argv as { dest?: string; ["no-image"]?: string };
@@ -335,9 +339,7 @@ async function getPosts(): Promise<PostMetadata[]> {
 
         const content = fs.readFileSync(postPath, { encoding: "utf-8" });
 
-        // The types for this library are wrong
-        /* @ts-ignore */
-        const metadata = fm<TMetadata>(content);
+        const metadata = fm<PostMetadata>(content);
         resolve({
           ...metadata.attributes,
           slug: post,
@@ -421,9 +423,7 @@ async function getPages(): Promise<PostMetadata[]> {
 
         const content = fs.readFileSync(page, { encoding: "utf-8" });
 
-        // The types for this library are wrong
-        /* @ts-ignore */
-        const metadata = fm<TMetadata>(content);
+        const metadata = fm<PostMetadata>(content);
         resolve({
           ...metadata.attributes,
           slug: path.relative(pagesDir, page),
@@ -434,7 +434,7 @@ async function getPages(): Promise<PostMetadata[]> {
 
   return (await Promise.all(promises))
     .filter((o) => !!o)
-    .map((item) => {
+    .map<PostMetadata>((item) => {
       return {
         categories: [],
         tags: [],
@@ -732,7 +732,7 @@ async function run() {
       if (imageTypes.youtubeThumbnail) {
         if (isImageResolution(imageTypes.youtubeThumbnail)) {
           await processYoutubeThumbs(
-            imageTypes.prefix,
+            imageTypes.prefix ?? "",
             imageTypes.youtubeThumbnail
           );
         }
@@ -748,12 +748,12 @@ async function run() {
 
         if (isImageResolution(imageTypes.postThumbnail)) {
           await processPostThumbnails(
-            imageTypes.prefix,
+            imageTypes.prefix ?? "",
             posts,
             imageTypes.postThumbnail
           );
         } else if (imageTypes.postThumbnail) {
-          await copyPostThumbnails(imageTypes.prefix, posts);
+          await copyPostThumbnails(imageTypes.prefix ?? "", posts);
         }
 
         // imageMaps["postThumbnail"] = maps;

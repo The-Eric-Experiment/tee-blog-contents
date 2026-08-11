@@ -12,6 +12,15 @@
       "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/ts-node",
       "args": ["${workspaceRoot}/processor/index.ts"],
       "restart": true
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Flights",
+      "cwd": "${workspaceRoot}",
+      "runtimeExecutable": "node",
+      "args": ["${workspaceRoot}/processor/pages/flights.ts"],
+      "restart": true
     }
   ]
 }

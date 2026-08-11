@@ -1,4 +1,5 @@
-import { extension } from "showdown";
+import showdown from "showdown";
+const { extension } = showdown;
 
 extension("fix-block-elements", function () {
   return [
@@ -16,7 +17,7 @@ extension("fix-block-elements", function () {
           text = text.replace(
             /^\s*<(object|embed|video|audio|iframe|table|tr|td|th|center)\b[^>]*>[\s\S]*?<\/\1>$/gim,
             function (wm) {
-              return "\n\n¨K" + (globals.gHtmlBlocks.push(wm) - 1) + "K\n\n";
+              return "\n\n¨K" + (globals.gHtmlBlocks!.push(wm) - 1) + "K\n\n";
             }
           );
 
@@ -24,7 +25,7 @@ extension("fix-block-elements", function () {
           text = text.replace(
             /^\s*<(embed|source|meta|link|br|hr|input|img|param)\b[^>]*\/?>$/gim,
             function (wm) {
-              return "\n\n¨K" + (globals.gHtmlBlocks.push(wm) - 1) + "K\n\n";
+              return "\n\n¨K" + (globals.gHtmlBlocks!.push(wm) - 1) + "K\n\n";
             }
           );
 
@@ -32,7 +33,7 @@ extension("fix-block-elements", function () {
           text = text.replace(
             /^\s*<\/(object|embed|video|audio|iframe|table|tr|td|th|center)>/gim,
             function (wm) {
-              return "¨K" + (globals.gHtmlBlocks.push(wm) - 1) + "K";
+              return "¨K" + (globals.gHtmlBlocks!.push(wm) - 1) + "K";
             }
           );
 

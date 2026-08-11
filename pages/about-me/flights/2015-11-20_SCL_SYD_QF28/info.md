@@ -1,0 +1,1 @@
+My first and probably last time flying on a Boeing 747, one of the most iconic airplanes in history, and I didn't take a single picture or video. That's a big regret, especially if you consider that this aircraft has been retired and disassembled.

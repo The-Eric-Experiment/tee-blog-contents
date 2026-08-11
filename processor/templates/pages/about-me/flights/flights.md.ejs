@@ -1,0 +1,74 @@
+---
+title: About Me | Flight Log
+---
+
+$$ content $$
+
+## About me
+
+[inject-md "menu.md"]
+
+# Flight Log
+
+<img src="/contents/public/airplane-1.gif" alt="Aeroplane" align="left">
+
+This is my personal flight log of all the flights I've taken.
+
+Since I was a kid, I had always wanted to fly on an airplane. When I was 27 I finally got to do it when I moved to Australia. Since then I've been keeping track of all of the flights I've taken.
+Initially I just had origin and destination in an excel spreadsheet, but I decided to comb through my old emails, plane tickets, google maps and photos to figure out all what flights and aircrafts I've flown on, some of it was lost completely, but I got the vast majority of them.
+
+## Some Stats
+
+<table border="0" cellspacing="2" cellpadding="4" width="100%">
+    <tr>
+        <td bgcolor="#777777">
+            <font size="-1"><b>Total Flights<sup><a href="#footnote-1">1</a></sup>:</b></font><br />
+            <font size="+2"><%= totalFlights %></font>
+        </td>
+        <td bgcolor="#777777">
+            <font size="-1"><b>Total Individual Aircrafts<sup><a href="#footnote-2">2</a></sup>:</b></font><br />
+            <font size="+2"><%= totalKnownAirframes %></font>
+        </td>
+        <td bgcolor="#777777">
+            <font size="-1"><b>Unknown Airframes<sup><a href="#footnote-3">3</a></sup>:</b></font><br />
+            <font size="+2"><%= totalUnknownAirframes %></font>
+        </td>
+        <td bgcolor="#777777">
+            <font size="-1"><b>Total Flight Time<sup><a href="#footnote-4">4</a></sup>:</b></font><br />
+            <font size="+2"><%= totalFlightTime %></font>
+        </td>
+        <td bgcolor="#777777">
+            <font size="-1"><b>Individual Airlines:</b></font><br />
+            <font size="+2"><%= totalAirlines %></font>
+        </td>
+    </tr>
+</table>
+
+<br />
+![Aeroplane](/contents/public/airplane-9.gif)
+<br />
+
+## Flights
+
+<% flights.forEach(function(flight) { %>
+<%- include('flight.md.ejs', { flight: flight }) %>
+<br />
+<hr />
+<br />
+<% }); %>
+
+<% if (hasMore) { %>
+<p><a href="flights-2"><img src="/contents/public/ToDo_NextArrow.gif" alt="More Flights"></a></p>
+<% } %>
+
+### Footnotes
+
+<sup id="footnote-1">1</sup> - Flights are counted by take-off, so flights that are divided with technical/transit stop, like when a flight from Sydney to London stops in Singapore for about 40 min, are counted as two flights.
+
+<sup id="footnote-2">2</sup> - The number of known individual airframes flown, counted by number of different tail numbers. This number is an under count because there are some flights with unknown tail numbers.
+
+<sup id="footnote-3">3</sup> - Number of flights which the tail number for an aircraft is unknown.
+
+<sup id="footnote-4">4</sup> - Some of the flights don't have the actual flight time, just the estimated flight time, so consider this an estimate.
+
+![Travel!](/contents/public/globe-1.gif)

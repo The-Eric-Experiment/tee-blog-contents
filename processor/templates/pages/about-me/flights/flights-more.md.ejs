@@ -1,0 +1,29 @@
+---
+title: About me | Flight Log - Page <%= currentPage %>
+---
+
+$$ content $$
+
+## About me
+
+[inject-md "menu.md"]
+
+# Flight Log - Page <%= currentPage %>
+
+<br />
+![Aeroplane](/contents/public/airplane-9.gif)
+<br />
+
+<% flights.forEach(function(flight) { %>
+<%- include('flight.md.ejs', { flight: flight }) %>
+<br />
+<hr />
+<br />
+<% }); %>
+
+<p>
+<a href="<%= prevPage %>"><img src="/contents/public/ToDo_BackArrow.gif" alt="Previous Flights"></a>
+<% if (hasNext) { %>
+<a href="<%= nextPage %>"><img src="/contents/public/ToDo_NextArrow.gif" alt="More Flights"></a>
+<% } %>
+</p>

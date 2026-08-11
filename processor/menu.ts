@@ -2,18 +2,20 @@ import {
   createCanvas,
   loadImage,
   GlobalFonts,
-  Canvas,
-  SKRSContext2D,
-  Image,
+  type Canvas,
+  type SKRSContext2D,
+  type Image,
 } from "@napi-rs/canvas";
-import * as ejs from "ejs";
+import ejs from "ejs";
 import { promises as fs } from "fs";
 import { GifCodec, GifFrame, GifUtil } from "gifwrap";
-import { join } from "path";
+import { join, dirname } from "path";
 import sharp from "sharp";
 import yargs from "yargs";
 import { hideBin } from "yargs/helpers";
+import { fileURLToPath } from "url";
 
+const __dirname = dirname(fileURLToPath(import.meta.url));
 const currentDir = join(__dirname, "..");
 const yargies = yargs(hideBin(process.argv));
 const args = yargies.argv as { dest?: string; ["no-image"]?: string };

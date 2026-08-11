@@ -1,7 +1,9 @@
-import { Converter, extension } from "showdown";
+import showdown from "showdown";
+import type { Converter } from "showdown";
+const { extension } = showdown;
 import { v4 } from "uuid";
-import { addGallery } from "../galleries";
-import { renderTemplate } from "../template";
+import { addGallery } from "../galleries.ts";
+import { renderTemplate } from "../template.ts";
 import * as path from "path";
 
 extension("gallery", function () {

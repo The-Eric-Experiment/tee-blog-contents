@@ -1,4 +1,4 @@
-import { PostMetadata } from "./types";
+import type { PostMetadata } from "./types.ts";
 
 function galleryStart(ln: string) {
   const galleryRegex = /^\[gallery\]/gi;
@@ -53,6 +53,6 @@ function getGalleryImagesFromMD(content: string) {
 }
 
 export function getGalleryImages(posts: PostMetadata[]): string[] {
-  let imgs = posts.map((p) => getGalleryImagesFromMD(p.content));
-  return [].concat.apply([], imgs);
+  const imgs = posts.map((p) => getGalleryImagesFromMD(p.content));
+  return imgs.flat();
 }

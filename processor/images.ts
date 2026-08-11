@@ -1,10 +1,10 @@
-import { PostMetadata } from "./types";
+import type { PostMetadata } from "./types.ts";
 
 // const ytRegex = /\!yt\[(.+)\]\((.+)\)/gi;
 
 function parseProperties(rest: string) {
-  let src: string;
-  let alt: string;
+  let src: string = "";
+  let alt: string = "";
   let d;
 
   if (rest) {
@@ -75,12 +75,12 @@ function getContentImagesFromMD(content: string) {
 
       return img;
     })
-    .filter((o) => !!o);
+    .filter((o): o is string => !!o);
 
   return imgs;
 }
 
 export function getContentImages(posts: PostMetadata[]): string[] {
-  let imgs = posts.map((p) => getContentImagesFromMD(p.content));
-  return [].concat.apply([], imgs);
+  const imgs = posts.map((p) => getContentImagesFromMD(p.content));
+  return imgs.flat();
 }

@@ -1,4 +1,5 @@
-import { helper, subParser } from "showdown";
+import showdown from "showdown";
+const { helper, subParser } = showdown;
 
 subParser("hashHTMLBlocks", function (text, options, globals) {
   "use strict";

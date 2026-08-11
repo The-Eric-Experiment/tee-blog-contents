@@ -1,6 +1,9 @@
-import * as ejs from "ejs";
+import ejs from "ejs";
 import * as fs from "fs";
 import * as path from "path";
+import { fileURLToPath } from "url";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export function renderTemplate(template: string, data: object) {
   const layoutEjs = fs.readFileSync(

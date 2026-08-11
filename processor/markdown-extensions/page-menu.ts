@@ -1,5 +1,7 @@
-import { Converter, extension } from "showdown";
-import { renderTemplate } from "../template";
+import showdown from "showdown";
+import type { Converter } from "showdown";
+const { extension } = showdown;
+import { renderTemplate } from "../template.ts";
 
 extension("page-menu", function () {
   return [

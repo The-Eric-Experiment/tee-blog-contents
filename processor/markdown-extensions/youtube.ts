@@ -1,7 +1,8 @@
-import { extension } from "showdown";
-import { renderTemplate } from "../template";
+import showdown from "showdown";
+const { extension } = showdown;
+import { renderTemplate } from "../template.ts";
 import path, { join } from "path";
-import config from "../config";
+import config from "../config.ts";
 
 type YoutubeThumb = {
   path: string;
@@ -62,7 +63,7 @@ extension("youtube", function () {
             return match;
           }
 
-          if (options.slug && options.filePath) {
+          if (options?.slug && options?.filePath) {
             YOUTUBE_THUMBS.push({
               path: slugJoin(options.filePath, options.slug),
               videoId: vid,
@@ -74,7 +75,7 @@ extension("youtube", function () {
             videoId: vid,
             title,
             thumbPath:
-              options.contentPath &&
+              options?.contentPath &&
               path.join(options.contentPath, `${vid}.jpg`),
           });
         });

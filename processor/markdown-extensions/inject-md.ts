@@ -1,4 +1,6 @@
-import { extension, Converter } from "showdown";
+import showdown from "showdown";
+import type { Converter } from "showdown";
+const { extension } = showdown;
 import * as path from "path";
 import * as fs from "fs";
 

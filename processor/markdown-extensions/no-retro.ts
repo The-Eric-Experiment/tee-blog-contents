@@ -1,4 +1,5 @@
-import { extension } from "showdown";
+import showdown from "showdown";
+const { extension } = showdown;
 
 extension("no-retro", () => {
   return [
