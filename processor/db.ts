@@ -64,7 +64,6 @@ type PostTagInput = { post_id: string; tag_id: string };
 export default function setup(location: string) {
   const db = new DatabaseSync(path.join(location, "tee-index.sqlite"));
 
-  db.exec("PRAGMA journal_mode = WAL");
   db.exec("PRAGMA foreign_keys = ON");
   db.exec(SCHEMA);
 
