@@ -1,179 +1,164 @@
 import * as path from "path";
-import { DataTypes, Model, Sequelize } from "sequelize";
+import { DatabaseSync } from "node:sqlite";
+
+export type Post = {
+  id: string;
+  title: string;
+  date: string; // 'YYYY-MM-DD'
+  image: string | null;
+  slug: string;
+  description: string;
+};
+
+export type Tag = { id: string; name: string };
+export type Category = { id: string; name: string };
+
+const SCHEMA = `
+CREATE TABLE IF NOT EXISTS posts (
+  id          TEXT NOT NULL PRIMARY KEY,
+  title       TEXT NOT NULL,
+  date        TEXT NOT NULL,
+  image       TEXT,
+  slug        TEXT NOT NULL,
+  description TEXT NOT NULL
+) STRICT;
+
+CREATE TABLE IF NOT EXISTS tags (
+  id   TEXT NOT NULL PRIMARY KEY,
+  name TEXT NOT NULL
+) STRICT;
+
+CREATE TABLE IF NOT EXISTS categories (
+  id   TEXT NOT NULL PRIMARY KEY,
+  name TEXT NOT NULL
+) STRICT;
+
+CREATE TABLE IF NOT EXISTS post_tags (
+  post_id TEXT NOT NULL,
+  tag_id  TEXT NOT NULL,
+  PRIMARY KEY (post_id, tag_id)
+) STRICT;
+
+CREATE TABLE IF NOT EXISTS post_categories (
+  post_id     TEXT NOT NULL,
+  category_id TEXT NOT NULL,
+  PRIMARY KEY (post_id, category_id)
+) STRICT;
+
+CREATE INDEX IF NOT EXISTS idx_post_tags_tag ON post_tags(tag_id);
+CREATE INDEX IF NOT EXISTS idx_post_categories_cat ON post_categories(category_id);
+`;
+
+type PostInput = {
+  id: string;
+  title: string;
+  date: string;
+  image: string | null | undefined;
+  slug: string;
+  description: string;
+};
+
+type PostCategoryInput = { post_id: string; category_id: string };
+type PostTagInput = { post_id: string; tag_id: string };
 
 export default function setup(location: string) {
-  const sequelize = new Sequelize({
-    dialect: "sqlite",
-    storage: path.join(location, "tee-index.sqlite"),
-    logging: false,
-  });
+  const db = new DatabaseSync(path.join(location, "tee-index.sqlite"));
 
-  type PostAttributes = {
-    id: string;
-    title: string;
-    date: string;
-    image: string;
-    slug: string;
-    description: string;
+  db.exec("PRAGMA journal_mode = WAL");
+  db.exec("PRAGMA foreign_keys = ON");
+  db.exec(SCHEMA);
+
+  const stmts = {
+    allCategories: db.prepare(
+      "SELECT id, name FROM categories ORDER BY name"
+    ),
+    upsertPost: db.prepare(`
+      INSERT INTO posts (id, title, date, image, slug, description)
+      VALUES (?, ?, ?, ?, ?, ?)
+      ON CONFLICT(id) DO UPDATE SET
+        title = excluded.title,
+        date = excluded.date,
+        image = excluded.image,
+        slug = excluded.slug,
+        description = excluded.description
+    `),
+    insertCategory: db.prepare(
+      "INSERT OR IGNORE INTO categories (id, name) VALUES (?, ?)"
+    ),
+    insertTag: db.prepare(
+      "INSERT OR IGNORE INTO tags (id, name) VALUES (?, ?)"
+    ),
+    insertPostCategory: db.prepare(
+      "INSERT OR IGNORE INTO post_categories (post_id, category_id) VALUES (?, ?)"
+    ),
+    insertPostTag: db.prepare(
+      "INSERT OR IGNORE INTO post_tags (post_id, tag_id) VALUES (?, ?)"
+    ),
   };
 
-  type PostModelCreator = PostAttributes;
-  type PostModel = Model<PostAttributes, PostModelCreator>;
-
-  const Post = sequelize.define<PostModel, PostModelCreator>(
-    "post",
-    {
-      id: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        primaryKey: true,
-      },
-      title: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      date: {
-        type: DataTypes.DATEONLY,
-        allowNull: false,
-      },
-      image: {
-        type: DataTypes.STRING,
-        allowNull: true,
-      },
-      slug: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      description: {
-        type: DataTypes.TEXT,
-        allowNull: false,
-      },
-    },
-    { timestamps: false }
-  );
-
-  type TagAttributes = {
-    id: string;
-    name: string;
-  };
-
-  type TagModelCreator = TagAttributes;
-  type TagModel = Model<TagAttributes, TagModelCreator>;
-
-  const Tag = sequelize.define<TagModel, TagModelCreator>(
-    "tag",
-    {
-      id: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        primaryKey: true,
-      },
-      name: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-    },
-    { timestamps: false }
-  );
-
-  type CategoryAttributes = {
-    id: string;
-    name: string;
-  };
-
-  type CategoryModelCreator = CategoryAttributes;
-  type CategoryModel = Model<CategoryAttributes, CategoryModelCreator>;
-
-  const Category = sequelize.define<CategoryModel, CategoryModelCreator>(
-    "category",
-    {
-      id: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        primaryKey: true,
-      },
-      name: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-    },
-    { timestamps: false }
-  );
-
-  const PostCategories = sequelize.define(
-    "post_categories",
-    {
-      post_id: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        primaryKey: true,
-      },
-      category_id: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        primaryKey: true,
-      },
-    },
-    { timestamps: false }
-  );
-
-  const PostTags = sequelize.define(
-    "post_tags",
-    {
-      post_id: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        primaryKey: true,
-      },
-      tag_id: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        primaryKey: true,
-      },
-    },
-    { timestamps: false }
-  );
-
-  Tag.belongsToMany(Post, {
-    through: PostTags,
-    foreignKey: "tag_id",
-    sourceKey: "id",
-    as: "tags",
-  });
-  Post.belongsToMany(Tag, {
-    through: PostTags,
-    foreignKey: "post_id",
-    sourceKey: "id",
-    as: "tag_posts",
-  });
-
-  Category.belongsToMany(Post, {
-    through: PostCategories,
-    foreignKey: "category_id",
-    sourceKey: "id",
-    as: "categories",
-  });
-  Post.belongsToMany(Category, {
-    through: PostCategories,
-    foreignKey: "post_id",
-    sourceKey: "id",
-    as: "cat_posts",
-  });
+  function transaction<T>(fn: () => T): T {
+    db.exec("BEGIN");
+    try {
+      const result = fn();
+      db.exec("COMMIT");
+      return result;
+    } catch (err) {
+      db.exec("ROLLBACK");
+      throw err;
+    }
+  }
 
   return {
-    Tag,
-    Category,
-    Post,
-    PostCategories,
-    PostTags,
-    async connect() {
-      try {
-        await sequelize.authenticate();
-        await sequelize.sync();
-        console.log("Connection has been established successfully.");
-      } catch (error) {
-        console.error("Unable to connect to the database:", error);
-      }
+    Post: {
+      bulkCreate: (rows: PostInput[]): void => {
+        transaction(() => {
+          for (const r of rows) {
+            stmts.upsertPost.run(
+              r.id,
+              r.title,
+              r.date,
+              r.image ?? null,
+              r.slug,
+              r.description
+            );
+          }
+        });
+      },
+    },
+    Category: {
+      create: (row: { id: string; name: string }): void => {
+        stmts.insertCategory.run(row.id, row.name);
+      },
+      findAll: (): Category[] => stmts.allCategories.all() as Category[],
+    },
+    Tag: {
+      create: (row: { id: string; name: string }): void => {
+        stmts.insertTag.run(row.id, row.name);
+      },
+    },
+    PostCategories: {
+      bulkCreate: (rows: PostCategoryInput[]): void => {
+        transaction(() => {
+          for (const r of rows) {
+            stmts.insertPostCategory.run(r.post_id, r.category_id);
+          }
+        });
+      },
+    },
+    PostTags: {
+      bulkCreate: (rows: PostTagInput[]): void => {
+        transaction(() => {
+          for (const r of rows) {
+            stmts.insertPostTag.run(r.post_id, r.tag_id);
+          }
+        });
+      },
+    },
+    transaction,
+    // Kept async for call-site compatibility; nothing to await.
+    async connect(): Promise<void> {},
+    close(): void {
+      db.close();
     },
   };
 }

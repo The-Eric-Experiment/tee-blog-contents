@@ -23,6 +23,8 @@ const rl = readline.createInterface({
 const currentDir = path.join(__dirname, "..");
 const dbDir = path.join(currentDir, ".temp/");
 
+fs.mkdirSync(dbDir, { recursive: true });
+
 const { Category, connect } = sqlite(dbDir);
 
 async function question(query: string) {
@@ -152,8 +154,8 @@ async function main(): Promise<any> {
 
   console.log("Creating post");
 
-  const cats = await Category.findAll();
-  const menuOptions = cats.map((o) => o.getDataValue("name"));
+  const cats = Category.findAll();
+  const menuOptions = cats.map((o) => o.name);
   menuOptions.push("Done");
 
   const selectedCategories = await promptUser(menuOptions, ["Videos"]);

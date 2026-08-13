@@ -506,7 +506,7 @@ async function run() {
 
   const posts: PostMetadata[] = await getPosts();
 
-  await Post.bulkCreate(
+  Post.bulkCreate(
     posts.map((post) => {
       const extension = path.extname(post.image);
       const isPng = extension === ".png";
@@ -528,40 +528,32 @@ async function run() {
   const categories = getCategories(posts);
 
   for (const cat of categories) {
-    await Category.create(
-      {
-        id: cat.id,
-        name: cat.name,
-      },
-      { ignoreDuplicates: true }
-    );
+    Category.create({
+      id: cat.id,
+      name: cat.name,
+    });
 
-    await PostCategories.bulkCreate(
+    PostCategories.bulkCreate(
       cat.slugs.map((slg) => ({
         post_id: md5(slg),
         category_id: cat.id,
-      })),
-      { ignoreDuplicates: true }
+      }))
     );
   }
 
   const tags = getTags(posts);
 
   for (const tag of tags) {
-    await Tag.create(
-      {
-        id: tag.id,
-        name: tag.name,
-      },
-      { ignoreDuplicates: true }
-    );
+    Tag.create({
+      id: tag.id,
+      name: tag.name,
+    });
 
-    await PostTags.bulkCreate(
+    PostTags.bulkCreate(
       tag.slugs.map((slg) => ({
         post_id: md5(slg),
         tag_id: tag.id,
-      })),
-      { ignoreDuplicates: true }
+      }))
     );
   }
 
